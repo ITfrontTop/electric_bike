@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,56 +10,182 @@
     <link rel="stylesheet" href="css/style.min.css">
 
 </head>
+
 <body>
 
     <header class="header">
         <div class="container">
-            <nav class="menu">
+            <div class="header__top">
                 <div class="menu-logo">
                     <img class="logo" src="images/logo-white.svg" alt="logo">
                 </div>
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Trade In</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Велосипеды</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Запчасти</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Экипировка</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Аксессуары</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Велостанки</a>
-                    </li>
-                </ul>
-                <div class="user-nav">
-                    <div class="user-nav__items">
-                        <div class="user-nav__search">
-                            <svg class="svg-search-icon-dims">
-                                <use href="images/sprite.svg#search-icon"></use>
-                            </svg>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link" href="">Trade In</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="">Велосипеды</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="">Запчасти</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="">Экипировка</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="">Аксессуары</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="">Велостанки</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-nav__wrapper">
+                    <div class="user-nav">
+                        <div class="user-nav__items">
+                            <div class="user-nav__search">
+                                <a class="user-nav__search-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zm2 9.5l-4.197-4.197"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="user-nav__user">
+                                <a class="user-nav__user-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 15H6a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4zm-4-4a4 4 0 100-8 4 4 0 000 8z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="user-nav__heart">
+                                <a class="user-nav__heart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.331 12.047L12 20l7.669-7.953A4.804 4.804 0 0021 8.714C21 6.111 18.965 4 16.454 4a4.465 4.465 0 00-3.214 1.38L12 6.668 10.76 5.38A4.465 4.465 0 007.546 4C5.036 4 3 6.11 3 8.714c0 1.25.479 2.45 1.331 3.333z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__heart-number">0</span>
+                                </a>
+                            </div>
+                            <div class="user-nav__cart">
+                                <a class="user-nav__cart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 17H6.5l-2-14H2" stroke="#fff" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M4.786 5H21l-3 9H6.07M9 21a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__cart-number">0</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="user-nav__user">
-                            <img class="user-nav__user-img" src="" alt="user">
-                        </div>
-                        <div class="user-nav__heart">
-                            <img class="user-nav__heart-img" src="" alt="heart">
-                        </div>
-                        <div class="user-nav__cart">
-                            <img class="user-nav__cart-img" src="" alt="cart">
+                    </div>
+                    <div class="menu-extra">
+                        <div class="menu-extra__btn">
+                            <a class="menu-extra__btn-link" href="#">
+                                <svg width="32" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="#fff" stroke-width="1.5" d="M0 1.25h32m-24 9h24m-24 9h24" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
+            <div class="header__content">
+                <div class="header-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper header-slider__wrapper">
+                            <div class="swiper-slide header-slider__item">
+                                <div class="header-slider__title">
+                                    Электро велосипеды
+                                </div>
+                                <div class="header-slider__subtitle">
+                                    Cento10 Hybrid — это гоночный велосипед с помогающим педалированию электроприводом,
+                                    который устанавливает новый, очень высокий стандарт для данной категории
+                                </div>
+                                <a class="header-slider__btn" href="#">
+                                    Подробнее
+                                </a>
+                            </div>
+                            <div class="swiper-slide header-slider__item">
+                                <div class="header-slider__title">
+                                    Горные велосипеды
+                                </div>
+                                <div class="header-slider__subtitle">
+                                    Горный велосипед несмотря на свое название часто и активно используются в условиях
+                                    города, так как обладает рядом характеристик, позволяющих сделать велопрогулку
+                                    максимально приятной и комфортной
+                                </div>
+                                <a class="header-slider__btn" href="#">
+                                    Подробнее
+                                </a>
+                            </div>
+                            <div class="swiper-slide header-slider__item">
+                                <div class="header-slider__title">
+                                    Экипировка велоспорта
+                                </div>
+                                <div class="header-slider__subtitle">
+                                    Наша компания специализируется на продаже товаров для велосипедного спорта —
+                                    велосипедов, запасных частей, аксессуаров и различного спортивного инвентаря
+                                    для активного спорта и отдыха. </div>
+                                <a class="header-slider__btn" href="#">
+                                    Подробнее
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-    
+
+    <section class="more">
+        <div class="more__inner">
+            <div class="more__item more__extreme">
+                <div class="more__item-extreme">
+                    <div class="more__item-title">
+                        Экстремальное вождение на горном велосипеде
+                    </div>
+                    <a class="more__item-link" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </div>
+            <div class="more__item more__profi">
+                <div class="more__item-profi">
+                    <div class="more__item-title">
+                        Велосипеды для профессионалов
+                    </div>
+                    <a class="more__item-link" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </div>
+            <div class="more__item more__race">
+                <div class="more__item-race">
+                    <div class="more__item-title">
+                        Долгая поездка на шоссейном велосипеде
+                    </div>
+                    <a class="more__item-link" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <script src="js/main.min.js"></script>
 </body>
+
 </html>

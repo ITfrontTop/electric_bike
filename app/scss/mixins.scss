@@ -1,0 +1,21 @@
+@mixin flex{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin button{
+    display: inline-block;
+    @extend %inter-500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    padding: 16px 80px;
+    background-color: $orange;
+    border-radius: 10px;
+}

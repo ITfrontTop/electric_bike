@@ -2,6 +2,8 @@
 @import 'fonts';
 @import 'global';
 @import 'vars';
+@import 'mixins';
+@import 'libs';
 
 
 /*
@@ -15,15 +17,248 @@
 */
 
 
+/*  header  */
+
 .header {
     background-image: url(../images/header-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 875px;
+
+    &__top {
+        height: 105px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        column-gap: auto;
+    }
+
+    &__content {
+        width: 100%;
+    }
 }
 
-.svg-search-icon-dims { 
-    width: 24px;
-    height: 24px;
+.menu {
+
+
+    &-list {
+        @include flex-center-sb;
+        column-gap: 32px;
+    }
+
+    &-item {
+        min-width: fit-content;
+    }
+
+    &-link {
+        color: $white;
+        font-size: 12px;
+        line-height: 19px;
+        text-transform: uppercase;
+
+        transition: color .25s;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+
+.user-nav {
+    &__wrapper {
+        @include flex;
+        justify-content: flex-end;
+        column-gap: 58px;
+    }
+
+
+    &__items {
+        @include flex;
+        justify-content: flex-end;
+        column-gap: 24px;
+
+    }
+
+
+
+    &__heart {
+        position: relative;
+
+        &-number {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            font-size: 8px;
+            top: 0;
+            right: 0;
+            background-color: $orange;
+            color: $white;
+            @include flex;
+            justify-content: center;
+        }
+    }
+
+    &__cart {
+        position: relative;
+
+        &-number {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            font-size: 8px;
+            top: 0;
+            right: 0;
+            background-color: $orange;
+            color: $white;
+            @include flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+/* slider */
+
+.header-slider {
+    margin-top: 80px;
+
+
+    &__title {
+        @extend %bebas-400;
+        font-size: 110px;
+        line-height: 135px;
+        color: $white;
+        letter-spacing: 2.2px;
+        max-width: 680px;
+        margin-bottom: 48px;
+
+    }
+
+    &__subtitle {
+        @extend %inter-300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .12px;
+        color: $white;
+        max-width: 645px;
+        margin-bottom: 40px;
+
+    }
+
+
+    &__btn {
+        @include button;
+    }
+}
+
+
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-pagination {
+    margin-top: 100px;
+    @include flex;
+    justify-content: center;
+    column-gap: 16px;
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background-color: #4C4C4C;
+        border-radius: 50%;
+    }
+    .swiper-pagination-bullet-active {
+        width: 19px;
+        height: 19px;
+        background-color: $orange;
+        transition: background-color .3s;
+    }
+}
+
+
+
+/*  more  */
+
+.more {
+    &__inner {
+        @include flex;
+        justify-content: center;
+        
+    }
+
+    &__item-link {
+        display: none;
+    }
+    
+    &__item {
+        padding: 48px;
+        height: 212px; 
+        background-color: #4C4C4C;
+        transition: height .3s;
+
+
+        &:hover {
+            /*height: 246px;*/
+            .more__item-link {
+                display: block;
+            }
+            .more__item-title {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__item-title {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: .24px;
+        color: $white;
+    }
+
+
+    &__extreme {
+        width: 747px;
+        background-color: #101010;
+    }
+
+    &__item-extreme {
+        width: 293px;
+        margin-left: auto;
+    }
+
+
+    &__profi {
+        width: 427px;
+        background-color: #131313;
+    }
+
+    &__item-profi {
+        width: 277px;
+    }
+
+
+    &__race {
+        width: 747px;
+        background-color: #2E2E2E;
+    }
+
+    &__item-race {
+        width: 326px;
+    }
+
+    &__item-link {
+        @extend %inter-500;
+        line-height: 19px;
+        color: $orange;
+    }
+
 }
