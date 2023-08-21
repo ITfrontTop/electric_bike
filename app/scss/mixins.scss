@@ -1,15 +1,15 @@
-@mixin flex{
+@mixin flex {
     display: flex;
     align-items: center;
 }
 
-@mixin flex-center-sb{
+@mixin flex-center-sb {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@mixin button{
+@mixin button {
     display: inline-block;
     @extend %inter-500;
     font-size: 16px;
@@ -19,3 +19,51 @@
     background-color: $orange;
     border-radius: 10px;
 }
+
+@mixin product-item-title {
+    @extend %inter-300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: .18px;
+    min-height: 60px;
+    margin: 16px 0 24px;
+}
+
+@mixin background-image-property {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin button-one-click {
+    display: inline-block;
+    @extend %inter-500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    border-radius: 10px;
+    padding: 16px 0;
+    width: 100%;
+    background-color: $orange;
+    text-align: center;
+    margin-top: 33px;
+
+    p {
+        display: inline-block;
+        padding-left: 30px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url(../images/click-icon.svg);
+            @include background-image-property;
+            width: 25px;
+            height: 25px;
+            top: -3px;
+            left: 0;
+
+        }
+    }
+}
+

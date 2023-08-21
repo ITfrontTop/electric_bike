@@ -159,9 +159,7 @@
 }
 
 
-.swiper {
-    overflow: hidden;
-}
+
 
 .swiper-pagination {
     margin-top: 100px;
@@ -328,3 +326,129 @@
     }
 
 }
+
+/* brand */
+
+.brand {
+    margin-bottom: 66px;
+    height: 206px;
+    &__inner {
+        @include flex-center-sb;
+    }
+}
+
+/* novelties */
+
+.novelties {
+    padding: 80px 0;
+    background-color: $grey-bg;
+
+    &__title {
+        margin-bottom: 80px;
+
+    }
+}
+
+
+/* product cart item */
+.product-item {
+    padding: 18px 16px 20px;
+    border-radius: 10px;
+    background-color: $white;
+    position: relative;
+
+    /*
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #2E2E2E;
+        border-radius: 10px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: transform .4s ease;
+
+    }
+
+    &:hover::after {
+        border-radius: 10px;
+        transform: scaleY(1.38);
+    }
+    */
+
+    &__top {
+        @include flex-center-sb;
+
+        &-box {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &-img {
+            border-radius: 10px 0 0 0;
+        }
+
+        &-stock {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+        }
+    }
+
+    &__title {
+        @include product-item-title;
+    }
+
+    &__price {
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $grey-deep;
+    }
+
+    /* button */
+    &__link-btn {
+        @include button-one-click;
+    }
+}
+
+
+
+
+/* button slider   ************************************/
+.swiper-button-prev,
+.swiper-button-next {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+
+.swiper-button-prev {
+    background-image: url(../images/arrow-back-to-left.svg);
+}
+
+
+
+
+
+
+.show-all {
+    margin-top: 48px;
+    display: inline-block;
+    @include flex;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $grey-deep;
+}
+

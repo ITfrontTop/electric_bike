@@ -1,3 +1,5 @@
+@import 'vars';
+
 body {
     @extend %inter-400;
 }
@@ -12,3 +14,33 @@ a {
     margin: 0 auto;
 }
 
+.swiper,
+.swiper-container {
+    overflow: hidden;
+}
+
+.title {
+    @extend %bebas-400;
+    font-size: 64px;
+    line-height: 78px;
+    color: $black;
+    letter-spacing: 3.2px;
+}
+
+.sold-in {
+    @extend %inter-400;
+    font-size: 16px;
+    line-height: 25px;
+    color: $green;
+}
+
+.sold-out {
+    @extend %inter-400;
+    font-size: 16px;
+    line-height: 25px;
+    color: $red;
+}
+
+.arrows-active {
+    
+}
