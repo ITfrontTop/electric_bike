@@ -452,3 +452,152 @@
     color: $grey-deep;
 }
 
+
+
+.catalog {
+    &__inner {
+        padding: 160px 0 80px;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+    &__items {
+        width: 1280px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    &__items-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        width: 864px;
+    }
+
+    &__item {
+        border-radius: 10px;
+    }
+
+    /* display: inline-block; for all title*/
+
+
+    &__item-bike {
+        width: 100%;
+        height: 300px;
+        padding-left: 80px;
+        background-color: $orange;
+        @include flex;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+    }
+
+
+    &__item-trade-in {
+        max-width: 400px;
+        width: 100%;
+        height: 458px;
+        background-color: $black;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+    }
+
+    &__title-trade-in {
+        text-align: center;
+        padding-top: 80px;
+    }
+
+
+    &__item-spares {
+        max-width: 400px;
+        width: 100%;
+        height: 190px;
+        background-color: $black;
+        @include flex;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+    }
+
+    &__title-spares {
+        padding-left: 40px;
+    }
+
+
+    &__item-kit {
+        max-width: 448px;
+        width: 100%;
+        height: 239px;
+        background-color: $black;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+
+    &__title-kit {
+        padding-left: 40px;
+    }
+
+
+    &__item-accessory {
+        max-width: 400px;
+        width: 100%;
+        height: 252px;
+        background-color: $black;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: end;
+        background-repeat: no-repeat;
+        background-position: top right;
+        margin-top: -48px;
+    }
+
+    &__title-accessory {
+        padding: 40px 29px;
+    }
+
+    &__item-stand {
+        max-width: 448px;
+        width: 100%;
+        height: 203px;
+        background-color: $black;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+
+    &__title-stand {
+        padding: 40px;
+    }
+
+
+    &__info {
+        margin-top: 160px;
+        @include flex;
+        justify-content: space-between;
+    }
+
+    &__title-info {
+        max-width: 620px;
+    }
+
+    &__info-descr {
+        max-width: 510px;
+    }
+
+    &__info-text {
+        @include text;
+        margin-bottom: 32px;
+    }
+
+    &__info-link {
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $grey-light;
+    }
+
+}
