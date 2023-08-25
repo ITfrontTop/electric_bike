@@ -42,6 +42,18 @@
     background-size: cover;
 }
 
+@mixin serveces-after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 @mixin button-one-click {
     display: inline-block;
     @extend %inter-500;
@@ -73,4 +85,3 @@
         }
     }
 }
-
