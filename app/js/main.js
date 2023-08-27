@@ -24,3 +24,16 @@ const novelties = new Swiper ('.novelties-slider', {
     },
 
 })
+
+
+const best_winter = new Swiper ('.best-winter__slider', {
+    speed: 1000,
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 45,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+})

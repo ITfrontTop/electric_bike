@@ -691,3 +691,58 @@
     }
 }
 
+.best-winter {
+    &__inner {
+        display: flex;
+        height: 770px;
+        background-color: $black;
+        position: relative;
+
+        /*&::before {
+            content: '';
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            width: 634px;
+            height: 685px;
+            background: url(../images/best-winter-bg-left.png), lightgray -205.122px 0.001px / 129.945% 140.454% no-repeat;
+            @include background-image-property;
+        }*/
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 345px;
+            height: 506px;
+            background: url(../images/best-winter-bg-right.png), lightgray -205.122px 0.001px / 129.945% 140.454% no-repeat;
+            @include background-image-property;
+
+        }
+    }
+
+    &__title-box {
+        width: 645px;
+        background: url(../images/best-winter-bg-left.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 685px 634px;
+        position: relative;
+    }
+    
+    &__title {
+        max-width: 418px;
+        color: $white;
+        position: absolute;
+        right: -85px;
+        top: 80px;
+
+    }
+
+    &__slider-inner {
+        max-width: 1275px;
+        margin-top: 248px;
+    }
+
+}
