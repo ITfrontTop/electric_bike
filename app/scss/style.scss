@@ -351,6 +351,10 @@
     padding: 80px 0;
     background-color: $grey-bg;
 
+    &-slider {
+        position: relative;
+    }
+
     &__title {
         margin-bottom: 80px;
 
@@ -431,17 +435,43 @@
 
 
 /* button slider   ************************************/
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-button-left,
+.swiper-button-right {
+    position: absolute;
     width: 43px;
     height: 43px;
     border-radius: 50%;
-    background-color: red;
-
+    background-color: $white;
+    border: 1px solid $black;
+    z-index: 5;
+    @include flex;
+    justify-content: center;
+    transition: all .25s ease;
+    svg {
+        path {
+            fill: $black;
+        }
+    }
+    &:hover {
+        background-color: $black;
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
 }
 
-.swiper-button-prev {
-    background-image: url(../images/arrow-back-to-left.svg);
+.swiper-button-left {
+    /*background-image: url(../images/arrow-left-black.svg);*/
+    top: 40%;
+    left: 8px;
+}
+
+.swiper-button-right {
+    /*background-image: url(../images/arrow-right-black.svg);*/ 
+    top: 40%;
+    right: 8px;
 }
 
 
@@ -698,17 +728,6 @@
         background-color: $black;
         position: relative;
 
-        /*&::before {
-            content: '';
-            position: absolute;
-            bottom: 28px;
-            left: 0;
-            width: 634px;
-            height: 685px;
-            background: url(../images/best-winter-bg-left.png), lightgray -205.122px 0.001px / 129.945% 140.454% no-repeat;
-            @include background-image-property;
-        }*/
-
         &::after {
             content: '';
             position: absolute;
@@ -744,5 +763,123 @@
         max-width: 1275px;
         margin-top: 248px;
     }
+}
 
+
+/* mountain */
+.mountain {
+    padding: 132px 0 80px;
+    background-color: $grey-bg;
+
+    &__title {
+        max-width: 370px;
+        margin-bottom: 80px;
+    }
+    
+    &__info {
+        @include flex-center-sb;
+    }
+
+
+    &__details {
+        display: grid;
+        grid-template-columns: repeat(2, 302px);
+        grid-template-rows: repeat(2, 233px);
+        gap: 16px;
+    }
+    
+    &__item {
+        background-color: $grey-deep-light;
+        border-radius: 10px;
+        padding: 32px 25px;
+        position: relative;
+        transition: all .25s ease-in-out;
+        
+
+        &:hover {
+            background-color: $orange;
+            .mountain__item-inner {
+
+            }
+        }
+    }
+    
+    &__item-inner {
+        color: $white;
+    }
+    
+    &__item-title {
+        max-width: 190px;
+        height: 76px;
+        @extend %inter-500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: .2px;
+        @include flex;
+        margin-bottom: 16px;
+
+    }
+    
+    &__item-text {
+        max-width: 241px;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__item-frame,
+    &__item-computer,
+    &__item-transmission,
+    &__item-equipment {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 71px;
+            height: 71px;
+            right: 28px;
+            top: 12%;
+        }
+    }
+
+    &__item-frame {
+        &::after {
+            background-image: url(../images/frame-icon.svg);
+        }
+    }
+
+    &__item-computer {
+        &::after {
+            background-image: url(../images/computer-icon.svg);
+        }
+    }
+
+    &__item-transmission {
+        &::after {
+            background-image: url(../images/transmission-icon.svg);
+        }
+    }
+
+    &__item-equipment {
+        &::after {
+            background-image: url(../images/equipment-icon.svg);
+        }
+    }
+
+
+    &__descr {
+        max-width: 510px;
+    }
+
+    &__descr-img {
+        margin-bottom: 29px;
+    }
+
+    &__descr-text {
+        @include text;
+        margin-bottom: 40px;
+    }
+
+    &__descr-link {
+        @include button;
+    }
 }
