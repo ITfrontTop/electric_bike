@@ -883,3 +883,72 @@
         @include button;
     }
 }
+
+
+.advantages {
+    margin: 160px 0;
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+    &__items {
+        @include flex-center-sb;
+    }
+
+    &__serveces {
+        display: grid;
+        grid-template-columns: repeat(2, 290px);
+        grid-template-rows: repeat(2, 267px);
+        gap: 40px;
+    }
+
+    &__part {
+        padding: 32px;
+        border-radius: 10px;
+        transition: opacity .25s ease;
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__part-title {
+        @extend %inter-500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: .2px;
+        color: $white;
+        margin-bottom: 16px;
+        width: 180px;
+    }
+
+    &__part-text {
+        @include text;
+        color: $white;
+        margin-bottom: 24px;
+    }
+
+    &__part-link {
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white;
+    }
+
+    &__delivery {
+        background-color: $orange;
+    }
+
+    &__return {
+        background-color: $orange-black;
+    }
+
+    &__extra {
+        background-color: $orange-deep;
+    }
+
+    &__payment {
+        background-color: $orange-deep-black;
+    }
+
+}
