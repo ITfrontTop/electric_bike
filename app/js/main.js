@@ -35,8 +35,20 @@ const best_winter = new Swiper ('.best-winter__slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    // autoplay: {
-    //     delay: 3000,
-    // },
+    autoplay: {
+        delay: 3000,
+    },
 
+})
+
+
+const equipment = new Swiper ('.equipment__slider', {
+    speed: 1000,
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 })

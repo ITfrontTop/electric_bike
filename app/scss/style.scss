@@ -432,66 +432,6 @@
 }
 
 
-
-
-/* button slider   ************************************/
-.swiper-button-left,
-.swiper-button-right {
-    position: absolute;
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    background-color: $white;
-    border: 1px solid $black;
-    z-index: 5;
-    @include flex;
-    justify-content: center;
-    transition: all .25s ease;
-    svg {
-        path {
-            fill: $black;
-        }
-    }
-    &:hover {
-        background-color: $black;
-        svg {
-            path {
-                fill: $white;
-            }
-        }
-    }
-}
-
-.swiper-button-left {
-    /*background-image: url(../images/arrow-left-black.svg);*/
-    top: 40%;
-    left: 8px;
-}
-
-.swiper-button-right {
-    /*background-image: url(../images/arrow-right-black.svg);*/ 
-    top: 40%;
-    right: 8px;
-}
-
-
-
-
-
-
-.show-all {
-    margin-top: 48px;
-    display: inline-block;
-    @include flex;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: $grey-deep;
-}
-
-
-
 .catalog {
     &__inner {
         padding: 160px 0 80px;
@@ -920,6 +860,7 @@
         color: $white;
         margin-bottom: 16px;
         width: 180px;
+        text-transform: uppercase;
     }
 
     &__part-text {
@@ -950,5 +891,65 @@
     &__payment {
         background-color: $orange-deep-black;
     }
+}
+
+
+.equipment {
+    background-color: $grey-bg;
+    padding: 80px 0;
+    
+    &__title {
+        margin-bottom: 80px;
+    }
+    
+    &__slider-inner {
+        position: relative;
+    }
 
 }
+
+/* equipment-item card */
+.equipment-item {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 18px 16px 20px;
+    position: relative;
+
+    &__top {
+        position: absolute;
+        top: 18px;
+        right: 16px;
+    }
+
+    &__img {
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        max-width: 350px;
+        height: 58px;
+        @extend %inter-300;
+        font-size: 18px;
+        line-height: 28px;
+        color: $black;
+        letter-spacing: .18px;
+        margin-bottom: 24px;
+    }
+
+    &__price {
+        color: $grey-deep;
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        span {
+            color: #B3B3B3;
+            @extend %inter-500;
+            font-size: 12px;
+            line-height: 14px;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
