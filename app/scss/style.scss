@@ -487,6 +487,7 @@
     &__title-trade-in {
         text-align: center;
         padding-top: 80px;
+        display: block;
     }
 
 
@@ -516,7 +517,8 @@
     }
 
     &__title-kit {
-        padding-left: 40px;
+        padding: 40px;
+        display: block;
     }
 
 
@@ -549,6 +551,7 @@
 
     &__title-stand {
         padding: 40px;
+        display: block;
     }
 
 
@@ -588,7 +591,7 @@
         width: 100%;
         height: auto;
     }
-    
+
     &__btn {
         position: absolute;
         top: 50%;
@@ -601,17 +604,19 @@
 
 
 .serveces {
-    margin-top: -5px;
-    background-color: $grey-deep-dark;
-    height: 206px;
-    @include flex-center-sb;
-    
+    &__inner {
+        margin-top: -5px;
+        background-color: $grey-deep-dark;
+        height: 206px;
+        @include flex-center-sb;
+    }
+
     &__items {
         display: flex;
         column-gap: 44px;
         color: $white;
     }
-    
+
     &__item-title {
         position: relative;
         height: 40px;
@@ -622,7 +627,7 @@
         letter-spacing: .2px;
         padding-left: 56px;
         margin-bottom: 16px;
-        
+
     }
 
     &__item-text {
@@ -689,7 +694,7 @@
         background-size: 685px 634px;
         position: relative;
     }
-    
+
     &__title {
         max-width: 418px;
         color: $white;
@@ -715,7 +720,7 @@
         max-width: 370px;
         margin-bottom: 80px;
     }
-    
+
     &__info {
         @include flex-center-sb;
     }
@@ -727,27 +732,26 @@
         grid-template-rows: repeat(2, 233px);
         gap: 16px;
     }
-    
+
     &__item {
         background-color: $grey-deep-light;
         border-radius: 10px;
         padding: 32px 25px;
         position: relative;
         transition: all .25s ease-in-out;
-        
+
 
         &:hover {
             background-color: $orange;
-            .mountain__item-inner {
 
-            }
+            .mountain__item-inner {}
         }
     }
-    
+
     &__item-inner {
         color: $white;
     }
-    
+
     &__item-title {
         max-width: 190px;
         height: 76px;
@@ -759,7 +763,7 @@
         margin-bottom: 16px;
 
     }
-    
+
     &__item-text {
         max-width: 241px;
         @extend %inter-400;
@@ -847,6 +851,7 @@
         padding: 32px;
         border-radius: 10px;
         transition: opacity .25s ease;
+
         &:hover {
             opacity: .8;
         }
@@ -897,11 +902,11 @@
 .equipment {
     background-color: $grey-bg;
     padding: 80px 0;
-    
+
     &__title {
         margin-bottom: 80px;
     }
-    
+
     &__slider-inner {
         position: relative;
     }
@@ -942,6 +947,7 @@
         font-size: 16px;
         line-height: 19px;
         text-transform: uppercase;
+
         span {
             color: #B3B3B3;
             @extend %inter-500;
@@ -953,3 +959,69 @@
 
 }
 
+.reviews {
+    margin: 160px 0;
+
+    &__items {
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+        margin-right: -133px;
+        
+    }
+
+    &__item {
+        width: 400px;
+        height: 462px;
+        border-radius: 10px;
+        background-color: $black;
+    }
+
+    &__img {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    &__info {
+        padding: 24px 27px 35px;
+
+    }
+
+    &__data-link {
+        display: block;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $white;
+        margin-bottom: 8px;
+    }
+
+    &__link-tag {
+        display: block;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $orange;
+        margin-bottom: 16px;
+
+    }
+
+    &__text {
+        height: 87px;
+        color: $white;
+        @extend %inter-300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .18px;
+        margin-bottom: 19px;
+
+    }
+
+    &__link {
+        color: $white;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+
+    }
+
+}
