@@ -962,12 +962,15 @@
 .reviews {
     margin: 160px 0;
 
+    &__title {
+        margin-bottom: 80px;
+    }
+
     &__items {
         display: flex;
-        justify-content: flex-end;
         gap: 40px;
         margin-right: -133px;
-        
+
     }
 
     &__item {
@@ -980,7 +983,7 @@
     &__img {
         border-radius: 10px 10px 0 0;
     }
-    
+
     &__info {
         padding: 24px 27px 35px;
 
@@ -1024,4 +1027,301 @@
 
     }
 
+}
+
+.contacts {
+    margin-bottom: 160px;
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+    &__map {
+        margin-bottom: 40px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 140px;
+    }
+
+    &__info-item {
+        max-width: 215px;
+        width: 100%;
+        padding-left: 48px;
+        position: relative;
+    }
+
+    &__info-item-phone,
+    &__info-item-navigation,
+    &__info-item-mail,
+    &__info-item-calendar {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__info-item-phone {
+        &::after {
+            background-image: url(../images/phone-orange-icon.svg);
+            @include background-image-property;
+        }
+    }
+
+    &__info-item-navigation {
+        &::after {
+            background-image: url(../images/navigation-orange-icon.svg);
+            @include background-image-property;
+        }
+    }
+
+    &__info-item-mail {
+        &::after {
+            background-image: url(../images/mail-orange-icon.svg);
+            @include background-image-property;
+        }
+    }
+
+    &__info-item-calendar {
+        &::after {
+            background-image: url(../images/calendar-orange-icon.svg);
+            @include background-image-property;
+        }
+    }
+
+    &__item-text {
+        margin-bottom: 8px;
+        @extend %inter-300;
+
+    }
+
+}
+
+
+.footer {
+    &__subscription {
+        padding: 40px 0;
+        background-color: $grey-deep-black;
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom: 32px;
+    }
+
+    &__subscription-email {
+        @include flex;
+        gap: 16px;
+        margin-bottom: 14px;
+    }
+
+    &__subscription-btn {
+        display: inline-block;
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white;
+        background-color: $orange;
+        border-radius: 10px;
+        padding: 11px 45px;
+
+    }
+
+    &__subscription-input {
+        padding: 10px 16px;
+        border-radius: 5px;
+        max-width: 345px;
+        width: 100%;
+
+        &::placeholder {
+            @extend %inter-400;
+            font-size: 16px;
+            line-height: 26px;
+            color: $grey-light;
+        }
+    }
+
+    /*  checkbox  */
+    &__subscription-label {
+        @extend %inter-400;
+        font-size: 12px;
+        line-height: 19px;
+        color: $white;
+        @include flex;
+        padding: 3px 0 3px 32px;
+        position: relative;
+        
+    }
+
+    &__subscription-processing-input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        
+        &:checked + .footer__subscription-checkbox {
+            background-color: $orange;
+            border-radius: 4px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 17px;
+                height: 14px;
+                background-image: url(../images/check-white-icon.svg);
+                @include background-image-property;
+                top: 16%;
+                left: 15%;
+            }
+        }
+    }
+
+    &__subscription-checkbox {
+        position: absolute;
+        background-color: $white;
+        border-radius: 4px;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: 0;
+        transition: all .2s ease-in-out;
+    }
+
+
+
+    &__content {
+        background-color: $grey-black;
+    }
+
+    &__content-inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 102px 0 40px;
+        border-bottom: 1px solid $grey-deep-light;
+    }
+
+    &__content-logo {
+        margin-top: -11px;
+    }
+
+    &__logo {
+        margin-bottom: 64px;
+    }
+
+    &__content-descr {
+        display: inline-block;
+        max-width: 290px;
+        width: 100%;
+        @extend %inter-300;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-light;
+    }
+
+    &__content-menu {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 91px;
+    }
+
+    &__content-catalog,
+    &__content-client,
+    &__content-contacts {
+        width: 219px;
+    }
+
+
+    &__content-catalog-title {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: .24px;
+        color: $white;
+        margin-bottom: 32px;
+    }
+
+
+    &__content-item + .footer__content-item {
+        margin-top: 16px;
+    }
+
+    &__content-link,
+    &__content-info {
+        @extend %inter-300;
+        font-size: 16px;
+        line-height: 25px;
+        color: $white;
+        transition: color .25s ease;
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__content-contacts-item {
+        padding-left: 48px;
+        & + .footer__content-contacts-item{
+            margin-top: 16px;
+        }
+    }
+
+    &__content-phone,
+    &__content-address,
+    &__content-email {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 18%;
+            left: 0;
+        }
+    }
+
+    &__content-phone {
+        &::before {
+            background-image: url(../images/phone-grey-icon.svg);
+        }
+    }
+
+    &__content-address {
+        &::before {
+            background-image: url(../images/navigation-grey-icon.svg);
+        }
+    }
+    
+    &__content-email {
+        &::before {
+            background-image: url(../images/email-grey-icon.svg);
+            top: 0;
+        }
+    }
+
+
+    &__copy {
+        padding: 16px 0 23px;
+    }
+
+    &__copy-inner {
+        @include flex;
+        column-gap: 24px;
+    }
+
+    &__copy-author,
+    &__copy-agreement {
+        @extend %inter-400;
+        font-size: 12px;
+        line-height: 19px;
+        color: $grey-deep;
+    }
+
+    &__copy-author {
+        text-transform: uppercase;
+    }
 }
