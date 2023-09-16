@@ -26,6 +26,12 @@
     background-size: cover;
     height: 875px;
 
+    /* all pages */
+    &__pages {
+        height: 105px;
+        background-color: $black;
+    }
+
     &__top {
         height: 105px;
         display: grid;
@@ -1106,8 +1112,22 @@
 
 .footer {
     &__subscription {
-        padding: 40px 0;
+        
         background-color: $grey-deep-black;
+
+        background-image: url(../images/subscription-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 88% 0;
+    }
+
+    &__subscription-inner {
+        height: 275px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
     }
 
     &__title {
@@ -1156,7 +1176,7 @@
         @include flex;
         padding: 3px 0 3px 32px;
         position: relative;
-        
+
     }
 
     &__subscription-processing-input {
@@ -1165,10 +1185,11 @@
         height: 1px;
         overflow: hidden;
         clip: rect(0 0 0 0);
-        
-        &:checked + .footer__subscription-checkbox {
+
+        &:checked+.footer__subscription-checkbox {
             background-color: $orange;
             border-radius: 4px;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -1247,7 +1268,7 @@
     }
 
 
-    &__content-item + .footer__content-item {
+    &__content-item+.footer__content-item {
         margin-top: 16px;
     }
 
@@ -1258,6 +1279,7 @@
         line-height: 25px;
         color: $white;
         transition: color .25s ease;
+
         &:hover {
             color: $orange;
         }
@@ -1265,7 +1287,8 @@
 
     &__content-contacts-item {
         padding-left: 48px;
-        & + .footer__content-contacts-item{
+
+        &+.footer__content-contacts-item {
             margin-top: 16px;
         }
     }
@@ -1274,6 +1297,7 @@
     &__content-address,
     &__content-email {
         position: relative;
+
         &::before {
             content: '';
             position: absolute;
@@ -1295,7 +1319,7 @@
             background-image: url(../images/navigation-grey-icon.svg);
         }
     }
-    
+
     &__content-email {
         &::before {
             background-image: url(../images/email-grey-icon.svg);

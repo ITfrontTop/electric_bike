@@ -1,8 +1,21 @@
 @import 'mixins';
 @import 'vars';
 
+
+
+html,
+body {
+    height: 100%;
+}
+
 body {
     @extend %inter-400;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 a {
