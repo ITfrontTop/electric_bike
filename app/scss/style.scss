@@ -26,6 +26,8 @@
     background-size: cover;
     height: 875px;
 
+    position: relative;
+
     /* all pages */
     &__pages {
         height: 105px;
@@ -48,7 +50,6 @@
 
 .menu {
 
-
     &-list {
         @include flex-center-sb;
         column-gap: 32px;
@@ -56,18 +57,122 @@
 
     &-item {
         min-width: fit-content;
+        position: relative;
+
+        &:hover>.menu-sub {
+            opacity: 1;
+            visibility: visible;
+            transform: rotateX(0deg)
+        }
     }
 
     &-link {
-        color: $white;
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
         font-size: 12px;
         line-height: 19px;
+        color: $white;
+        padding: 18px 0;
         text-transform: uppercase;
-
         transition: color .25s;
 
         &:hover {
             color: $orange;
+        }
+
+
+        &__trade {
+            color: $orange;
+        }
+
+    }
+
+    /* sub menu */
+    &-sub {
+        width: 502px;
+        height: 383px;
+        padding: 40px 40px 0;
+        border-radius: 10px;
+        border: 1px solid $grey-deep-medium;
+        background-color: $black;
+        display: flex;
+        justify-content: space-between;
+        background-image: url(../images/menu-bg.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center bottom;
+
+        position: absolute;
+        top: 35px;
+        left: 0;
+
+        z-index: 100;
+        transform-origin: 0 0;
+        transform: rotateX(-90deg);
+        transition: transform .3s linear;
+        visibility: hidden;
+        opacity: 0;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+        }
+
+        &__link {
+            /* %inter-500 don't correct, need %inter-400, but it dont work */
+            @extend %inter-500;
+            font-size: 14px;
+            line-height: 22px;
+            color: $white-light;
+            transition: color .25s;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    /* menu-more style */
+    &-more {
+        z-index: 100;
+        width: 448px;
+        height: 1087px;
+        background-color: $white;
+        padding: 40px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+
+        &__btn {
+            @include flex;
+            justify-content: flex-end;
+            margin-bottom: 40px;
+        }
+
+        &__sutitle {
+            margin-bottom: 48px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+        }
+
+        &__link {
+            @extend %inter-500;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: .18px;
+            color: $black;
+            transition: color .25s ease;
+
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }
@@ -85,7 +190,58 @@
         @include flex;
         justify-content: flex-end;
         column-gap: 24px;
+    }
 
+    &__search {
+        position: relative;
+        &:hover > .user-nav__search-form{
+            transform: rotateX(0deg);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__search-link {
+        padding: 15px 0;
+        
+    }
+
+    &__search-form {
+        width: 259px;
+        padding: 10px 16px;
+        @include flex;
+        column-gap: 10px;
+        background-color: $black;
+        border-radius: 5px;
+        border: 1px solid $grey-deep-medium;
+        position: absolute;
+        top: 39px;
+        right: -15px;
+
+        z-index: 100;
+        transform-origin: 0 0;
+        transform: rotateX(-90deg);
+        transition: transform .3s linear;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &__search-input {
+        all: unset;
+        color: $white;
+        &::placeholder {
+            /* %inter-500 don't correct, need %inter-400, but it dont work */
+            @extend %inter-400;
+            font-size: 14px;
+            color: $grey-deep;
+        }
+    }
+
+    &__search-submit {
+        all: unset;
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/search-form.svg);
     }
 
 
@@ -750,8 +906,6 @@
 
         &:hover {
             background-color: $orange;
-
-            .mountain__item-inner {}
         }
     }
 
@@ -857,10 +1011,10 @@
     &__part {
         padding: 32px;
         border-radius: 10px;
-        transition: opacity .25s ease;
+        transition: background-color .25s ease;
 
         &:hover {
-            opacity: .8;
+            background-color: $grey-deep-light;
         }
     }
 
@@ -886,6 +1040,11 @@
         font-size: 16px;
         line-height: 19px;
         color: $white;
+        transition: color ease .25s;
+
+        &:hover {
+            color: $orange;
+        }
     }
 
     &__delivery {
@@ -1113,7 +1272,7 @@
 
 .footer {
     &__subscription {
-        
+
         background-color: $grey-deep-black;
 
         background-image: url(../images/subscription-bg.png);
@@ -1128,7 +1287,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
     }
 
     &__title {
