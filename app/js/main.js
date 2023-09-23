@@ -1,3 +1,6 @@
+'use strict'
+
+// Swiper sliders:
 const swiper = new Swiper ('.header-slider__swiper', {
     speed: 1000,
     loop: true,
@@ -52,3 +55,57 @@ const equipment = new Swiper ('.equipment__slider', {
         prevEl: '.swiper-button-prev',
     },
 })
+
+
+// header event listener
+document.querySelector('.menu-list').addEventListener('click', function(e) {
+    e.preventDefault()
+    console.log(e.target)
+    if(e.target.classList.contains('menu-link')) {
+        const href = e.target.getAttribute('href')
+        document.querySelector(href).scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
+})
+
+
+// footer event listener
+document.querySelector('.footer__content-menu-items').addEventListener('click', function(e) {
+    e.preventDefault()
+    if(e.target.classList.contains('footer__content-link')) {
+        const href = e.target.getAttribute('href')
+        document.querySelector(href).scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
+})
+
+// btn menu-more open and close
+
+const menuMoreBtn = document.querySelectorAll('.menu-extra__btn-link')
+const closeBtn = document.querySelector('.menu-more__btn-link')
+
+const menuMore = document.querySelector('.menu-more')
+const overlay = document.querySelector('.menu-more__overlay')
+
+const openMenuMore = function(e) {
+    e.preventDefault()
+    // menuMore.classList.remove('hidden')
+    overlay.classList.remove('hidden')
+    menuMore.classList.add('show')
+    
+}
+
+const closeMenuMore = function() {
+    // menuMore.classList.add('hidden')
+    overlay.classList.add('hidden')
+    menuMore.classList.remove('show')
+    
+}
+
+menuMoreBtn.forEach(button => button.addEventListener('click', openMenuMore))
+
+closeBtn.addEventListener('click', closeMenuMore)
+overlay.addEventListener('click', closeMenuMore)
+

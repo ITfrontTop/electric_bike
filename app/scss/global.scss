@@ -44,6 +44,7 @@ a {
     line-height: 78px;
     color: $black;
     letter-spacing: 3.2px;
+
     &__catalog-item {
         color: $white;
     }
@@ -83,14 +84,16 @@ a {
     @include flex;
     justify-content: center;
     transition: all .25s ease;
+
     svg {
         path {
             fill: $black;
         }
     }
-    
+
     &:hover {
         background-color: $black;
+
         svg {
             path {
                 fill: $white;
@@ -124,3 +127,7 @@ a {
 }
 
 
+
+.hidden {
+    display: none;
+}

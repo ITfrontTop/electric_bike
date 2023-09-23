@@ -22,7 +22,7 @@
                 <nav class="menu">
                     <ul class="menu-list">
                         <li class="menu-item">
-                            <a class="menu-link menu-link__trade" href="#">Trade In</a>
+                            <a class="menu-link menu-link__trade" href="#catalog">Trade In</a>
                         </li>
                         <li class="menu-item">
                             <a class="menu-link" href="#">Велосипеды</a>
@@ -84,16 +84,16 @@
                             </div>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#">Запчасти</a>
+                            <a class="menu-link" href="#catalog">Запчасти</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#">Экипировка</a>
+                            <a class="menu-link" href="#catalog">Экипировка</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#">Аксессуары</a>
+                            <a class="menu-link" href="#catalog">Аксессуары</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#">Велостанки</a>
+                            <a class="menu-link" href="#catalog">Велостанки</a>
                         </li>
                     </ul>
                 </nav>
@@ -209,10 +209,10 @@
             </div>
         </div>
 
-        <div class="menu-more">
+        <nav class="menu-more">
 
             <div class="menu-more__btn">
-                <a class="menu-more__btn" href="#">
+                <a class="menu-more__btn-link" href="#">
                     <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
                     </svg>
@@ -225,48 +225,50 @@
 
             <ul class="menu-more__list">
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         О нас
                     </a>
                 </li>
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         Веломастерская
                     </a>
                 </li>
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         Хранение
                     </a>
                 </li>
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         Гарантии
                     </a>
                 </li>
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         Пользовательское соглашение
                     </a>
                 </li>
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         Доставка и оплата
                     </a>
                 </li>
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         Блог
                     </a>
                 </li>
                 <li class="menu-more__item">
-                    <a href="#" class="menu-more__link">
+                    <a class="menu-more__link" href="#">
                         Контакты
                     </a>
                 </li>
             </ul>
 
-        </div>
+        </nav>
+
+        <div class="menu-more__overlay hidden"></div>
 
     </header>
 
@@ -531,7 +533,7 @@
             </div>
         </section>
 
-        <section class="catalog">
+        <section class="catalog" id="catalog">
             <div class="container">
                 <div class="catalog__inner">
                     <h2 class="title catalog__title">
@@ -540,7 +542,7 @@
                     <div class="catalog__items">
                         <div class="catalog__item catalog__item-bike"
                             style="background-image: url(images/bike-bg.png);">
-                            <a class="title title__catalog-item title__item-bike" href="#">
+                            <a class="title title__catalog-item title__item-bike catalog__title-bike" href="#">
                                 Велосипеды
                             </a>
                         </div>
@@ -1372,32 +1374,32 @@
                             </h6>
                             <ul class="footer__content-menu-items">
                                 <li class="footer__content-item">
-                                    <a class="footer__content-link" href="#">
+                                    <a class="footer__content-link" href="#catalog">
                                         Trade-in
                                     </a>
                                 </li>
                                 <li class="footer__content-item">
-                                    <a class="footer__content-link" href="#">
+                                    <a class="footer__content-link" href="#catalog">
                                         Велосипеды
                                     </a>
                                 </li>
                                 <li class="footer__content-item">
-                                    <a class="footer__content-link" href="#">
+                                    <a class="footer__content-link" href="#catalog">
                                         Экипировка
                                     </a>
                                 </li>
                                 <li class="footer__content-item">
-                                    <a class="footer__content-link" href="#">
+                                    <a class="footer__content-link" href="#catalog">
                                         Запчасти
                                     </a>
                                 </li>
                                 <li class="footer__content-item">
-                                    <a class="footer__content-link" href="#">
+                                    <a class="footer__content-link" href="#catalog">
                                         Велостанки
                                     </a>
                                 </li>
                                 <li class="footer__content-item">
-                                    <a class="footer__content-link" href="#">
+                                    <a class="footer__content-link" href="#catalog">
                                         Аксессуары
                                     </a>
                                 </li>
