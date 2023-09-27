@@ -25,6 +25,15 @@
     padding: 16px 80px;
     background-color: $orange;
     border-radius: 10px;
+    transition: background-color .25s ease;
+    
+    &:hover {
+        background-color: $orange-light;
+    }
+
+    &:active {
+        background-color: $orange-deep;
+    }
 }
 
 @mixin product-item-title {
@@ -66,6 +75,15 @@
     background-color: $orange;
     text-align: center;
     margin-top: 33px;
+    transition: background-color .25s ease;
+    
+    &:hover {
+        background-color: $orange-light;
+    }
+    
+    &:active {
+        background-color: $orange-deep;
+    }
 
     p {
         display: inline-block;

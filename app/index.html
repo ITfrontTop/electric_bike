@@ -212,7 +212,7 @@
         <nav class="menu-more">
 
             <div class="menu-more__btn">
-                <a class="menu-more__btn-link" href="#">
+                <a class="menu-more__btn-link" href="#"> 
                     <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
                     </svg>
@@ -1326,18 +1326,18 @@
     </main>
 
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer__subscription">
             <div class="container">
                 <div class="footer__subscription-inner">
                     <h2 class="title footer__title">
                         Подпишитесь на наши новости
                     </h2>
-                    <form class="footer__subscription-form" action="#">
+                    <form class="footer__subscription-form" action="#footer">
 
                         <div class="footer__subscription-email">
                             <input class="footer__subscription-input" type="email" placeholder="E-mail">
-                            <button class="footer__subscription-btn">
+                            <button class="footer__subscription-btn" type="submit">
                                 Подписаться
                             </button>
                         </div>
@@ -1349,6 +1349,26 @@
                         </label>
 
                     </form>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="popup__close">
+                            <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                            </svg>
+                        </div>
+                        <div class="popup__img">
+                            <svg width="98" height="99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y=".5" width="98" height="98" rx="49" fill="#F57520" />
+                                <path d="M21 51.91L38.69 69.5 78 26.5" stroke="#fff" stroke-width="8.167" />
+                            </svg>
+                        </div>
+                        <h2 class="title popup__title">
+                            Благодарим за подписку!
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>

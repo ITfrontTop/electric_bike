@@ -109,3 +109,48 @@ menuMoreBtn.forEach(button => button.addEventListener('click', openMenuMore))
 closeBtn.addEventListener('click', closeMenuMore)
 overlay.addEventListener('click', closeMenuMore)
 
+
+// subscription popup
+// кнопка, после нажатия которой появляеться popup
+const popupLink = document.querySelectorAll('.footer__subscription-btn')
+// close btn
+const closeBtnPopup = document.querySelector('.popup__close')
+// Затемненный фон
+const popupBody = document.querySelector('.popup__body')
+
+// Input формы
+const inputForm = document.querySelectorAll('.footer__subscription-input')
+
+// Чтобы блокировать скролл нужно body
+// const popup = document.querySelector('.popup')
+
+const openPopup = function() {
+    popup.classList.add('open')
+}
+
+const closePopup = function() {
+    popup.classList.remove('open')
+}
+
+// Проверка на валидность input
+const validateForm = function() {
+    for(const input of inputForm) {
+        if(input.validity.valid) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+popupLink.forEach(button => button.addEventListener('click', function() {
+    if(validateForm()) {
+        openPopup()
+    } else {
+        return
+    }
+}
+))
+
+closeBtnPopup.addEventListener('click', closePopup)
+popupBody.addEventListener('click', closePopup)
