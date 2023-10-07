@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/style.min.css">
 
+    <script src="js/main.min.js" defer></script>
 </head>
 
 <body>
@@ -212,7 +213,10 @@
         <nav class="menu-more">
 
             <div class="menu-more__btn">
-                <a class="menu-more__btn-link" href="#"> 
+                <div class="logo__black">
+                    <img src="images/logo-black.svg" alt="logo">
+                </div>
+                <a class="menu-more__btn-link" href="#">
                     <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
                     </svg>
@@ -222,6 +226,83 @@
             <h4 class="sutitle menu-more__sutitle">
                 Доп. Информация
             </h4>
+
+            <div class="menu-main">
+                <ul class="menu-main__items">
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            TRADE IN
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велосипеды
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Запчасти
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Экипировка
+                        </a>
+                        <ul class="menu-main__equipment close-menu">
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Велокуртки
+                                </a>
+                            </li>
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Велотрусы
+                                </a>
+                            </li>
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Термобелье
+                                </a>
+                            </li>
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Велообувь
+                                </a>
+                            </li>
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Велошлемы
+                                </a>
+                            </li>
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Велоперчатки
+                                </a>
+                            </li>
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Очки
+                                </a>
+                            </li>
+                            <li class="menu-main__equipment-item">
+                                <a class="menu-main__equipment-link" href="#">
+                                    Аксессуары
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велостанки
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
             <ul class="menu-more__list">
                 <li class="menu-more__item">
@@ -1254,15 +1335,15 @@
                             <a class="reviews__link" href="#">
                                 Подробнее
                             </a>
-                        </div>
-
-                    </div> -->
+                        </div> -->
 
                     </div>
-                    <a class="show-all" href="#">
-                        показать все
-                    </a>
+
                 </div>
+                <a class="show-all" href="#">
+                    показать все
+                </a>
+            </div>
             </div>
         </section>
 
@@ -1356,7 +1437,8 @@
                     <div class="popup__content">
                         <div class="popup__close">
                             <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                                <path stroke="#B3B3B3" stroke-width="2"
+                                    d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
                             </svg>
                         </div>
                         <div class="popup__img">
@@ -1516,7 +1598,7 @@
 
 
 
-    <script src="js/main.min.js"></script>
+
 </body>
 
 </html>

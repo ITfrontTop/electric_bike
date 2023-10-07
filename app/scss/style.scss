@@ -1699,3 +1699,46 @@
         text-transform: uppercase;
     }
 }
+
+
+
+
+/* media */
+
+
+/*
+.menu-main
+.logo__black
+*/
+
+
+.menu-main__item-link {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: $grey-bg;
+}
+
+
+
+.menu-main__item + .menu-main__item{
+    margin-top: 8px;
+}
+
+
+
+
+
+/* submenu */
+.menu-main__equipment {
+    visibility: visible;
+    transition: transform 1s ease;
+    height: auto;
+}
+
+.close-menu {
+    visibility: hidden;
+    transition: transform 1s ease;
+    height: 0;
+}

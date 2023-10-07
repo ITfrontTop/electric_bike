@@ -110,6 +110,27 @@ closeBtn.addEventListener('click', closeMenuMore)
 overlay.addEventListener('click', closeMenuMore)
 
 
+
+// main menu
+const linkForSubMainMenu = document.querySelectorAll('.menu-main__item')
+const linksSubMenu = document.querySelector('.menu-main__equipment')
+
+// Проверяем есть или нет класса, и добавляем или удаляем
+const openCloseSubMenu = function() {
+    if(linksSubMenu.classList.contains('close-menu')) {
+        linksSubMenu.classList.remove('close-menu')
+    } else {
+        linksSubMenu.classList.add('close-menu')
+    }
+}
+
+linkForSubMainMenu.forEach(button => button.addEventListener('click', openCloseSubMenu))
+
+
+
+
+
+
 // subscription popup
 // кнопка, после нажатия которой появляеться popup
 const popupLink = document.querySelectorAll('.footer__subscription-btn')
