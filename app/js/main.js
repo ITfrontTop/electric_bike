@@ -19,13 +19,23 @@ const swiper = new Swiper ('.header-slider__swiper', {
 const novelties = new Swiper ('.novelties-slider', {
     speed: 1000,
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 40,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
+    breakpoints: {
+        // when window width is >= 320px
+        720: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1240: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+    },
 })
 
 
@@ -114,24 +124,45 @@ overlay.addEventListener('click', closeMenuMore)
 
 
 
-// main menu
+// // main menu
+// // new code
+const boxes = Array.from(document.querySelectorAll('.menu-main__item-link'))
 
-// old code
-// const linkForSubMainMenu = document.querySelectorAll('.menu-main__item')
-// const linksSubMenu = document.querySelector('.menu-main__equipment')
+
+boxes.forEach(box => {
+    box.addEventListener('click', boxHandler)
+})
+
+function boxHandler(e) {
+    e.preventDefault()
+    let currentBox = e.target.closest('.menu-main__item-link')
+    let currentContent = e.target.nextElementSibling
+    currentBox.classList.toggle('active')
+
+    if(currentBox.classList.contains('active')) {
+        // Чтобы box раскрывался плавно
+        currentContent.style.maxHeight = currentContent.scrollHeight + 'px'
+    } else {
+        currentContent.style.maxHeight = 0
+    }
+}
+
+
+// // old code
+// const linkForSubMainMenu = document.querySelectorAll('.menu-main__item-link')
+// const linksSubMenu = document.querySelector('.menu-main__subitems')
 
 // // Проверяем есть или нет класса, и добавляем или удаляем
 // const openCloseSubMenu = function() {
-//     if(linksSubMenu.classList.contains('close-menu')) {
-//         linksSubMenu.classList.remove('close-menu')
+//     if(linksSubMenu.classList.contains('hidden')) {
+//         linksSubMenu.classList.remove('hidden')
 //     } else {
-//         linksSubMenu.classList.add('close-menu')
+//         linksSubMenu.classList.add('hidden')
 //     }
 // }
 
 // linkForSubMainMenu.forEach(button => button.addEventListener('click', openCloseSubMenu))
 
-// new code
 
 
 

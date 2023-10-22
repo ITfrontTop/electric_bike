@@ -22,11 +22,10 @@
 .header {
     background-image: url(../images/header-bg.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 63% 50%;
     background-size: cover;
     height: 875px;
 
-    position: relative;
 
     /* all pages */
     &__pages {
@@ -206,6 +205,141 @@
     }
 }
 
+/* menu-main ***************************/
+.menu-main {
+    padding: 16px 16px 40px;
+}
+
+/* .logo__black */
+.menu-more__btn {
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.menu-main__subitem {
+    @include flex-center-sb;
+}
+
+.menu-main__item-link {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: $grey-bg;
+    @extend %inter-500;
+    font-size: 18px;
+    color: $black;
+    line-height: 28px;
+    letter-spacing: 0.18px;
+    transition: all .2s ease;
+
+    /* position */
+    position: relative;
+
+    &:hover {
+
+        color: $white;
+        background-color: $orange-light;
+
+        &:after {
+            background-image: url(../images/arrow-more-menu-white.svg);
+            transform: rotate(180deg) translateY(50%);
+        }
+    }
+
+    &:after {
+
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 14px;
+        background-image: url(../images/arrow-more-menu-black.svg);
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+    }
+
+    &:active {
+
+        background-color: $orange-deep;
+    }
+
+    &.active {
+
+        color: $white;
+        background-color: $orange-light;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 14px;
+            background-image: url(../images/arrow-more-menu-white.svg);
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px;
+
+        }
+    }
+}
+
+.menu-main__item+.menu-main__item {
+    margin-top: 8px;
+
+}
+
+/* submenu all links*/
+.menu-main__subitems {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 14px;
+    position: relative;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s;
+}
+
+.menu-main__subitem-item {
+
+    display: inline-block;
+    padding: 8px 16px;
+
+    &:first-child {
+        padding-top: 26px;
+    }
+
+    &:last-child {
+        padding-bottom: 26px;
+    }
+}
+
+/* submenu link*/
+.menu-main__subitem-link {
+
+    /* %inter-500 don't correct, need %inter-400, but it dont work */
+    @extend %inter-500;
+    font-size: 16px;
+    color: $grey-deep-medium;
+    line-height: 25px;
+    transition: color .2s ease;
+
+    &:hover {
+        color: $orange;
+    }
+}
+
+.logo__black {
+    display: none;
+}
+
+.menu-main {
+    display: none;
+}
+
+/* menu-main ***************************/
 
 .user-nav {
     &__wrapper {
@@ -1703,42 +1837,220 @@
 
 
 
+
+
+
+
+
+
+
+
 /* media */
+@media (max-width: 1800px) {
+    .more {
+        margin-bottom: 0;
+    }
 
+    .brand {
+        margin-bottom: 0;
+        height: 207px;
+    }
 
+    .brand__inner {
+        gap: 24px;
+        overflow-x: hidden;
+    }
+    
+    .brand__img-box {
+        flex: 0 0 auto;
+    }
 
-
-/*
-.menu-main
-.logo__black
-*/
-
-
-.menu-main__item-link {
-    display: inline-block;
-    width: 100%;
-    padding: 16px;
-    border-radius: 10px;
-    background-color: $grey-bg;
 }
 
 
+@media (max-width: 1340px) {
+    .header {
+        height: auto;
+    }
 
-.menu-main__item + .menu-main__item{
-    margin-top: 8px;
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-main {
+        display: block;
+        padding: 16px 0 40px 0;
+    }
+
+    .menu-more__sutitle {
+        display: none;
+    }
+
+    .menu-more {
+        padding: 16px 20px 40px;
+        display: block;
+
+        /*position: absolute; так должно быть*/
+        position: fixed;
+
+        height: auto;
+
+        &__list {
+            padding: 0 16px;
+        }
+    }
+
+    .menu-more__btn {
+        display: block;
+        @include flex-center-sb;
+        height: 100px;
+    }
+
+    .more__item-race {
+        width: 300px;
+    }
+
+    .logo__black {
+        display: block;
+    }
+
+
 }
 
 
+@media (max-width: 1240px) {
+    .more__inner {
+        flex-direction: column;
+    }
 
-/* submenu */
-.menu-main__subitem {
-    visibility: visible;
-    transition: transform 1s ease;
-    height: auto;
+    .more__item {
+        padding: 20px;
+    }
+
+    .more__item-link {
+        display: block;
+    }
+
+    .more__item-title {
+        margin-bottom: 25px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0.18px;
+    }
+
+    .more__item:hover {
+        .more__item-title {
+            margin-bottom: 25px;
+        }
+    }
+
+    .more__extreme,
+    .more__profi,
+    .more__race {
+        height: auto;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .more__item-extreme {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .more__item-profi {
+        width: 100%;
+    }
+
+    .more__item-race {
+        width: 100%;
+    }
+
+    .more__profi {
+        width: 100%;
+        margin-right: 0;
+
+    }
+
+    .product-item__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .novelties {
+        padding: 40px 0;
+    }
+
 }
 
-.close-menu {
-    visibility: hidden;
-    transition: transform 1s ease;
-    height: 0;
+
+@media (max-width: 1000px) {
+
+    .header-slider__title {
+        font-size: 80px;
+        line-height: 100px;
+        max-width: 500px;
+    }
+
+
+    .swiper-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet-active {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .header-slider {
+        margin-top: 200px;
+    }
+
+    .header-slider__title {
+        font-size: 60px;
+        line-height: 80px;
+        max-width: 300px;
+    }
+
+    .header-slider__btn {
+        padding: 16px 50px;
+    }
+
+    .swiper-pagination {
+        margin-top: 43px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .user-nav__wrapper {
+        column-gap: 24px;
+    }
+
+    .user-nav__items {
+        column-gap: 16px;
+    }
+
+    .header-slider {
+        margin-top: 150px;
+    }
+
+    .show-all {
+        font-size: 12px;
+    }
 }
