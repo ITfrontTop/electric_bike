@@ -26,7 +26,6 @@ const novelties = new Swiper ('.novelties-slider', {
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        // when window width is >= 320px
         720: {
           slidesPerView: 2,
           spaceBetween: 40,
@@ -42,15 +41,25 @@ const novelties = new Swiper ('.novelties-slider', {
 const best_winter = new Swiper ('.best-winter__slider', {
     speed: 1000,
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1, 
     spaceBetween: 40,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    autoplay: {
-        delay: 3000,
+    breakpoints: {
+        720: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1340: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
     },
+    // autoplay: {
+    //     delay: 3000,
+    // },
 
 })
 
@@ -58,11 +67,21 @@ const best_winter = new Swiper ('.best-winter__slider', {
 const equipment = new Swiper ('.equipment__slider', {
     speed: 1000,
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 40,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        720: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1240: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
     },
 })
 
@@ -118,6 +137,7 @@ menuMoreBtn.forEach(button => button.addEventListener('click', openMenuMore))
 
 closeBtn.addEventListener('click', closeMenuMore)
 overlay.addEventListener('click', closeMenuMore)
+
 
 
 

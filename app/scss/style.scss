@@ -999,6 +999,10 @@
         transform: translate(-50%, -50%);
         z-index: 2;
     }
+
+    &__btn-img {
+        display: none;
+    }
 }
 
 
@@ -1071,26 +1075,10 @@
         display: flex;
         height: 770px;
         background-color: $black;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 345px;
-            height: 506px;
-            background: url(../images/best-winter-bg-right.png), lightgray -205.122px 0.001px / 129.945% 140.454% no-repeat;
-            @include background-image-property;
-
-        }
     }
 
     &__title-box {
         width: 645px;
-        background: url(../images/best-winter-bg-left.png);
-        background-repeat: no-repeat;
-        background-position: left bottom;
         background-size: 685px 634px;
         position: relative;
     }
@@ -1860,9 +1848,55 @@
         gap: 24px;
         overflow-x: hidden;
     }
-    
+
     .brand__img-box {
         flex: 0 0 auto;
+    }
+
+    .best-winter__inner {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .best-winter__title {
+        max-width: 100%;
+        color: #fff;
+        position: relative;
+        right: 0;
+        top: 0;
+        padding-top: 40px;
+
+    }
+
+    .best-winter__title-box {
+        position: relative;
+        width: 100%;
+    }
+
+    .best-winter__slider-inner {
+        margin-top: 50px;
+    }
+
+    .product-item__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .best-winter__inner {
+        padding-bottom: 15px;
+    }
+
+    .advantages__decor-big {
+        display: none;
+    }
+
+    .advantages__decor-smoll {
+        display: none;
+    }
+
+    .reviews__items {
+        margin-right: 0;
     }
 
 }
@@ -1894,14 +1928,19 @@
     .menu-more {
         padding: 16px 20px 40px;
         display: block;
+        height: auto;
 
         /*position: absolute; так должно быть*/
         position: fixed;
 
-        height: auto;
-
         &__list {
             padding: 0 16px;
+        }
+    }
+
+    .menu-more.show {
+        &:hover {
+            position: absolute;
         }
     }
 
@@ -1919,6 +1958,124 @@
         display: block;
     }
 
+    .catalog__inner {
+        padding: 80px 0;
+    }
+
+    .catalog__items {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .catalog__items-box {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .catalog__item-bike {
+        width: 100%;
+        height: 200px;
+        padding-left: 0;
+    }
+
+    .catalog__item-trade-in {
+        max-width: 100%;
+        height: 200px;
+        background-position: left bottom;
+    }
+
+    .catalog__item-spares {
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .catalog__item-accessory {
+        margin-top: 0;
+    }
+
+    .catalog__item-kit {
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .catalog__item-accessory {
+        max-width: 100%;
+        height: 200px
+    }
+
+    .catalog__item-stand {
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .catalog__title-bike,
+    .catalog__title-trade-in,
+    .catalog__title-spares,
+    .catalog__title-kit,
+    .catalog__title-accessory,
+    .catalog__title-stand {
+        padding: 0;
+    }
+
+    .catalog__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .catalog__info {
+        margin-top: 80px;
+        flex-direction: column;
+    }
+
+    .catalog__title-info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .serveces__items {
+        gap: 44px;
+        flex-direction: column;
+    }
+
+    .serveces__inner {
+        padding: 20px;
+        height: auto;
+    }
+
+    .product-item__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .best-winter {
+        display: none;
+    }
+
+    .equipment-item__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .reviews {
+        margin: 50px 0;
+    }
+
+    .reviews__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .contacts {
+        margin: 80px 0;
+    }
+
+    .contacts__info {
+        gap: 30px;
+        flex-direction: column;
+    }
 
 }
 
@@ -1979,17 +2136,45 @@
 
     }
 
-    .product-item__img {
-        display: flex;
-        justify-content: center;
-    }
-
     .title {
         font-size: 50px;
+        line-height: 52px;
     }
 
     .novelties {
         padding: 40px 0;
+    }
+
+    .mountain {
+        padding: 40px 0;
+    }
+
+    .mountain__title {
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .mountain__info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .advantages {
+        margin: 40px 0 60px;
+    }
+
+    .reviews {
+        margin: 80px 0;
+    }
+
+    .contacts__title {
+        margin-bottom: 32px;
+    }
+
+    .footer__content-inner {
+        padding: 50px 0 40px;
+        flex-direction: column;
+        gap: 20px;
     }
 
 }
@@ -2003,7 +2188,6 @@
         max-width: 500px;
     }
 
-
     .swiper-pagination .swiper-pagination-bullet {
         width: 8px;
         height: 8px;
@@ -2012,6 +2196,19 @@
     .swiper-pagination .swiper-pagination-bullet-active {
         width: 12px;
         height: 12px;
+    }
+
+    .contacts {
+        margin: 35px 0;
+    }
+
+
+}
+
+@media (max-width: 850px) {
+    .footer__content-menu {
+        gap: 30px;
+        flex-direction: column;
     }
 }
 
@@ -2034,6 +2231,69 @@
     .swiper-pagination {
         margin-top: 43px;
     }
+
+    .catalog__inner {
+        padding: 48px 0 32px;
+    }
+
+    .video__btn-img {
+        display: block;
+    }
+
+    .video__btn-img-big {
+        display: none;
+    }
+
+    .mountain__details {
+        grid-template-columns: repeat(1, 302px);
+        grid-template-rows: repeat(4, 233px);
+    }
+
+    .advantages__serveces {
+        grid-template-columns: repeat(1, 290px);
+        grid-template-rows: repeat(4, 267px);
+    }
+
+    .equipment {
+        padding: 40px 0;
+    }
+
+    .show-all {
+        margin-top: 24px;
+    }
+
+    .equipment__title {
+        margin-bottom: 32px;
+    }
+
+    .footer__content-logo {
+        margin-top: 0;
+    }
+
+    .footer__subscription {
+        background-size: cover;
+    }
+
+    .footer__subscription-email {
+        align-items: flex-start;
+        margin-bottom: 14px;
+        flex-direction: column;
+    }
+
+    .footer__subscription-inner {
+        height: 310px;
+    }
+
+    .footer__subscription {
+        background-image: none;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .menu-more {
+        width: 100%;
+    }
 }
 
 
@@ -2052,5 +2312,62 @@
 
     .show-all {
         font-size: 12px;
+    }
+
+    .video__btn-link {
+        svg {
+            width: 60;
+            height: 60;
+        }
+    }
+
+    .serveces__item-title {
+        font-size: 15px;
+        padding-left: 50px;
+    }
+
+    .serveces__inner {
+        padding: 20px;
+    }
+
+    .serveces__inner {
+        padding: 10px;
+    }
+
+    .mountain__details {
+        grid-template-columns: repeat(1, 270px);
+        grid-template-rows: repeat(4, 233px);
+    }
+
+    .advantages__title {
+        font-size: 45px;
+    }
+
+    .reviews__item {
+        width: 280px;
+    }
+
+    .reviews__text {
+        height: 160px;
+    }
+
+    .footer__subscription-inner {
+        height: 370px;
+    }
+
+    .footer__subscription-btn {
+        width: 100%;
+    }
+
+    .footer__subscription-input {
+        max-width: 100%;
+    }
+
+    .footer__copy-inner {
+        flex-direction: column;
+    }
+
+    .footer__title {
+        font-size: 48px;
     }
 }
