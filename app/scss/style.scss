@@ -138,17 +138,32 @@
         width: 448px;
         height: 1087px;
         /*height: 100vh;*/
+        /*position: fixed;*/
         background-color: $white;
         padding: 40px;
-        position: fixed;
+        
+
+
+        position: absolute;
         top: 0;
-        right: -448px;
-        transition: right .3s ease;
+        right: 0;
+        transform: translateY(-100%);
+        transition: transform .5s ease;
+
+        /*right: -448px;
+        transition: right .3s ease;*/
+
+
+
 
         &.show {
+            /*transition: right .5s ease;
+            right: 0;*/
 
-            transition: right .5s ease;
-            right: 0;
+            transform: translateY(0);
+            transition: transform .5s ease;
+
+
         }
 
 
@@ -208,98 +223,104 @@
 /* menu-main ***************************/
 .menu-main {
     padding: 16px 16px 40px;
-}
 
-/* .logo__black */
-.menu-more__btn {
-    display: flex;
-    justify-content: flex-end;
-    height: auto;
-}
+    /* .logo__black */
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+        height: auto;
+    }
 
-.menu-main__subitem {
-    @include flex-center-sb;
-}
+    &__subitem {
+        @include flex-center-sb;
+    }
 
-.menu-main__item-link {
-    display: inline-block;
-    width: 100%;
-    padding: 16px;
-    border-radius: 10px;
-    background-color: $grey-bg;
-    @extend %inter-500;
-    font-size: 18px;
-    color: $black;
-    line-height: 28px;
-    letter-spacing: 0.18px;
-    transition: all .2s ease;
-
-    /* position */
-    position: relative;
-
-    &:hover {
-
-        color: $white;
-        background-color: $orange-light;
-
-        &:after {
-            background-image: url(../images/arrow-more-menu-white.svg);
-            transform: rotate(180deg) translateY(50%);
+    &__item-link {
+        display: inline-block;
+        width: 100%;
+        padding: 16px;
+        border-radius: 10px;
+        background-color: $grey-bg;
+        @extend %inter-500;
+        font-size: 18px;
+        color: $black;
+        line-height: 28px;
+        letter-spacing: 0.18px;
+        transition: all .2s ease;
+    
+        /* position */
+        position: relative;
+    
+        &:hover {
+    
+            color: $white;
+            background-color: $orange-light;
+    
+            &:after {
+                background-image: url(../images/arrow-more-menu-white.svg);
+                transform: rotate(180deg) translateY(50%);
+            }
         }
-    }
-
-    &:after {
-
-        content: '';
-        position: absolute;
-        width: 24px;
-        height: 14px;
-        background-image: url(../images/arrow-more-menu-black.svg);
-        top: 50%;
-        transform: translateY(-50%);
-        right: 16px;
-    }
-
-    &:active {
-
-        background-color: $orange-deep;
-    }
-
-    &.active {
-
-        color: $white;
-        background-color: $orange-light;
-
+    
         &:after {
+    
             content: '';
             position: absolute;
             width: 24px;
             height: 14px;
-            background-image: url(../images/arrow-more-menu-white.svg);
+            background-image: url(../images/arrow-more-menu-black.svg);
             top: 50%;
             transform: translateY(-50%);
             right: 16px;
-
+        }
+    
+        &:active {
+    
+            background-color: $orange-deep;
+        }
+    
+        &.active {
+    
+            color: $white;
+            background-color: $orange-light;
+    
+            &:after {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 14px;
+                background-image: url(../images/arrow-more-menu-white.svg);
+                top: 50%;
+                transform: translateY(-50%);
+                right: 16px;
+    
+            }
         }
     }
-}
 
-.menu-main__item+.menu-main__item {
-    margin-top: 8px;
+    &__traid-in {
+        color: $orange;
+        &::after {
+            display: none;
+        }
+    }
 
-}
+    &__item+.menu-main__item {
+        margin-top: 8px;
+    
+    }
 
-/* submenu all links*/
-.menu-main__subitems {
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 14px;
-    position: relative;
-    overflow: hidden;
-    max-height: 0;
-    transition: .3s;
+    /* submenu all links*/
+    &__subitems {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 14px;
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: .3s;
+    }
 }
 
 .menu-main__subitem-item {
@@ -330,17 +351,17 @@
         color: $orange;
     }
 }
-
+/* don't move this code */
 .logo__black {
     display: none;
 }
-
 .menu-main {
     display: none;
 }
 
-/* menu-main ***************************/
 
+
+/* user-nav */
 .user-nav {
     &__wrapper {
         @include flex;
@@ -1826,6 +1847,86 @@
 
 
 
+/* shop pages */
+
+/* header pages */
+.header {
+    &__pages-content {
+        height: 278px;
+        background-image: url(../images/header-shop-bg.png);
+        @include background-image-property;
+    }
+
+
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+    padding: 46px 0 62px;
+
+    &__items {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__item-link {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 14px;
+        line-height: 22px;
+        color: $white;
+
+        &:active {
+            color: $orange-deep;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+
+        &::after {
+            /* %inter-500 don't correct, need %inter-400, but it dont work */
+            @extend %inter-500;
+            color: $white;
+            content: '/';
+            position: absolute;
+            width: 5px;
+            height: 14px;
+            top: 0;
+            right: -10px;
+        }
+
+        &:last-child {
+            .breadcrumbs__item-link {
+                color: $orange;
+
+                &:active {
+                    color: $orange-deep;
+                }
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.shop {
+    &__title {
+        color: $white;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1929,9 +2030,6 @@
         padding: 16px 20px 40px;
         display: block;
         height: auto;
-
-        /*position: absolute; так должно быть */
-        position: fixed;
 
         &__list {
             padding: 0 16px;
