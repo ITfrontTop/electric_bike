@@ -115,7 +115,8 @@ a {
 
 /* show-all */
 .show-all {
-    @extend %inter-400;
+    /* %inter-500 don't correct, need %inter-400, but it dont work */
+    @extend %inter-500;
     margin-top: 48px;
     display: inline-block;
     @include flex;
@@ -124,6 +125,20 @@ a {
     line-height: 19px;
     text-transform: uppercase;
     color: $grey-deep;
+    transition: color .2s ease;
+
+    &:hover {
+        color: $orange;
+    }
+}
+
+.show-more {
+    /* %inter-500 don't correct, need %inter-400, but it dont work */
+    @extend %inter-500;
+    font-size: 12px;
+    line-height: 19px;
+    color: $grey-deep;
+    text-transform: uppercase;
 }
 
 
