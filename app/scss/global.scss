@@ -139,6 +139,16 @@ a {
     line-height: 19px;
     color: $grey-deep;
     text-transform: uppercase;
+    transition: color .2s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: $orange;
+    }
+
+    &:active {
+        color: $orange-deep;
+    }
 }
 
 
@@ -147,5 +157,98 @@ a {
     display: none;
     height: 0;
     visibility: hidden;
-    
+
+}
+
+
+/* style checkbox list */
+.check-list {
+    border-bottom: 1px solid $grey-light-bright;
+
+    &__item {
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+    }
+
+    &__item-label {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 15px;
+        line-height: 25px;
+        color: $grey-deep;
+        position: relative;
+        padding-left: 34px;
+        @include flex-center-sb;
+    }
+
+    &__item-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        appearance: none;
+
+        &:checked + .check-list__item-checkbox {
+            color: $orange-deep-black;
+            
+            &::before {
+                background-color: $orange;
+                border: 1px solid $orange;
+            }
+            
+            &::after {
+                background-color: $orange;
+            }
+        }
+    }
+
+    &__item-checkbox {
+        transition: color .2s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: 0;
+            border-radius: 3px;
+            border: 1px solid #777;
+            background-color: $white;
+            transition: all .2s ease;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 14px;
+            background-image: url(../images/check-white-icon.svg);
+            @include background-image-property;
+            top: 5px;
+            left: 3px;
+            transition: all .2s ease;
+        }
+    }
+
+    &__item-text {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 12px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: $grey-light;
+        transition: color .2s ease;
+    }
+
+    &__item-more {
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        padding-bottom: 24px;
+
+    }
+
 }

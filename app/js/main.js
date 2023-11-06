@@ -216,3 +216,7 @@ popupLink.forEach(button => button.addEventListener('click', function() {
 
 closeBtnPopup.addEventListener('click', closePopup)
 popupBody.addEventListener('click', closePopup)
+
+
+
+// показать ещё

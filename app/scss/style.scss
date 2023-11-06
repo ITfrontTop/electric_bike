@@ -141,7 +141,7 @@
         /*position: fixed;*/
         background-color: $white;
         padding: 40px;
-        
+
 
 
         position: absolute;
@@ -247,23 +247,23 @@
         line-height: 28px;
         letter-spacing: 0.18px;
         transition: all .2s ease;
-    
+
         /* position */
         position: relative;
-    
+
         &:hover {
-    
+
             color: $white;
             background-color: $orange-light;
-    
+
             &:after {
                 background-image: url(../images/arrow-more-menu-white.svg);
                 transform: rotate(180deg) translateY(50%);
             }
         }
-    
+
         &:after {
-    
+
             content: '';
             position: absolute;
             width: 24px;
@@ -273,17 +273,17 @@
             transform: translateY(-50%);
             right: 16px;
         }
-    
+
         &:active {
-    
+
             background-color: $orange-deep;
         }
-    
+
         &.active {
-    
+
             color: $white;
             background-color: $orange-light;
-    
+
             &:after {
                 content: '';
                 position: absolute;
@@ -293,13 +293,14 @@
                 top: 50%;
                 transform: translateY(-50%);
                 right: 16px;
-    
+
             }
         }
     }
 
     &__traid-in {
         color: $orange;
+
         &::after {
             display: none;
         }
@@ -307,7 +308,7 @@
 
     &__item+.menu-main__item {
         margin-top: 8px;
-    
+
     }
 
     /* submenu all links*/
@@ -351,10 +352,12 @@
         color: $orange;
     }
 }
+
 /* don't move this code */
 .logo__black {
     display: none;
 }
+
 .menu-main {
     display: none;
 }
@@ -1934,25 +1937,39 @@
 .shop-aside {
     max-width: 290px;
 
+    &__box {
+        padding: 32px 16px;
+    }
+
     &__title {
         @extend %inter-500;
         font-size: 18px;
         line-height: 28px;
         color: $grey-deep-light;
         letter-spacing: .15px;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: '';
+        }
     }
+
+
 }
 
 .shop-content {
     width: 950px;
-    
+
     &__item {
         width: 290px;
         height: 373px;
-        
+
     }
 
 }
+
+
 
 
 /* checkbox switch toggle */
@@ -1964,6 +1981,7 @@
         position: relative;
         width: 100%;
         padding: 0 16px 24px;
+        cursor: pointer;
     }
 
     /* скрываем input */
@@ -1975,7 +1993,7 @@
         appearance: none;
 
         /* когда состояние checked (+ означает соседний елемент)*/
-        &:checked + .presence__item-checkbox {
+        &:checked+.presence__item-checkbox {
             &::before {
                 background-color: $orange;
                 border: 1px solid $orange;
@@ -2008,7 +2026,7 @@
             border-radius: 21px;
             border: 1px solid $grey-light;
             transition: all .3s ease;
-            
+
         }
 
         /* ползунок внутри */
@@ -2026,25 +2044,21 @@
     }
 }
 
-
-
-.category {
-    padding: 32px 16px;
-    border-bottom: 1px solid $grey-light-bright;
-
-    &__item {
-        padding: 24px 0;
+/* shop-aside color */
+.color {
+    &__items {
         display: flex;
-        flex-direction: column;
-        gap: 19px;
+        flex-wrap: wrap;
+        gap: 13px;
+        padding-top: 24px;
     }
 
     &__item-label {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
-        font-size: 16px;
-        line-height: 25px;
-        color: $grey-deep;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        position: relative;
+        
     }
 
     &__item-input {
@@ -2053,12 +2067,49 @@
         width: 0;
         height: 0;
         appearance: none;
+
+        &:checked + .color__item-checkbox {
+            
+            &::after {
+                content: '';
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+                border: 5px solid $grey-deep-medium;
+
+            }
+        }
+
+        &:checked + .color__item-checkbox {
+
+        }
     }
 
-    &__item-checkbox {
-        
+}
+
+
+/* reset */
+
+.reset-filter {
+    &__btn {
+        display: block;
+        width: 100%;
+        padding: 16px 10px;
+        border: 1px solid $grey-light-bright;
+        border-radius: 10px;
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $black;
+        text-align: center;
+        margin-top: 32px;
+
     }
 }
+
 
 
 
