@@ -421,6 +421,7 @@
                             <h6 class="category__title shop-aside__title">
                                 Категории товара
                             </h6>
+
                             <div class="category__item check-list__item">
                                 <label class="category__item-label check-list__item-label">
                                     <input class="category__item-input check-list__item-input" type="checkbox">
@@ -452,9 +453,6 @@
                                         Двухподвесные велосипеды
                                     </span>
                                 </label>
-                            </div>
-
-                            <div class="category__item-more check-list__item-more hidden">
                                 <label class="category__item-label check-list__item-label">
                                     <input class="category__item-input check-list__item-input" type="checkbox">
                                     <span class="category__item-checkbox check-list__item-checkbox">
@@ -488,7 +486,7 @@
                             </div>
 
                             <!-- style in global -->
-                            <p class="show-more">
+                            <p class="show-more-category">
                                 показать ещё
                             </p>
 
@@ -498,7 +496,35 @@
                             <h6 class="price__title shop-aside__title">
                                 Цена
                             </h6>
-                            
+
+                            <div class="price-input">
+                                <div class="slider__wrapper">
+                                    <div class="slider">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="range-input">
+                                        <input type="range" class="range-min" min="0" max="1500000" value="2500" step="1000">
+                                        <input type="range" class="range-max" min="0" max="1500000" value="750000" step="1000">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="field__wrapper">
+                                    <div class="field">
+                                        <span></span>
+                                        <input class="input-min" type="number" value="25000">
+                                    </div>
+                                    <div class="separator">-</div>
+                                    <div class="field">
+                                        <span></span>
+                                        <input class="input-max" type="number" value="750000">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
 
                         </div>
 
@@ -515,7 +541,8 @@
                                     <p class="brand-aside__item-text check-list__item-text">(24)</p>
                                 </label>
                                 <label class="brand-aside__item-label check-list__item-label">
-                                    <input class="brand-aside__item-input check-list__item-input" type="checkbox" checked>
+                                    <input class="brand-aside__item-input check-list__item-input" type="checkbox"
+                                        checked>
                                     <span class="brand-aside__item-checkbox check-list__item-checkbox">
                                         BMC
                                     </span>
@@ -542,9 +569,6 @@
                                     </span>
                                     <p class="brand-aside__item-text check-list__item-text">(19)</p>
                                 </label>
-                            </div>
-
-                            <div class="brand-aside__item-more check-list__item-more">
                                 <label class="brand-aside__item-label check-list__item-label">
                                     <input class="brand-aside__item-input check-list__item-input" type="checkbox">
                                     <span class="brand-aside__item-checkbox check-list__item-checkbox">
@@ -582,7 +606,7 @@
                                 </label>
                             </div>
 
-                            <p class="show-more">
+                            <p class="show-more-brand">
                                 показать ещё
                             </p>
 

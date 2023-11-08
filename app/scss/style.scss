@@ -2044,6 +2044,131 @@
     }
 }
 
+/* price */
+.price-input {
+    
+}
+
+.field {
+    &__wrapper {
+        @include flex-center-sb;
+    }
+
+    input {
+        width: 109px;
+        height: 46px;
+        padding: 10px 16px;
+        outline: none;
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-deep;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid $grey-light-bright;
+        -moz-appearance: textfield;
+    }
+}
+
+/* удаляем стрелки вниз и вверх */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.separator {
+    /* %inter-500 don't correct, need %inter-400, but it dont work */
+    @extend %inter-500;
+    font-size: 16px;
+    line-height: 25px;
+    color: $black-deep;
+
+}
+
+.slider {
+    height: 6px;
+    width: 258px;
+    background-color: $white-light;
+    border-radius: 5px;
+    position: relative;
+
+    &__wrapper {
+        margin: 24px 0 20px;
+    }
+
+    .progress {
+        height: 6px;
+        left: 2%;
+        right: 50%;
+        position: absolute;
+        border-radius: 5px;
+        background-color: $black;
+    }
+}
+
+
+
+.range-input {
+    display: flex;
+    position: relative;
+
+    input {
+        position: absolute;
+        top: -8px;
+        height: 6px;
+        width: 100%;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+
+
+    }
+}
+
+/* делаем ползунки цветом который нам нужно */
+input[type="range"]::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    border: 5px solid $black;
+    background-color: $black;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    pointer-events: auto;
+    -moz-appearance: none;
+    border: 5px solid $black;
+}
+
+
+
+
+
+/* чтобы показывалить 5 пунктов */
+.category {
+    &__item-label {
+        &:nth-child(n + 6) {
+            display: none;
+        }
+    }
+}
+
+/* чтобы показывалить 5 пунктов */
+.brand-aside {
+    &__item-label {
+        &:nth-child(n + 6) {
+            display: none;
+        }
+    }
+}
+
 /* shop-aside color */
 .color {
     &__items {

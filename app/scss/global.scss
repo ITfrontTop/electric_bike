@@ -132,7 +132,8 @@ a {
     }
 }
 
-.show-more {
+.show-more-category,
+.show-more-brand {
     /* %inter-500 don't correct, need %inter-400, but it dont work */
     @extend %inter-500;
     font-size: 12px;
@@ -157,7 +158,6 @@ a {
     display: none;
     height: 0;
     visibility: hidden;
-
 }
 
 
@@ -242,13 +242,13 @@ a {
         color: $grey-light;
         transition: color .2s ease;
     }
+}
 
-    &__item-more {
-        display: flex;
-        flex-direction: column;
-        gap: 19px;
-        padding-bottom: 24px;
 
-    }
+.category__item-label.check-list__item-label.is-visible {
+    display: block;
+}
 
+.brand-aside__item-label.check-list__item-label.is-visible {
+    display: flex;
 }
