@@ -719,32 +719,6 @@
     padding: 18px 16px 20px;
     border-radius: 10px;
     background-color: $white;
-    position: relative;
-
-    /*
-    z-index: -1;
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #2E2E2E;
-        border-radius: 10px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transition: transform .4s ease;
-
-    }
-
-    &:hover::after {
-        border-radius: 10px;
-        transform: scaleY(1.38);
-    }
-    */
 
     &__top {
         @include flex-center-sb;
@@ -1918,24 +1892,23 @@
 }
 
 .shop {
+
     &__title {
         color: $white;
     }
-}
-
-/* shop-aside + shop-content*/
-
-.shop {
 
     &__inner {
         display: flex;
         justify-content: space-between;
+        gap: 40px;
     }
 }
 
 
+/* shop-aside + shop-content*/
+
 .shop-aside {
-    max-width: 290px;
+    width: 290px;
 
     &__box {
         padding: 32px 16px;
@@ -1949,27 +1922,54 @@
         letter-spacing: .15px;
         cursor: pointer;
         position: relative;
+        transition: all .2s ease;
 
+        &:hover {
+            color: $orange-light;
+        }
+
+        /* стрелочка в списках */
         &::after {
             content: '';
+            position: absolute;
+            width: 18px;
+            height: 10px;
+            background-image: url(../images/arrow-grey-up.svg);
+            @include background-image-property;
+            top: 50%;
+            right: 0;
+            transform: rotate(180deg) translateY(50%);
+
         }
     }
-
-
 }
 
-.shop-content {
-    width: 950px;
 
-    &__item {
-        width: 290px;
-        height: 373px;
+
+.category__title.shop-aside__title.active,
+.price__title.shop-aside__title.active,
+.brand__title.shop-aside__title.active,
+.material__title.shop-aside__title.active,
+.color__title.shop-aside__title.active {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 10px;
+        background-image: url(../images/arrow-grey-up.svg);
+        @include background-image-property;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
 
     }
-
 }
 
 
+.shop-aside__title::after.active {
+    transform: rotate(180deg);
+
+}
 
 
 /* checkbox switch toggle */
@@ -2045,9 +2045,7 @@
 }
 
 /* price */
-.price-input {
-    
-}
+.price-input {}
 
 .field {
     &__wrapper {
@@ -2148,9 +2146,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
-
-
-
 /* чтобы показывалить 5 пунктов */
 .category {
     &__item-label {
@@ -2183,7 +2178,7 @@ input[type="range"]::-moz-range-thumb {
         height: 32px;
         border-radius: 50%;
         position: relative;
-        
+
     }
 
     &__item-input {
@@ -2193,8 +2188,8 @@ input[type="range"]::-moz-range-thumb {
         height: 0;
         appearance: none;
 
-        &:checked + .color__item-checkbox {
-            
+        &:checked+.color__item-checkbox {
+
             &::after {
                 content: '';
                 position: absolute;
@@ -2208,16 +2203,12 @@ input[type="range"]::-moz-range-thumb {
             }
         }
 
-        &:checked + .color__item-checkbox {
-
-        }
     }
 
 }
 
 
 /* reset */
-
 .reset-filter {
     &__btn {
         display: block;
@@ -2234,6 +2225,237 @@ input[type="range"]::-moz-range-thumb {
 
     }
 }
+
+
+
+
+
+
+/* shop-content и полная настрой карточки товаров */
+.shop-content {
+    width: 950px;
+
+    &__header {
+        @include flex-center-sb;
+        margin-bottom: 16px;
+    }
+
+    &__view {
+        @include flex-center-sb;
+        gap: 10px;
+    }
+
+    &__view-img {
+        cursor: pointer;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 16px;
+        column-gap: 40px;
+    }
+
+    /* Настройка карточек товаров */
+    &__link-btn-wrapper {
+        display: none;
+    }
+
+    &__item {
+        width: 290px;
+        height: 373px;
+        position: relative;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 0px rgba(186, 186, 186, 0.10),
+                2px 9px 21px 0px rgba(186, 186, 186, 0.10),
+                6px 38px 38px 0px rgba(186, 186, 186, 0.09),
+                14px 84px 51px 0px rgba(186, 186, 186, 0.05),
+                25px 150px 61px 0px rgba(186, 186, 186, 0.01),
+                39px 235px 67px 0px rgba(186, 186, 186, 0.00);
+            
+
+            .shop-content__link-btn-wrapper {
+                display: block;
+                position: absolute;
+                bottom: -70px;
+                left: 0;
+                width: 290px;
+                height: 90px;
+                padding: 0 8px 8px;
+                background-color: $white;
+                border-radius: 0 0 10px 10px;
+                z-index: 100;
+                box-shadow: 0px 0px 0px 0px rgba(186, 186, 186, 0.10),
+                    2px 9px 21px 0px rgba(186, 186, 186, 0.10),
+                    6px 38px 38px 0px rgba(186, 186, 186, 0.09),
+                    14px 84px 51px 0px rgba(186, 186, 186, 0.05),
+                    25px 150px 61px 0px rgba(186, 186, 186, 0.01),
+                    39px 235px 67px 0px rgba(186, 186, 186, 0.00);
+            }
+
+            .shop-content__link-btn {
+                display: block;
+                margin-top: 28px;
+            }
+        }
+
+    }
+
+    /* размеры флага */
+    &__top-box {
+        width: 72px;
+        height: 38px;
+    }
+
+    &__title {
+        margin: 16px 0;
+    }
+}
+
+
+/* блок из скидками */
+.discount {
+    width: 290px;
+    height: 373px;
+    background-color: $black;
+    border-radius: 10px;
+    background-image: url(../images/discount-bg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    padding: 35px 20px;
+    
+    &:hover {
+        box-shadow: 0px 0px 0px 0px rgba(186, 186, 186, 0.10),
+        2px 9px 21px 0px rgba(186, 186, 186, 0.10),
+        6px 38px 38px 0px rgba(186, 186, 186, 0.09),
+        14px 84px 51px 0px rgba(186, 186, 186, 0.05),
+        25px 150px 61px 0px rgba(186, 186, 186, 0.01),
+        39px 235px 67px 0px rgba(186, 186, 186, 0.00);
+    }
+
+    &__promotion {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: .24px;
+        color: $grey-deep-medium;
+        margin-bottom: 8px;
+    }
+
+    &__rebate {
+        @extend %bebas-400;
+        font-size: 64px;
+        letter-spacing: 3.2px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+    }
+
+    &__equipment {
+        @extend %bebas-400;
+        font-size: 40px;
+        line-height: 49px;
+        letter-spacing: 2px;
+        color: $orange;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+
+/*****
+****
+*****
+*****
+*****
+*****
+*****
+
+
+* переместить в верх SCSS файла */
+
+/* скопировать в info.doc */
+/* select style*/
+.select {
+    /* стилизуем текст */
+    @extend %inter-500;
+    font-size: 16px;
+    color: $grey-deep;
+
+    /* убираем браузерную стрелку */
+    appearance: none;
+
+    /* задаем свой фон и рамку */
+    border: 1px solid $white-light;
+    border-radius: 10px;
+
+    /* jnxnegs jn hfvrb lj ntrcnf */
+    padding: 20px 44px 20px 16px;
+
+    outline: none;
+    cursor: pointer;
+
+    /* добавляем нужный outline  */
+    &:focus {
+        box-shadow: 0px 0px 0px 1px $grey-light, 0px 0px 10px $grey-light-bright;
+    }
+}
+
+/* убрать стрелочку в IE 10 и IE 11 */
+.select::-ms-expand {
+    display: none;
+}
+
+.select-wrapper {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+
+        /* вставляем стрелку */
+        width: 18px;
+        height: 10px;
+        background-image: url(../images/arrow-grey-down.svg);
+        @include background-image-property;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+
+        /* снять клик из стрелочки */
+        pointer-events: none;
+    }
+}
+
+
+/* 
+    select с dropdown на JS 
+*/
+.dropdown__button {
+    /* задаем нужные стили */
+    position: relative;
+    @extend %inter-500;
+    font-size: 16px;
+    color: $grey-deep;
+    appearance: none;
+    outline: none;
+    background-color: $white;
+    border: 1px solid $white-light;
+    border-radius: 10px;
+    padding: 20px 44px 20px 16px;
+    cursor: pointer;
+
+}
+
+
+
+
+
 
 
 

@@ -294,9 +294,6 @@ priceInput.forEach(input => {
                 progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + '%'
             }
         }
-
-
-
     })
 })
 
@@ -319,8 +316,19 @@ rangeInput.forEach(input => {
             progress.style.left = (minVal / rangeInput[0].max) * 100 + '%'
             progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + '%'
         }
-
-
-
     })
 })
+
+
+
+// скрытие фильтров на shop-aside
+const headerShopAside = document.querySelectorAll('[data-name="accordeon-title"]')
+
+headerShopAside.forEach(item => {
+    item.addEventListener('click', showShopAside)
+})
+
+function showShopAside() {
+    this.nextElementSibling.classList.toggle('hidden')
+    this.classList.toggle('active')
+}
