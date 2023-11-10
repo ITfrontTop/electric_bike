@@ -2234,6 +2234,7 @@ input[type="range"]::-moz-range-thumb {
 /* shop-content и полная настрой карточки товаров */
 .shop-content {
     width: 950px;
+    margin-bottom: 160px;
 
     &__header {
         @include flex-center-sb;
@@ -2255,6 +2256,8 @@ input[type="range"]::-moz-range-thumb {
         flex-wrap: wrap;
         row-gap: 16px;
         column-gap: 40px;
+        margin-bottom: 78px;
+
     }
 
     /* Настройка карточек товаров */
@@ -2274,7 +2277,7 @@ input[type="range"]::-moz-range-thumb {
                 14px 84px 51px 0px rgba(186, 186, 186, 0.05),
                 25px 150px 61px 0px rgba(186, 186, 186, 0.01),
                 39px 235px 67px 0px rgba(186, 186, 186, 0.00);
-            
+
 
             .shop-content__link-btn-wrapper {
                 display: block;
@@ -2312,6 +2315,73 @@ input[type="range"]::-moz-range-thumb {
     &__title {
         margin: 16px 0;
     }
+
+
+    /* shop content pagination */
+    &__pagination-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__arrows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 4px;
+    }
+
+    &__left-two,
+    &__left,
+    &__right,
+    &__right-two {
+        @include flex-center-jc-center;
+    }
+
+    &__arrow,
+    &__arrow-two {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &__img {
+        display: inline-block;
+
+    }
+
+    &__number-inner {
+        @include flex-center-jc-center;
+        column-gap: 12px;
+        margin: 0 10px;
+    }
+
+    &__number {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 25px;
+        color: $black;
+        padding: 10px 16px;
+        border-radius: 5px;
+        border: 1px solid $white-light;
+        cursor: pointer;
+        transition: all .2s ease;
+
+        
+        &:hover {
+            color: $orange;
+            border: 1px solid $orange;
+        }
+        
+        &.pagination-active {
+            color: $white;
+            background-color: $orange;
+            border: 1px solid $orange;
+        }
+
+    }
+
 }
 
 
@@ -2326,14 +2396,14 @@ input[type="range"]::-moz-range-thumb {
     background-position: right center;
     background-size: contain;
     padding: 35px 20px;
-    
+
     &:hover {
         box-shadow: 0px 0px 0px 0px rgba(186, 186, 186, 0.10),
-        2px 9px 21px 0px rgba(186, 186, 186, 0.10),
-        6px 38px 38px 0px rgba(186, 186, 186, 0.09),
-        14px 84px 51px 0px rgba(186, 186, 186, 0.05),
-        25px 150px 61px 0px rgba(186, 186, 186, 0.01),
-        39px 235px 67px 0px rgba(186, 186, 186, 0.00);
+            2px 9px 21px 0px rgba(186, 186, 186, 0.10),
+            6px 38px 38px 0px rgba(186, 186, 186, 0.09),
+            14px 84px 51px 0px rgba(186, 186, 186, 0.05),
+            25px 150px 61px 0px rgba(186, 186, 186, 0.01),
+            39px 235px 67px 0px rgba(186, 186, 186, 0.00);
     }
 
     &__promotion {
