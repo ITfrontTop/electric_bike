@@ -332,3 +332,118 @@ function showShopAside() {
     this.nextElementSibling.classList.toggle('hidden')
     this.classList.toggle('active')
 }
+
+
+// пагинация  shop content
+let thisPage = 1
+let limit = 12
+let list = document.querySelectorAll('.shop-content__item')
+const shopPageNumber = document.querySelector('.shop-content__number-inner');
+
+// количество товаров, и сколько нужно показывать
+function loadItem () {
+    let beginGet = limit * (thisPage - 1)
+    let endGet = limit * thisPage - 1
+    list.forEach((item, key) => {
+        if(key >= beginGet && key <= endGet) {
+            item.style.display = 'block'
+        } else {
+            item.style.display = 'none'
+        }
+    })
+    listPage()
+}
+
+loadItem()
+
+function listPage() {
+    let count = Math.ceil(list.length / limit)
+    document.querySelector('.shop-content__number-inner').innerHTML = ''
+
+    // добавления кнопки prev
+    if(thisPage != 1) {
+        let prev = document.createElement('div')
+        // prev.innerText = 'PREV'
+        prev.classList.add('shop-content__arrow-prev')
+        prev.setAttribute('onclick', "changePage("+ (thisPage - 1) +")")
+        document.querySelector('.shop-content__number-inner').appendChild(prev)
+    }
+
+    // добавление кнопок
+    for(let i = 1; i <= count; i++) {
+        let newPage = document.createElement('div')
+        newPage.classList.add('shop-content__number')
+        newPage.innerText = i
+        // console.log(newPage)
+        if(i === thisPage) {
+            newPage.classList.add('pagination-active')
+        }
+        newPage.setAttribute('onclick', "changePage("+ i +")")
+        document.querySelector('.shop-content__number-inner').appendChild(newPage)
+    }
+
+    if(thisPage != count) {
+        let next = document.createElement('div')
+        // next.innerText = 'NEXT'
+        next.classList.add('shop-content__arrow-next')
+        next.setAttribute('onclick', "changePage("+ (thisPage + 1) +")")
+        document.querySelector('.shop-content__number-inner').appendChild(next)
+    }
+}
+
+function changePage(i) {
+    thisPage = i;
+    loadItem()
+}
+// при нажатие на сторинку скролит вверх страницы
+shopPageNumber.addEventListener('click', function() {
+    window.scrollTo(0, 0)
+})
+
+
+
+
+
+// переключения размеров карточки товаров
+const shopView3 = document.querySelector('.shop-content__view-img-3')
+const shopView2 = document.querySelector('.shop-content__view-img-2')
+const shopContentItem = document.querySelectorAll('.shop-content__item')
+
+
+shopView2.addEventListener('click', function() {
+    shopView3.classList.remove('active')
+    shopView2.classList.add('active')
+    shopContentItem.forEach(item => {
+        item.classList.add('shop-content__item-view2')
+        limit = 8
+        loadItem()
+    })
+})
+
+shopView3.addEventListener('click', function() {
+    shopView2.classList.remove('active')
+    shopView3.classList.add('active')
+    shopContentItem.forEach(item => {
+        item.classList.remove('shop-content__item-view2')
+        limit = 12
+        loadItem()
+    })
+})
+
+// кнопка scroll to top
+const scrollBtn = document.querySelector('.scroll-top-btn')
+
+window.onscroll = () => {
+    if(window.scrollY > 300) {
+        scrollBtn.classList.remove('scroll-top-btn__hide')
+    } else if(window.scrollY < 300) {
+        scrollBtn.classList.add('scroll-top-btn__hide')
+    }
+}
+
+scrollBtn.onclick = () => {
+    window.scrollTo(0, 0)
+}
+
+
+// select

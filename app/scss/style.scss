@@ -744,11 +744,25 @@
         @include product-item-title;
     }
 
-    &__price {
+    &__price-now {
         @extend %inter-500;
         font-size: 16px;
         line-height: 19px;
         color: $grey-deep;
+    }
+
+    &__price-old {
+        @extend %inter-500;
+        font-size: 12px;
+        line-height: 14px;
+        color: $grey-light;
+        text-decoration: line-through;
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
     }
 
     /* button */
@@ -2228,9 +2242,6 @@ input[type="range"]::-moz-range-thumb {
 
 
 
-
-
-
 /* shop-content и полная настрой карточки товаров */
 .shop-content {
     width: 950px;
@@ -2246,8 +2257,29 @@ input[type="range"]::-moz-range-thumb {
         gap: 10px;
     }
 
-    &__view-img {
+    &__view-img-3,
+    &__view-img-2 {
         cursor: pointer;
+
+    }
+
+    /* переключение размеров товаров */
+    &__view-img-3.active {
+        svg {
+            rect {
+                fill: $orange;
+            }
+        }
+    }
+
+    &__view-img-2.active {
+        svg {
+            fill: $orange;
+
+            rect {
+                stroke: $orange;
+            }
+        }
     }
 
     &__wrapper {
@@ -2257,7 +2289,6 @@ input[type="range"]::-moz-range-thumb {
         row-gap: 16px;
         column-gap: 40px;
         margin-bottom: 78px;
-
     }
 
     /* Настройка карточек товаров */
@@ -2285,6 +2316,7 @@ input[type="range"]::-moz-range-thumb {
                 bottom: -70px;
                 left: 0;
                 width: 290px;
+                /*width: 435px;*/
                 height: 90px;
                 padding: 0 8px 8px;
                 background-color: $white;
@@ -2301,6 +2333,72 @@ input[type="range"]::-moz-range-thumb {
             .shop-content__link-btn {
                 display: block;
                 margin-top: 28px;
+            }
+        }
+
+    }
+
+    /* меняю размер товаров*/
+    &__item-view2 {
+        width: 435px;
+        height: 500px;
+
+        .product-item__img {
+            @include flex-center-jc-center;
+        }
+
+        .product-item_link {
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* hover часть 1 клик*/
+        .product-item__link-btn-wrapper.shop-content__link-btn-wrapper {
+            width: 435px;
+        }
+
+        .shop-content__title {
+            @extend %inter-500;
+            font-size: 20px;
+        }
+
+        .product-item__price-now {
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        .product-item__price-old {
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        .sold-in {
+            font-size: 21px;
+        }
+
+        .sold-out {
+            font-size: 21px;
+        }
+
+        /* блок скидок */
+        &.shop-content__item.discount {
+            width: 435px;
+            height: 500px;
+
+            .discount__promotion {
+                font-size: 34px;
+                line-height: 44px;
+            }
+
+            .discount__rebate {
+                font-size: 80px;
+            }
+
+            .discount__equipment {
+                font-size: 53px;
+                line-height: 60px;
             }
         }
 
@@ -2325,35 +2423,30 @@ input[type="range"]::-moz-range-thumb {
 
     }
 
-    &__arrows {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 4px;
-    }
-
-    &__left-two,
-    &__left,
-    &__right,
-    &__right-two {
-        @include flex-center-jc-center;
-    }
-
-    &__arrow,
-    &__arrow-two {
-        padding: 10px;
+    /* стрески prev next */
+    &__arrow-prev,
+    &__arrow-next {
         cursor: pointer;
+        width: 10px;
+        height: 18px;
+        padding: 10px;
+        margin: 0 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 
-    &__img {
-        display: inline-block;
+    &__arrow-prev {
+        background-image: url(../images/arrow-left-grey.svg);
+    }
 
+    &__arrow-next {
+        background-image: url(../images/arrow-right-grey.svg);
     }
 
     &__number-inner {
         @include flex-center-jc-center;
         column-gap: 12px;
-        margin: 0 10px;
     }
 
     &__number {
@@ -2368,12 +2461,12 @@ input[type="range"]::-moz-range-thumb {
         cursor: pointer;
         transition: all .2s ease;
 
-        
+
         &:hover {
             color: $orange;
             border: 1px solid $orange;
         }
-        
+
         &.pagination-active {
             color: $white;
             background-color: $orange;
@@ -2383,6 +2476,7 @@ input[type="range"]::-moz-range-thumb {
     }
 
 }
+
 
 
 /* блок из скидками */
@@ -2396,6 +2490,7 @@ input[type="range"]::-moz-range-thumb {
     background-position: right center;
     background-size: contain;
     padding: 35px 20px;
+
 
     &:hover {
         box-shadow: 0px 0px 0px 0px rgba(186, 186, 186, 0.10),
@@ -2438,16 +2533,26 @@ input[type="range"]::-moz-range-thumb {
 
 
 
-/*****
-****
-*****
-*****
-*****
-*****
-*****
 
+
+
+
+
+
+
+
+
+
+
+/**
 
 * переместить в верх SCSS файла */
+
+
+
+
+
+
 
 /* скопировать в info.doc */
 /* select style*/
@@ -2506,22 +2611,57 @@ input[type="range"]::-moz-range-thumb {
 /* 
     select с dropdown на JS 
 */
-.dropdown__button {
-    /* задаем нужные стили */
+.dropdown {
     position: relative;
-    @extend %inter-500;
-    font-size: 16px;
-    color: $grey-deep;
-    appearance: none;
-    outline: none;
-    background-color: $white;
-    border: 1px solid $white-light;
-    border-radius: 10px;
-    padding: 20px 44px 20px 16px;
-    cursor: pointer;
 
+    &__button {
+        /* задаем нужные стили */
+        position: relative;
+        @extend %inter-500;
+        font-size: 16px;
+        color: $grey-deep;
+        appearance: none;
+        outline: none;
+        background-color: $white;
+        border: 1px solid $white-light;
+        border-radius: 10px;
+        padding: 20px 44px 20px 16px;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+
+            /* вставляем стрелку */
+            width: 18px;
+            height: 10px;
+            background-image: url(../images/arrow-grey-down.svg);
+            @include background-image-property;
+            top: 50%;
+            right: 13px;
+            transform: translateY(-50%);
+
+            /* снять клик из стрелочки */
+            pointer-events: none;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        left: 0;
+        top: 60px;
+
+        background-color: $white;
+        overflow: hidden;
+
+        border: 1px solid $grey-light-bright;
+        border-radius: 10px;
+    }
+
+    &__list-item {
+
+    }
 }
-
 
 
 
