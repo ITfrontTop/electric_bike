@@ -274,8 +274,8 @@ showMoreBrand.addEventListener('click', () => {
 
 // цены которые меняються ползунками
 const rangeInput = document.querySelectorAll('.range-input input'),
-priceInput = document.querySelectorAll('.field input'),
-progress = document.querySelector('.slider .progress')
+    priceInput = document.querySelectorAll('.field input'),
+    progress = document.querySelector('.slider .progress')
 
 let priceGap = 1000;
 
@@ -286,7 +286,7 @@ priceInput.forEach(input => {
             maxVal = parseInt(priceInput[1].value)
 
         if ((maxVal - minVal >= priceGap) && maxVal <= 1500000) {
-            if(e.target.className === 'input-min') {
+            if (e.target.className === 'input-min') {
                 rangeInput[0].value = minVal
                 progress.style.left = (minVal / rangeInput[0].max) * 100 + '%'
             } else {
@@ -304,10 +304,10 @@ rangeInput.forEach(input => {
             maxVal = parseInt(rangeInput[1].value)
 
         if (maxVal - minVal < priceGap) {
-            if(e.target.className === 'range-min') {
+            if (e.target.className === 'range-min') {
                 rangeInput[0].value = maxVal - priceGap
             } else {
-                rangeInput[1].value = minVal + priceGap 
+                rangeInput[1].value = minVal + priceGap
             }
         } else {
             // чтобы линия двигалась за ползунками
@@ -341,11 +341,11 @@ let list = document.querySelectorAll('.shop-content__item')
 const shopPageNumber = document.querySelector('.shop-content__number-inner');
 
 // количество товаров, и сколько нужно показывать
-function loadItem () {
+function loadItem() {
     let beginGet = limit * (thisPage - 1)
     let endGet = limit * thisPage - 1
     list.forEach((item, key) => {
-        if(key >= beginGet && key <= endGet) {
+        if (key >= beginGet && key <= endGet) {
             item.style.display = 'block'
         } else {
             item.style.display = 'none'
@@ -361,32 +361,32 @@ function listPage() {
     document.querySelector('.shop-content__number-inner').innerHTML = ''
 
     // добавления кнопки prev
-    if(thisPage != 1) {
+    if (thisPage != 1) {
         let prev = document.createElement('div')
         // prev.innerText = 'PREV'
         prev.classList.add('shop-content__arrow-prev')
-        prev.setAttribute('onclick', "changePage("+ (thisPage - 1) +")")
+        prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")")
         document.querySelector('.shop-content__number-inner').appendChild(prev)
     }
 
     // добавление кнопок
-    for(let i = 1; i <= count; i++) {
+    for (let i = 1; i <= count; i++) {
         let newPage = document.createElement('div')
         newPage.classList.add('shop-content__number')
         newPage.innerText = i
         // console.log(newPage)
-        if(i === thisPage) {
+        if (i === thisPage) {
             newPage.classList.add('pagination-active')
         }
-        newPage.setAttribute('onclick', "changePage("+ i +")")
+        newPage.setAttribute('onclick', "changePage(" + i + ")")
         document.querySelector('.shop-content__number-inner').appendChild(newPage)
     }
 
-    if(thisPage != count) {
+    if (thisPage != count) {
         let next = document.createElement('div')
         // next.innerText = 'NEXT'
         next.classList.add('shop-content__arrow-next')
-        next.setAttribute('onclick', "changePage("+ (thisPage + 1) +")")
+        next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")")
         document.querySelector('.shop-content__number-inner').appendChild(next)
     }
 }
@@ -396,7 +396,7 @@ function changePage(i) {
     loadItem()
 }
 // при нажатие на сторинку скролит вверх страницы
-shopPageNumber.addEventListener('click', function() {
+shopPageNumber.addEventListener('click', function () {
     window.scrollTo(0, 0)
 })
 
@@ -410,7 +410,7 @@ const shopView2 = document.querySelector('.shop-content__view-img-2')
 const shopContentItem = document.querySelectorAll('.shop-content__item')
 
 
-shopView2.addEventListener('click', function() {
+shopView2.addEventListener('click', function () {
     shopView3.classList.remove('active')
     shopView2.classList.add('active')
     shopContentItem.forEach(item => {
@@ -420,7 +420,7 @@ shopView2.addEventListener('click', function() {
     })
 })
 
-shopView3.addEventListener('click', function() {
+shopView3.addEventListener('click', function () {
     shopView2.classList.remove('active')
     shopView3.classList.add('active')
     shopContentItem.forEach(item => {
@@ -434,9 +434,9 @@ shopView3.addEventListener('click', function() {
 const scrollBtn = document.querySelector('.scroll-top-btn')
 
 window.onscroll = () => {
-    if(window.scrollY > 300) {
+    if (window.scrollY > 300) {
         scrollBtn.classList.remove('scroll-top-btn__hide')
-    } else if(window.scrollY < 300) {
+    } else if (window.scrollY < 300) {
         scrollBtn.classList.add('scroll-top-btn__hide')
     }
 }
@@ -446,4 +446,121 @@ scrollBtn.onclick = () => {
 }
 
 
-// select
+
+// делаем универсальный select для многих selector на страници
+
+// чтобы в IE 10 работал метод forEach нужно добавить - полифил для метода forEach для NodeList
+if(window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+        thisArg = thisArg || window
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this)
+        }
+    }
+}
+
+// находим все dropdown select элементы
+document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+    // назначаем переменный
+    const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button')
+    const dropDownList = dropDownWrapper.querySelector('.dropdown__list')
+    const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item')
+    const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden')
+
+
+
+    // отслеживаем клик по кнопке
+    dropDownBtn.addEventListener('click', function () {
+        dropDownList.classList.toggle('dropdown__list--visible')
+        this.classList.add('dropdown__button--active')
+    })
+
+    // Выбор элумента списка. Запомнить выбранное значение. Закрыть дропдаун
+    dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener('click', function (e) {
+
+            // делаел чтобы клик по dropdown__list-item не считался
+            e.stopPropagation()
+
+            dropDownBtn.innerText = this.innerText
+            dropDownBtn.focus()
+            dropDownInput.value = this.dataset.value
+            // Скрываем dropdown
+            dropDownList.classList.remove('dropdown__list--visible')
+        })
+    })
+
+    // Клик снаружи dropdown. Закрыть dropdown (отследить клик не по кнопки и не по списку)
+    document.addEventListener('click', function (e) {
+        if (e.target !== dropDownBtn) {
+            dropDownBtn.classList.remove('dropdown__button--active')
+            dropDownList.classList.remove('dropdown__list--visible')
+
+        }
+    })
+
+    // скрываем dropdown__list при нажатии клавишей
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Tab' || e.key === 'Escape') {
+            dropDownBtn.classList.remove('dropdown__button--active')
+            dropDownList.classList.remove('dropdown__list--visible')
+        }
+    })
+})
+
+
+
+// кнопка 'Сбросить фильтры'
+const resetBtn = document.querySelector('.reset-filter__btn')
+const presenceBtn = document.querySelector('.presence__item-input')
+const categoryItems = document.querySelectorAll('.category__item-input')
+
+const rangeMin = document.querySelector('.range-min')
+const rangeMax = document.querySelector('.range-max')
+
+const inputMinPrice = document.querySelector('.input-min')
+const inputMaxPrice = document.querySelector('.input-max')
+
+const progressItem = document.querySelector('.progress')
+
+const brandItems = document.querySelectorAll('.brand-aside__item-input')
+const materialItem = document.querySelectorAll('.material__item-input')
+const colorItems = document.querySelectorAll('.color__item-input')
+
+
+const resetItems = function(items) {
+    items.forEach((item) => {
+        item.checked = false
+    })
+}
+
+resetBtn.addEventListener('click', function() {
+    // убераем checked с "Только в наличии"
+    presenceBtn.checked = false
+
+    // убераем checked с "Категории товара"
+    resetItems(categoryItems)
+
+    // ставим в исходное положения ползунки "Цена"
+    rangeMin.value = '25000'
+    rangeMax.value = '750000'
+
+    inputMinPrice.value = '25000'
+    inputMaxPrice.value = '750000'
+
+    progressItem.style.left = '2%'
+    progressItem.style.right = '50%'
+
+    // убераем checked с "Бренд"
+    resetItems(brandItems)
+
+    // убераем checked с "Материал рамы"
+    resetItems(materialItem)
+
+    // убераем checked с "Цвет"
+    resetItems(colorItems)
+
+})
+
+
+

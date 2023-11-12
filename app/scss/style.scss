@@ -2139,6 +2139,7 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 }
 
+
 /* делаем ползунки цветом который нам нужно */
 input[type="range"]::-webkit-slider-thumb {
     width: 16px;
@@ -2241,6 +2242,154 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
+/* select style*/
+.select {
+    /* стилизуем текст */
+    @extend %inter-500;
+    font-size: 16px;
+    color: $grey-deep;
+
+    /* убираем браузерную стрелку */
+    appearance: none;
+
+    /* задаем свой фон и рамку */
+    border: 1px solid $white-light;
+    border-radius: 10px;
+
+    /* jnxnegs jn hfvrb lj ntrcnf */
+    padding: 20px 44px 20px 16px;
+
+    outline: none;
+    cursor: pointer;
+
+    /* добавляем нужный outline  */
+    &:focus {
+        box-shadow: 0px 0px 0px 1px $grey-light, 0px 0px 10px $grey-light-bright;
+    }
+}
+
+/* убрать стрелочку в IE 10 и IE 11 */
+.select::-ms-expand {
+    display: none;
+}
+
+.select-wrapper {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+
+        /* вставляем стрелку */
+        width: 18px;
+        height: 10px;
+        background-image: url(../images/arrow-grey-down.svg);
+        @include background-image-property;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+
+        /* снять клик из стрелочки */
+        pointer-events: none;
+    }
+}
+
+
+/* 
+    select с dropdown на JS 
+*/
+.dropdown {
+    position: relative;
+
+    &__button {
+        /* задаем нужные стили */
+        position: relative;
+        width: 277px;
+        @extend %inter-500;
+        font-size: 16px;
+        color: $grey-deep;
+        appearance: none;
+        outline: none;
+        background-color: $white;
+        border: 1px solid $white-light;
+        border-radius: 10px;
+        padding: 20px 42px 20px 16px;
+        text-align: start;
+        cursor: pointer;
+
+        &--active {
+            outline: none;
+            box-shadow: 0px 0px 2px 2px rgba($grey-deep,0.81);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0px 0px 2px 2px rgba($grey-deep,0.81);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+
+            /* вставляем стрелку */
+            width: 18px;
+            height: 10px;
+            background-image: url(../images/arrow-grey-down.svg);
+            @include background-image-property;
+            top: 50%;
+            right: 13px;
+            transform: translateY(-50%);
+
+            /* снять клик из стрелочки */
+            pointer-events: none;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        left: 0;
+        top: 60px;
+
+        background-color: $white;
+        overflow: hidden;
+
+        border: 1px solid $grey-light-bright;
+        border-radius: 10px;
+        z-index: 2000;
+
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 11px 42px 16px 16px;
+
+        display: none;
+    }
+
+    &__list--visible {
+        display: flex;
+    }
+
+    &__list-item {
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $grey-deep;
+        cursor: pointer;
+        transition: all .2s ease;
+
+        &:hover {
+            color: $orange;
+        }
+
+        &:active {
+            color: $orange-deep;
+        }
+    }
+
+    &__input-hidden {
+        display: none;
+    }
+}
 
 /* shop-content и полная настрой карточки товаров */
 .shop-content {
@@ -2544,124 +2693,7 @@ input[type="range"]::-moz-range-thumb {
 
 
 
-/**
 
-* переместить в верх SCSS файла */
-
-
-
-
-
-
-
-/* скопировать в info.doc */
-/* select style*/
-.select {
-    /* стилизуем текст */
-    @extend %inter-500;
-    font-size: 16px;
-    color: $grey-deep;
-
-    /* убираем браузерную стрелку */
-    appearance: none;
-
-    /* задаем свой фон и рамку */
-    border: 1px solid $white-light;
-    border-radius: 10px;
-
-    /* jnxnegs jn hfvrb lj ntrcnf */
-    padding: 20px 44px 20px 16px;
-
-    outline: none;
-    cursor: pointer;
-
-    /* добавляем нужный outline  */
-    &:focus {
-        box-shadow: 0px 0px 0px 1px $grey-light, 0px 0px 10px $grey-light-bright;
-    }
-}
-
-/* убрать стрелочку в IE 10 и IE 11 */
-.select::-ms-expand {
-    display: none;
-}
-
-.select-wrapper {
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-
-        /* вставляем стрелку */
-        width: 18px;
-        height: 10px;
-        background-image: url(../images/arrow-grey-down.svg);
-        @include background-image-property;
-        top: 50%;
-        right: 16px;
-        transform: translateY(-50%);
-
-        /* снять клик из стрелочки */
-        pointer-events: none;
-    }
-}
-
-
-/* 
-    select с dropdown на JS 
-*/
-.dropdown {
-    position: relative;
-
-    &__button {
-        /* задаем нужные стили */
-        position: relative;
-        @extend %inter-500;
-        font-size: 16px;
-        color: $grey-deep;
-        appearance: none;
-        outline: none;
-        background-color: $white;
-        border: 1px solid $white-light;
-        border-radius: 10px;
-        padding: 20px 44px 20px 16px;
-        cursor: pointer;
-
-        &::after {
-            content: '';
-            position: absolute;
-
-            /* вставляем стрелку */
-            width: 18px;
-            height: 10px;
-            background-image: url(../images/arrow-grey-down.svg);
-            @include background-image-property;
-            top: 50%;
-            right: 13px;
-            transform: translateY(-50%);
-
-            /* снять клик из стрелочки */
-            pointer-events: none;
-        }
-    }
-
-    &__list {
-        position: absolute;
-        left: 0;
-        top: 60px;
-
-        background-color: $white;
-        overflow: hidden;
-
-        border: 1px solid $grey-light-bright;
-        border-radius: 10px;
-    }
-
-    &__list-item {
-
-    }
-}
 
 
 
