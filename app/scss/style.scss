@@ -1523,6 +1523,7 @@
     overflow-x: hidden;
     transition: all .4s ease;
 
+
     &__body {
         min-height: 100%;
         @include flex;
@@ -2319,12 +2320,12 @@ input[type="range"]::-moz-range-thumb {
 
         &--active {
             outline: none;
-            box-shadow: 0px 0px 2px 2px rgba($grey-deep,0.81);
+            box-shadow: 0px 0px 2px 2px rgba($grey-deep, 0.81);
         }
 
         &:focus {
             outline: none;
-            box-shadow: 0px 0px 2px 2px rgba($grey-deep,0.81);
+            box-shadow: 0px 0px 2px 2px rgba($grey-deep, 0.81);
         }
 
         &::after {
@@ -2678,6 +2679,161 @@ input[type="range"]::-moz-range-thumb {
     }
 }
 
+
+/* buy-one-click */
+.buy-one-click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black-deep, .4);
+    z-index: 1100;
+
+    /*чтобы popup сначала небыло видно пишем*/
+    opacity: 0;
+    visibility: hidden;
+    /* если большой попап и он не влазит по тексту то нужно прописать чтобы небыло скролов при анимации */
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all .4s ease;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+
+        & .buy-one-click__content-inner {
+            transform: translate(0px, 0%);
+            opacity: 1;
+        }
+    }
+
+    &__body {
+        min-height: 100%;
+        @include flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    &__content-inner {
+        max-width: 921px;
+        height: 545px;
+        background-color: $white;
+        border-radius: 10px;
+        padding: 56px;
+        position: relative;
+        /* анимация элементов */
+        transition: all .4s ease;
+        opacity: 0;
+        transition: translate(0px, 100%)
+
+    }
+
+    &__close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                path {
+                    stroke: $black;
+                }
+            }
+        }
+    }
+
+    &__title {
+        @extend %bebas-400;
+        font-size: 40px;
+        line-height: 49px;
+        letter-spacing: 2px;
+        margin-bottom: 13px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+    }
+
+    &__img-box {
+        width: 340px;
+    }
+
+    &__img-inner {
+        height: 340px;
+        width: 340px;
+        @include flex-center-jc-center;
+    }
+
+    &__name {
+        @extend %inter-500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .18px;
+        color: $black;
+        text-align: center;
+    }
+
+    &__info {
+        width: 429px;
+    }
+
+    &__text {
+        @extend %inter-300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .18px;
+        margin-bottom: 24px;
+
+    }
+
+    &__input-box {
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+        background-color: $grey-bg;
+        border-radius: 10px;
+        padding: 16px;
+
+        &::placeholder {
+            /* %inter-500 don't correct, need %inter-400, but it dont work */
+            @extend %inter-500;
+            font-size: 16px;
+            line-height: 25px;
+            color: $grey-light;
+        }
+    }
+
+    &__agreement {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 12px;
+        line-height: 19px;
+        color: $grey-deep;
+        margin-bottom: 32px;
+    }
+
+    &__link {
+        color: $orange;
+    }
+
+    &__btn {
+        @include button;
+        width: 100%;
+        border: none;
+        
+    }
+}
 
 
 

@@ -564,3 +564,21 @@ resetBtn.addEventListener('click', function() {
 
 
 
+// buy-one-click
+const buyOneClick = document.querySelector('.buy-one-click')
+const buyOneClickBtn = document.querySelectorAll('.product-item__link-btn')
+const closeBtnOneClick = document.querySelector('.buy-one-click__close')
+const buyOneClickBody = document.querySelector('.buy-one-click__body')
+const buyOneClickContent = document.querySelector('.buy-one-click__content-inner')
+
+const closebuyOneClick = function() {
+    buyOneClick.classList.remove('open')
+}
+
+buyOneClickBtn.forEach(item => {
+    item.addEventListener('click', function() {
+        buyOneClick.classList.add('open')
+    })
+})
+
+closeBtnOneClick.addEventListener('click', closebuyOneClick)
