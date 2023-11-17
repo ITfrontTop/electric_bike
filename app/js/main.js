@@ -85,6 +85,32 @@ const equipment = new Swiper('.equipment__slider', {
     },
 })
 
+const shopOneBig = new Swiper('.shop-one__big-slider', {
+    speed: 1000,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 40,
+
+    
+})
+
+const shopOneSmall = new Swiper('.shop-one__small-slider', {
+    speed: 500,
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 16,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+})
+
+// не коректно работает
+shopOneBig.controller.control = shopOneSmall
+shopOneSmall.controller.control = shopOneBig
+
+
 
 // header event listener
 document.querySelector('.menu-list').addEventListener('click', function (e) {
@@ -231,7 +257,7 @@ const productsLengthCategory = document.querySelectorAll('.category__item-label'
 let itemsCategory = 5
 
 
-showMoreCategory.addEventListener('click', () => {
+showMoreCategory.addEventListener('click', function() {
     // добавляем количество пунктов
     itemsCategory += 5
 
@@ -248,7 +274,6 @@ showMoreCategory.addEventListener('click', () => {
     if (visItemsCategory.length === productsLengthCategory) {
         showMoreCategory.style.display = 'none'
     }
-
 })
 
 
@@ -582,3 +607,12 @@ buyOneClickBtn.forEach(item => {
 })
 
 closeBtnOneClick.addEventListener('click', closebuyOneClick)
+
+
+// filter btn shop
+const filterBtn = document.querySelector('.filter-btn')
+const shopeAside = document.querySelector('.shop-aside')
+
+filterBtn.addEventListener('click', function() {
+    shopeAside.classList.toggle('shop-aside--active')
+})

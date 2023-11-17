@@ -137,8 +137,6 @@
         z-index: 100;
         width: 448px;
         height: 1087px;
-        /*height: 100vh;*/
-        /*position: fixed;*/
         background-color: $white;
         padding: 40px;
 
@@ -150,20 +148,9 @@
         transform: translateY(-100%);
         transition: transform .5s ease;
 
-        /*right: -448px;
-        transition: right .3s ease;*/
-
-
-
-
         &.show {
-            /*transition: right .5s ease;
-            right: 0;*/
-
             transform: translateY(0);
             transition: transform .5s ease;
-
-
         }
 
 
@@ -1877,7 +1864,6 @@
     &__item {
         position: relative;
 
-
         &::after {
             /* %inter-500 don't correct, need %inter-400, but it dont work */
             @extend %inter-500;
@@ -1886,7 +1872,7 @@
             position: absolute;
             width: 5px;
             height: 14px;
-            top: 0;
+            top: 2px;
             right: -10px;
         }
 
@@ -1903,6 +1889,53 @@
                 display: none;
             }
         }
+    }
+
+    /* breadcrumbs__link-shop-one */
+    &__link-shop-one {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey-deep-medium;
+
+        &:active {
+            color: $orange-deep;
+        }
+    }
+
+    &__item-shop-one {
+        position: relative;
+
+        &::after {
+            /* %inter-500 don't correct, need %inter-400, but it dont work */
+            @extend %inter-500;
+            color: $grey-deep-medium;
+            content: '/';
+            position: absolute;
+            width: 5px;
+            height: 14px;
+            top: 2px;
+            right: -10px;
+        }
+
+        &:last-child {
+            .breadcrumbs__item-link {
+                color: $orange;
+
+                &:active {
+                    color: $orange-deep;
+                }
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__shop-one {
+        padding: 48px 0 59px 0;
     }
 }
 
@@ -2835,10 +2868,161 @@ input[type="range"]::-moz-range-thumb {
     }
 }
 
+.filter-btn {
+    display: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    border: 1px solid $grey-light-bright;
+    background-color: $white;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background-image: url(../images/filter-grey-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+    
+    &:active {
+        border: 1px solid $orange-deep;
+    }
+}
 
 
 
 
+
+
+/* shop-one page */
+
+.shop-one {
+    &__item-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__big-slider {
+        width: 623px;
+    }
+
+    &__small-slider {
+        width: 623px;
+        position: relative;
+    }
+
+    &__code-box {
+        @include flex-center-sb;
+    }
+
+    &__select {
+        width: 510px;
+    }
+
+    &__select-title {
+        @extend %bebas-400;
+        font-size: 40px;
+        line-height: 49px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    &__code-box {
+        @include flex-center-sb;
+        margin-bottom: 40px;
+    }
+
+    &__code-text-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    &__social-inner {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__code-text {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey-light;
+    }
+
+    &__social-ok,
+    &__social-vk,
+    &__social-telegram,
+    &__social-whatsapp,
+    &__social-viber {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22px;
+        height: 22px;
+        background-color: $grey-light-bright;
+        border-radius: 50%;
+        transition: all .3s ease;
+
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+
+        &:hover {
+            background-color: $grey-deep-medium;
+        }
+    }
+
+    &__price-box {
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    &__price-now {
+        @extend %inter-500;
+        font-size: 40px;
+        line-height: 64px;
+        color: $black;
+        letter-spacing: .4px;
+    }
+
+    &__price-sold {
+        @extend %inter-500;
+        font-size: 18px;
+        line-height: 49px;
+        letter-spacing: .18px;
+        text-decoration: line-through;
+        color: $grey-light;
+    }
+
+    &__desription {
+        /* %inter-500 don't correct, need %inter-400, but it dont work */
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-deep-medium;
+        margin-bottom: 32px;
+    }
+
+    
+
+}
 
 
 
@@ -3103,6 +3287,48 @@ input[type="range"]::-moz-range-thumb {
         flex-direction: column;
     }
 
+    .filter-btn {
+        display: block;
+        z-index: 9998;
+    }
+
+    .shop-content__view {
+        display: none;
+    }
+
+    .dropdown__button {
+        height: 64px;
+        padding: 12px 42px 12px 16px;
+    }
+
+    .shop__inner {
+        justify-content: center;
+        position: relative;
+        
+    }
+
+    .shop-aside {
+        position: absolute;
+        border: 1px solid $grey-light-bright;
+        border-radius: 10px;
+        box-shadow: 0px 0px 0px 2px $grey-light, 0px 0px 10px $grey-light-bright;
+        /*-130%*/
+        transform: translateY(-130%);
+        background-color: $white;
+        z-index: 9998;
+        left: 0;
+        transition: all .7s ease;
+    }
+
+    .shop-aside--active {
+        transform: translateY(4%);
+    }
+
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+
 }
 
 
@@ -3228,6 +3454,10 @@ input[type="range"]::-moz-range-thumb {
         margin: 35px 0;
     }
 
+    .shop-content__wrapper {
+        justify-content: center;
+    }
+
 
 }
 
@@ -3314,12 +3544,41 @@ input[type="range"]::-moz-range-thumb {
         background-image: none;
     }
 
+    .shop-content__number-inner {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .product-item {
+        padding: 8px 8px 8px;
+    }
+
 }
 
 @media (max-width: 520px) {
     .menu-more {
         width: 100%;
     }
+
+    .discount {
+        height: 181px;
+    }
+
+    .discount__rebate {
+        font-size: 50px;
+        line-height: 52px;
+        letter-spacing: 2.5px;
+        margin-bottom: 16px;
+    }
+
+    .discount__equipment {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+    }
+
+
 }
 
 
@@ -3395,5 +3654,17 @@ input[type="range"]::-moz-range-thumb {
 
     .footer__title {
         font-size: 48px;
+    }
+
+    .user-nav__items {
+        column-gap: 7px;
+    }
+
+    .shop-content__number-inner {
+        flex-wrap: wrap;
+    }
+
+    .dropdown__button {
+        width: 200px;
     }
 }

@@ -271,6 +271,7 @@ a {
     right: 190px;
     opacity: 1;
     transition: opacity .3s ease;
+    z-index: 2000;
 
     &__hide {
         opacity: 0;

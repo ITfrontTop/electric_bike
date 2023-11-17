@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script defer src="js/main.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header__pages">
+        <div class="container">
+            <div class="header__top">
+                <div class="menu-logo">
+                    <img class="logo" src="images/logo-white.svg" alt="logo">
+                </div>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link menu-link__trade" href="">Trade In</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велосипеды</a>
+                            <div class="menu-sub">
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Горные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Городские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Шоссейные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Гравийные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Трековые велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Велосипеды для триатлона
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Двухподвесные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Электровелосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Женские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Детские велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Запчасти
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Экипировка
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Аксессуары
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велостанки</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-nav__wrapper">
+                    <div class="user-nav">
+                        <div class="user-nav__items">
+                            <div class="user-nav__search">
+                                <a class="user-nav__search-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zm2 9.5l-4.197-4.197"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <form class="user-nav__search-form" action="#">
+                                    <input class="user-nav__search-input" type="search" placeholder="Поиск">
+                                    <input class="user-nav__search-submit" type="submit" value="">
+                                </form>
+
+                            </div>
+                            <div class="user-nav__user">
+                                <a class="user-nav__user-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 15H6a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4zm-4-4a4 4 0 100-8 4 4 0 000 8z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="user-nav__heart">
+                                <a class="user-nav__heart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.331 12.047L12 20l7.669-7.953A4.804 4.804 0 0021 8.714C21 6.111 18.965 4 16.454 4a4.465 4.465 0 00-3.214 1.38L12 6.668 10.76 5.38A4.465 4.465 0 007.546 4C5.036 4 3 6.11 3 8.714c0 1.25.479 2.45 1.331 3.333z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__heart-number">0</span>
+                                </a>
+                            </div>
+                            <div class="user-nav__cart">
+                                <a class="user-nav__cart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 17H6.5l-2-14H2" stroke="#fff" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M4.786 5H21l-3 9H6.07M9 21a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__cart-number">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-extra">
+                        <div class="menu-extra__btn">
+                            <a class="menu-extra__btn-link" href="#">
+                                <svg width="32" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="#fff" stroke-width="1.5" d="M0 1.25h32m-24 9h24m-24 9h24" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-more">
+            <div class="menu-more__btn">
+                <div class="logo__black">
+                    <img src="images/logo-black.svg" alt="logo">
+                </div>
+                <a class="menu-more__btn-link" href="#">
+                    <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                    </svg>
+                </a>
+            </div>
+
+            <h4 class="sutitle menu-more__sutitle">
+                Доп. Информация
+            </h4>
+
+            <div class="menu-main">
+                <ul class="menu-main__items">
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            TRADE IN
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велосипеды
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Горные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Городские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Шоссейные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Гравийные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Трековые велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велосипеды для триатлона
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Двухподвесные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Электровелосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Женские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Детские велосипеды
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Запчасти
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Экипировка
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велокуртки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велотрусы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Термобелье
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велообувь
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велошлемы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велоперчатки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Очки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Аксессуары
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велостанки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="menu-more__list">
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        О нас
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Веломастерская
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Хранение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Гарантии
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Пользовательское соглашение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Доставка и оплата
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Блог
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="menu-more__overlay hidden"></div>
+
+
+    </header>
+
+
+    <main class="main">
+
+        <section class="shop-one">
+            <div class="container">
+
+                <div class="breadcrumbs breadcrumbs__shop-one">
+                    <ul class="breadcrumbs__items">
+                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
+                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
+                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
+                                Велосипеды
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
+                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
+                                Горные велосипеды
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
+                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
+                                Scott Scale 700 RS 2016
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="shop-one__item-inner">
+                    <div class="shop-one__img-sliders">
+
+                        <div class="swiper-container shop-one__big-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img" src="images/slider-big-Look-977-BLACK.png"
+                                        alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img" src="images/slider-big-Look-977-BLACK.png"
+                                        alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img" src="images/slider-big-Look-977-BLACK.png"
+                                        alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img" src="images/slider-big-Look-977-BLACK.png"
+                                        alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img" src="images/slider-big-Look-977-BLACK.png"
+                                        alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img" src="images/slider-big-Look-977-BLACK.png"
+                                        alt="Look 977">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-container shop-one__small-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img"
+                                        src="images/slider-small-Look-977-BLACK.png.png" alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img"
+                                        src="images/slider-small-Look-977-BLACK.png.png" alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img"
+                                        src="images/slider-small-Look-977-BLACK.png.png" alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img"
+                                        src="images/slider-small-Look-977-BLACK.png.png" alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img"
+                                        src="images/slider-small-Look-977-BLACK.png.png" alt="Look 977">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="shop-one__big-slider-img"
+                                        src="images/slider-small-Look-977-BLACK.png.png" alt="Look 977">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <div class="swiper-button-left">
+                                    <svg width="14" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.125 21.1L.7 12.7a.871.871 0 01-.212-.325A1.1 1.1 0 01.425 12a1.1 1.1 0 01.063-.375A.871.871 0 01.7 11.3l8.425-8.425c.233-.233.525-.35.875-.35s.65.125.9.375.375.542.375.875a1.2 1.2 0 01-.375.875L3.55 12l7.35 7.35c.233.233.35.52.35.862 0 .342-.125.638-.375.888a1.2 1.2 0 01-.875.375 1.2 1.2 0 01-.875-.375z"
+                                            fill="#101010" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next">
+                                <div class="swiper-button-right">
+                                    <svg width="14" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.875 21.1l8.425-8.4c.1-.1.17-.208.212-.325a1.1 1.1 0 00.063-.375 1.1 1.1 0 00-.063-.375.871.871 0 00-.212-.325L4.875 2.875A1.187 1.187 0 004 2.525c-.35 0-.65.125-.9.375a1.2 1.2 0 00-.375.875c0 .333.125.625.375.875L10.45 12 3.1 19.35c-.233.233-.35.52-.35.862 0 .342.125.638.375.888s.542.375.875.375a1.2 1.2 0 00.875-.375z"
+                                            fill="#101010" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="shop-one__select">
+                        <div class="shop-one__select-title">
+                            Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018
+                        </div>
+
+                        <div class="shop-one__code-box">
+                            <div class="shop-one__code-text-inner">
+                                <p class="shop-one__code-text">
+                                    Scott
+                                </p>
+                                <p class="shop-one__code-text">
+                                    Артикул : 7655-188
+                                </p>
+                                <div class="shop-one__sold sold-in">
+                                    В наличии
+                                </div>
+                            </div>
+                            <div class="shop-one__social">
+                                <div class="shop-one__social-inner" href="#">
+                                    <a class="shop-one__social-ok" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="px"
+                                            viewBox="0 0 11 11">
+                                            <path
+                                                d="M5.5.457a2.521 2.521 0 000 5.043 2.52 2.52 0 000-5.043zm0 1.594a.929.929 0 110 1.855.929.929 0 110-1.855zm2.105 3.46a.923.923 0 00-.515.13 3.15 3.15 0 01-3.18 0 .916.916 0 00-1.363 1.007.898.898 0 00.418.563 4.79 4.79 0 001.07.48L2.754 9.016a.901.901 0 00-.23.664.89.89 0 00.304.629.918.918 0 00.61.234c.253 0 .5-.105.68-.3L5.5 8.808l1.379 1.425a.909.909 0 00.684.305.917.917 0 00.68-1.531L6.964 7.69a4.72 4.72 0 001.07-.48.898.898 0 00.418-.563.923.923 0 00-.105-.695.906.906 0 00-.563-.414.716.716 0 00-.18-.027zm0 0" />
+                                        </svg>
+                                    </a>
+                                    <a class="shop-one__social-vk" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="px"
+                                            viewBox="0 0 11 11">
+                                            <path
+                                                d="M10.488 8.066c-.414-.742-1.472-1.632-1.91-2.02a.282.282 0 01-.023-.405c.836-.899 1.504-1.93 1.734-2.555a.426.426 0 00-.406-.566h-.86c-.285 0-.449.101-.527.265-.695 1.422-1.293 2.04-1.71 2.399a.362.362 0 01-.598-.274V3.016a.476.476 0 00-.477-.477l-1.574-.02a.24.24 0 00-.192.383l.262.371a.739.739 0 01.148.45v1.675c0 .293-.355.434-.566.23-.707-.69-1.324-2.105-1.547-2.78a.475.475 0 00-.453-.328H.941c-.32 0-.55.3-.464.605.773 2.715 2.363 5.3 5.191 5.582.281.027.52-.2.52-.477v-.882c0-.25.199-.47.453-.473.011-.004.02-.004.027-.004.75 0 1.59 1.09 1.883 1.602a.474.474 0 00.41.234h1.14a.434.434 0 00.387-.64zm0 0" />
+                                        </svg>
+                                    </a>
+                                    <a class="shop-one__social-telegram" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+                                            <path
+                                                d="M10.148 1.441c-.164-.14-.421-.16-.691-.05-.281.113-7.977 3.414-8.289 3.546-.059.02-.555.208-.504.622.047.37.445.527.492.543l1.957.671c.133.43.61 2.024.715 2.368.067.21.176.488.363.546a.461.461 0 00.438-.078L5.824 8.5l1.93 1.504.047.031a.98.98 0 00.375.086c.094 0 .183-.02.27-.055a.788.788 0 00.413-.421l1.446-7.5c.086-.399-.035-.602-.157-.704zM4.84 7.04l-.66 1.762-.66-2.2L8.578 2.86zm0 0" />
+                                        </svg>
+                                    </a>
+                                    <a class="shop-one__social-whatsapp" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="px"
+                                            viewBox="0 0 11 11">
+                                            <path
+                                                d="M5.5 1.102A4.398 4.398 0 001.102 5.5c0 .824.23 1.594.625 2.254L1.14 9.898l2.187-.574A4.398 4.398 0 105.5 1.101zM3.992 3.449c.074 0 .149-.004.211 0 .078.004.164.008.246.192.098.214.309.754.336.804.027.055.047.121.008.192-.035.074-.055.117-.11.183-.054.063-.113.14-.163.188-.055.054-.11.117-.047.226.062.106.28.465.605.754.418.371.77.485.879.54.11.054.172.046.234-.028a4.38 4.38 0 00.344-.426c.074-.11.145-.09.246-.054.102.035.637.3.746.355.11.055.18.082.207.125.028.047.028.266-.062.52-.09.253-.535.5-.734.515-.204.02-.391.09-1.31-.27C4.52 6.829 3.82 5.692 3.767 5.618c-.055-.07-.446-.59-.446-1.125s.285-.8.383-.91a.396.396 0 01.29-.133zm0 0" />
+                                        </svg>
+                                    </a>
+                                    <a class="shop-one__social-viber" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="px"
+                                            viewBox="0 0 11 11">
+                                            <path
+                                                d="M9.3 3.05a2.225 2.225 0 00-.882-1.257c-.55-.379-1.18-.512-1.727-.594a7.736 7.736 0 00-2.09-.05c-.613.078-1.07.195-1.492.386-.82.38-1.316.992-1.464 1.82-.075.403-.125.766-.153 1.11-.066.8-.004 1.512.184 2.168.183.64.508 1.097.984 1.398.121.078.277.133.43.188.074.027.148.05.21.082v1.293c0 .168.138.304.305.304a.311.311 0 00.215-.085l1.196-1.16c.05-.06.05-.06.105-.063a34.84 34.84 0 001.238-.047c.504-.027 1.082-.074 1.633-.3.5-.212.867-.544 1.086-.99a4.25 4.25 0 00.414-1.538c.09-1.004.028-1.875-.191-2.664zM7.22 6.872a1.057 1.057 0 01-.508.422.583.583 0 01-.465-.016C4.97 6.738 3.965 5.887 3.305 4.66c-.137-.25-.23-.527-.34-.793-.024-.054-.024-.117-.031-.18.007-.43.34-.671.671-.746a.354.354 0 01.336.11c.262.25.47.539.625.863.07.14.04.27-.078.375l-.074.063c-.266.199-.305.347-.164.648.242.512.64.855 1.156 1.066a.307.307 0 00.367-.082c.016-.015.032-.027.043-.046.204-.34.497-.305.77-.11.18.125.355.262.531.39.27.2.266.384.102.653zm-1.532-3.52c-.07 0-.136.008-.207.02a.207.207 0 01-.238-.176.207.207 0 01.172-.238 1.647 1.647 0 011.918 1.621c0 .094-.008.188-.02.277a.212.212 0 01-.207.172H7.07a.211.211 0 01-.172-.242 1.229 1.229 0 00-1.21-1.434zm.915 1.364a.21.21 0 01-.211.207.21.21 0 01-.211-.207.628.628 0 00-.625-.63.21.21 0 110-.418 1.05 1.05 0 011.047 1.048zm1.41.254a.213.213 0 01-.207.164c-.016 0-.032 0-.047-.004a.209.209 0 01-.156-.25 1.851 1.851 0 00-2.21-2.215.21.21 0 01-.255-.156.21.21 0 01.16-.25c.164-.04.332-.059.504-.059a2.267 2.267 0 012.21 2.77zm0 0" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-one__price-box">
+                            <div class="shop-one__price-now">
+                                435 000 ₽
+                            </div>
+                            <div class="shop-one__price-sold">
+                                522 000 ₽
+                            </div>
+                        </div>
+
+                        <p class="shop-one__desription">
+                            Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата и Кубка Мира. Одна из
+                            самых легких рам среди гоночных хардтейлов для кросс-кантри.
+                        </p>
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__subscription">
+            <div class="container">
+                <div class="footer__subscription-inner">
+                    <h2 class="title footer__title">
+                        Подпишитесь на наши новости
+                    </h2>
+                    <form class="footer__subscription-form" action="#footer">
+
+                        <div class="footer__subscription-email">
+                            <input class="footer__subscription-input" type="email" placeholder="E-mail">
+                            <button class="footer__subscription-btn" type="submit">
+                                Подписаться
+                            </button>
+                        </div>
+
+                        <label class="footer__subscription-label">
+                            <input class="footer__subscription-processing-input" type="checkbox">
+                            <span class="footer__subscription-checkbox"></span>
+                            Согласен(на) на обработку персональных данных
+                        </label>
+
+                    </form>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="popup__close">
+                            <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#B3B3B3" stroke-width="2"
+                                    d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                            </svg>
+                        </div>
+                        <div class="popup__img">
+                            <svg width="98" height="99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y=".5" width="98" height="98" rx="49" fill="#F57520" />
+                                <path d="M21 51.91L38.69 69.5 78 26.5" stroke="#fff" stroke-width="8.167" />
+                            </svg>
+                        </div>
+                        <h2 class="title popup__title">
+                            Благодарим за подписку!
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__content">
+
+            <div class="container">
+                <div class="footer__content-inner">
+                    <div class="footer__content-logo">
+                        <div class="footer__logo">
+                            <img class="logo" src="images/logo-white.svg" alt="logo">
+                        </div>
+                        <p class="footer__content-descr">
+                            Компания World-bikes специализируется на продаже товаров для велосипедного спорта.
+                        </p>
+                    </div>
+
+                    <div class="footer__content-menu">
+
+                        <div class="footer__content-catalog">
+                            <h6 class="footer__content-catalog-title">
+                                Каталог
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Trade-in
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велосипеды
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Экипировка
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Запчасти
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велостанки
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Аксессуары
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-client">
+                            <h6 class="footer__content-catalog-title">
+                                Для клиента
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Доставка и оплата
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Блог
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Веломастерская
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Хранение
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Гарантии
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-contacts">
+                            <h6 class="footer__content-catalog-title footer__content-contacts-title">
+                                Контакты
+                            </h6>
+                            <div class="footer__content-contacts-info">
+                                <div class="footer__content-contacts-item footer__content-phone">
+                                    <a class="footer__content-info " href="tel:74950557586">
+                                        +7(495)055-75-86
+                                    </a>
+                                    <a class="footer__content-info" href="tel:79651422299">
+                                        +7(965)142-22-99
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-address">
+                                    <a class="footer__content-info" href="#">
+                                        г. Москва, ул. Доватора, 7/8 с1
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-email">
+                                    <a class="footer__content-info" href="email:order@world-bike.ru">
+                                        order@world-bike.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copy">
+                <div class="container">
+                    <div class="footer__copy-inner">
+                        <a class="footer__copy-author" href="#">
+                            © 2023 world bike
+                        </a>
+                        <a class="footer__copy-agreement" href="#">
+                            Пользовательское соглашение
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
