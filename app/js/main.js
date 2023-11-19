@@ -91,7 +91,7 @@ const shopOneBig = new Swiper('.shop-one__big-slider', {
     slidesPerView: 1,
     spaceBetween: 40,
 
-    
+
 })
 
 const shopOneSmall = new Swiper('.shop-one__small-slider', {
@@ -103,13 +103,39 @@ const shopOneSmall = new Swiper('.shop-one__small-slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    
 
 })
 
-// не коректно работает
+// количество больших слайдом должно соответствовать количеству маленьких
 shopOneBig.controller.control = shopOneSmall
 shopOneSmall.controller.control = shopOneBig
 
+
+const similarSlider = new Swiper('.similar-products__slider', {
+    speed: 500,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        720: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        960: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+    },
+})
 
 
 // header event listener
@@ -250,14 +276,14 @@ popupBody.addEventListener('click', closePopup)
 const showMoreCategory = document.querySelector('.show-more-category')
 
 
+
 // находим все пункты
 const productsLengthCategory = document.querySelectorAll('.category__item-label').length
 
 // количество начальное количество пунктов
 let itemsCategory = 5
 
-
-showMoreCategory.addEventListener('click', function() {
+showMoreCategory.addEventListener('click', function () {
     // добавляем количество пунктов
     itemsCategory += 5
 
@@ -275,6 +301,8 @@ showMoreCategory.addEventListener('click', function() {
         showMoreCategory.style.display = 'none'
     }
 })
+
+
 
 
 const showMoreBrand = document.querySelector('.show-more-brand')
@@ -475,7 +503,7 @@ scrollBtn.onclick = () => {
 // делаем универсальный select для многих selector на страници
 
 // чтобы в IE 10 работал метод forEach нужно добавить - полифил для метода forEach для NodeList
-if(window.NodeList && !NodeList.prototype.forEach) {
+if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
         thisArg = thisArg || window
         for (var i = 0; i < this.length; i++) {
@@ -553,13 +581,13 @@ const materialItem = document.querySelectorAll('.material__item-input')
 const colorItems = document.querySelectorAll('.color__item-input')
 
 
-const resetItems = function(items) {
+const resetItems = function (items) {
     items.forEach((item) => {
         item.checked = false
     })
 }
 
-resetBtn.addEventListener('click', function() {
+resetBtn.addEventListener('click', function () {
     // убераем checked с "Только в наличии"
     presenceBtn.checked = false
 
@@ -596,12 +624,12 @@ const closeBtnOneClick = document.querySelector('.buy-one-click__close')
 const buyOneClickBody = document.querySelector('.buy-one-click__body')
 const buyOneClickContent = document.querySelector('.buy-one-click__content-inner')
 
-const closebuyOneClick = function() {
+const closebuyOneClick = function () {
     buyOneClick.classList.remove('open')
 }
 
 buyOneClickBtn.forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         buyOneClick.classList.add('open')
     })
 })
@@ -613,6 +641,7 @@ closeBtnOneClick.addEventListener('click', closebuyOneClick)
 const filterBtn = document.querySelector('.filter-btn')
 const shopeAside = document.querySelector('.shop-aside')
 
-filterBtn.addEventListener('click', function() {
+filterBtn.addEventListener('click', function () {
     shopeAside.classList.toggle('shop-aside--active')
 })
+

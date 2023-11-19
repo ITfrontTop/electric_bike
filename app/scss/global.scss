@@ -191,14 +191,14 @@ a {
         height: 0;
         appearance: none;
 
-        &:checked + .check-list__item-checkbox {
+        &:checked+.check-list__item-checkbox {
             color: $orange-deep-black;
-            
+
             &::before {
                 background-color: $orange;
                 border: 1px solid $orange;
             }
-            
+
             &::after {
                 background-color: $orange;
             }
@@ -276,4 +276,14 @@ a {
     &__hide {
         opacity: 0;
     }
+}
+
+
+.shop-one-title {
+    @extend %bebas-400;
+    font-size: 40px;
+    line-height: 49px;
+    color: $black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
