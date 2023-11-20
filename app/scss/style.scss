@@ -2730,6 +2730,7 @@ input[type="range"]::-moz-range-thumb {
     overflow-y: auto;
     overflow-x: hidden;
     transition: all .4s ease;
+
     &.open {
         opacity: 1;
         visibility: visible;
@@ -2758,7 +2759,6 @@ input[type="range"]::-moz-range-thumb {
         transition: all .4s ease;
         opacity: 0;
         transition: translate(0px, 100%)
-
     }
 
     &__close {
@@ -2864,7 +2864,7 @@ input[type="range"]::-moz-range-thumb {
         @include button;
         width: 100%;
         border: none;
-        
+
     }
 }
 
@@ -2892,7 +2892,7 @@ input[type="range"]::-moz-range-thumb {
         transform: translate(-50%, -50%);
 
     }
-    
+
     &:active {
         border: 1px solid $orange-deep;
     }
@@ -3060,7 +3060,7 @@ input[type="range"]::-moz-range-thumb {
         height: 0;
         appearance: none;
 
-        &:checked + .shop-one__size-checkbox {
+        &:checked+.shop-one__size-checkbox {
             border: 1px solid $grey-black;
             color: $white;
             background-color: $grey-black;
@@ -3103,7 +3103,7 @@ input[type="range"]::-moz-range-thumb {
         height: 0;
         appearance: none;
 
-        &:checked + .shop-one__color-checkbox {
+        &:checked+.shop-one__color-checkbox {
             border: 5px solid $white-light;
         }
     }
@@ -3135,56 +3135,58 @@ input[type="range"]::-moz-range-thumb {
 /* стилизация инпута чисел  */
 /* https://snipp.ru/html-css/input-type-number */
 .number {
-	display: inline-block;
-	position: relative;
-	width: 123px;
+    display: inline-block;
+    position: relative;
+    width: 123px;
     height: 52px;
     border: none;
 }
 
 .number input[type="number"] {
-	display: block;
+    display: block;
     font-size: 16px;
-	line-height: 52px;
-	width: 100%;
+    line-height: 52px;
+    width: 100%;
     height: 52px;
-	padding: 0 32px;
-	text-align: center;
-	-moz-appearance: textfield;
-	-webkit-appearance: textfield;
-	appearance: textfield;
+    padding: 0 32px;
+    text-align: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
 }
+
 .number input[type="number"]::-webkit-outer-spin-button,
 .number input[type="number"]::-webkit-inner-spin-button {
-	display: none;
+    display: none;
 }
+
 .number-minus {
-	position: absolute;
-	top: 1px;
-	left: 1px;
-	bottom: 1px;
-	width: 27px;
-	padding: 0;
-	display: block;
-	text-align: center;
-	border: none;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    width: 27px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
     @extend %inter-500;
-	font-size: 16px;
+    font-size: 16px;
     background-color: $white;
 }
 
 .number-plus {
-	position: absolute;
-	top: 1px;
-	right: 1px;
-	bottom: 1px;
-	width: 27px;
-	padding: 0;
-	display: block;
-	text-align: center;
-	border: none;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 27px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
     @extend %inter-500;
-	font-size: 16px;
+    font-size: 16px;
     background-color: $white;
 }
 
@@ -3215,7 +3217,7 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 80px;
 
     &__title {
-        
+
         margin-bottom: 40px;
     }
 
@@ -3227,7 +3229,7 @@ input[type="range"]::-moz-range-thumb {
     &__item {
         padding: 24px;
         @include flex-center-sb;
-        
+
         gap: 40px;
 
         &:nth-child(even) {
@@ -3314,7 +3316,7 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
-    
+
 
     &__clarification {
         @extend %inter-500;
@@ -3335,8 +3337,8 @@ input[type="range"]::-moz-range-thumb {
     }
 
     .shop-content__item:hover {
-        box-shadow: none; 
-    }   
+        box-shadow: none;
+    }
 
     &__slider {
         position: relative;
@@ -3346,11 +3348,143 @@ input[type="range"]::-moz-range-thumb {
         width: 255px;
     }
 }
- 
 
 
+/* basket page */
+.basket {
+    margin-bottom: 160px;
+
+    &__title {
+        margin-bottom: 31px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__btn-box {
+        @include flex-center-sb;
+    }
+
+    &__btn-back {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $orange;
+        cursor: pointer;
+    }
+
+    &__btn-clean {
+        @extend %inter-400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey-light;
+        cursor: pointer;
+    }
+
+    &__item {
+        height: 162px;
+        @include flex;
+        column-gap: 72px;
+        border-bottom: 1px solid $grey-light-bright;
+        position: relative;
+    }
+
+    &__img-name-box {
+        @include flex;
+        column-gap: 72px;
+    }
+
+    &__item-name {
+        width: 200px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .18px;
+    }
+
+    &__item-price {
+        width: 120px;
+    }
+
+    &__number-price-box {
+        @include flex;
+        column-gap: 72px;
+    }
+
+    &__item-price-now {
+        @extend %inter-500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: .2px;
+        color: $black;
+    }
+
+    &__item-price-old {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-light;
+        text-decoration: line-through;
+    }
+
+    /* total box*/
+    &__total {
+        border: 1px solid $grey-light-bright;
+        border-radius: 10px;
+        padding: 32px 24px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__number-order-box,
+    &__sum-box,
+    &__discont,
+    &__total-box {
+        @include flex-center-sb;
+        gap: 16px;
+    }
+
+    &__number-order-name,
+    &__sum-name,
+    &__discont-name {
+        width: 113px;
+        @extend %inter-300;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-deep;
+    }
+
+    &__number-order,
+    &__sum,
+    &__discont {
+        @extend %inter-300;
+        font-size: 16px;
+        line-height: 25px;
+        color: $black;
+    }
+
+    &__total-box {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        color: $black;
+        letter-spacing: .24px;
+        padding-top: 24px;
+        border-top: 1px solid $grey-bg;
+    }
 
 
+    &__total-btn {
+        @include button;
+        padding: 16px 20px;
+        text-align: center;
+        width: 100%;
+    }
+}
 
 
 
@@ -3622,7 +3756,7 @@ input[type="range"]::-moz-range-thumb {
     .shop__inner {
         justify-content: center;
         position: relative;
-        
+
     }
 
     .shop-aside {
@@ -3649,6 +3783,11 @@ input[type="range"]::-moz-range-thumb {
 
     .buy-one-click__content-inner {
         z-index: 9998;
+    }
+
+    .basket__inner {
+        flex-direction: column;
+        justify-content: center;
     }
 
 }
@@ -3757,7 +3896,8 @@ input[type="range"]::-moz-range-thumb {
 
     .shop-one-title {
         font-size: 32px;
-        line-height: 33px;;
+        line-height: 33px;
+        ;
         letter-spacing: 1.6px;
     }
 
@@ -3829,6 +3969,29 @@ input[type="range"]::-moz-range-thumb {
         flex-direction: column;
         align-items: center;
     }
+
+    .basket__item {
+        height: fit-content;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .basket__item-delete-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .basket__items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .basket__number-price-box {
+        margin-bottom: 24px;
+    }
 }
 
 @media (max-width: 960px) {
@@ -3874,7 +4037,7 @@ input[type="range"]::-moz-range-thumb {
         height: 40px;
         background-image: url(../images/arrow-up-white-small.svg);
     }
-    
+
 }
 
 @media (max-width: 720px) {
@@ -4046,6 +4209,27 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 48px;
     }
 
+    .basket__img-name-box {
+        column-gap: 32px;
+        height: 150px;
+        margin-top: 40px;
+    }
+
+    .basket__item-img {
+        width: 104px;
+    }
+
+    .basket__item-name {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .basket__number-price-box {
+        column-gap: 24px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
 }
 
 
@@ -4169,7 +4353,7 @@ input[type="range"]::-moz-range-thumb {
         text-align: center;
     }
 
-    .number {
+    .shop-one__number {
         width: 74%;
     }
 
