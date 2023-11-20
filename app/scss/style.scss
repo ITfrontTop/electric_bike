@@ -3487,6 +3487,201 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
+/* placing page */
+.placing {
+    margin-bottom: 160px;
+
+    &__inner {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__details-pay {
+        padding: 40px;
+        width: 896px;
+        border: 1px solid $grey-light-bright;
+        border-radius: 10px;
+    }
+
+    &__subtitle {
+        margin-bottom: 32px;
+    }
+
+    &__input-box {
+        @include flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    &__input-name,
+    &__input-second-name,
+    &__input-city,
+    &__input-st,
+    &__input-house,
+    &__input-room,
+    &__input-phone,
+    &__input-email,
+    &__input-textarea {
+        padding: 16px;
+        background-color: $grey-bg;
+        border-radius: 10px;
+        border: 1px solid $grey-bg;
+        outline: none;
+
+        &:focus {
+            box-shadow: 0px 0px 0px 2px $grey-light, 0px 0px 10px $grey-light-bright;
+        }
+
+        &::placeholder {
+            @extend %inter-400;
+            font-size: 16px;
+            line-height: 25px;
+            color: $grey-light;
+        }
+    }
+
+    &__input-name,
+    &__input-second-name,
+    &__input-st,
+    &__input-phone,
+    &__input-email {
+        width: 399px;
+    }
+
+    &__input-city {
+        width: 219px;
+    }
+
+    &__input-house,
+    &__input-room {
+        width: 74px;
+    }
+
+    &__input-textarea {
+        resize: none;
+        width: 815px;
+        height: 160px;
+    }
+
+
+    /* placing details pay way*/
+    &__radio-box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__details-delivery {
+        padding: 40px;
+        border: 1px solid $grey-light-bright;
+        border-radius: 10px;
+    }
+
+    &__details-title {
+        margin-bottom: 32px;
+        width: 268px;
+    }
+
+    &__details-way-title,
+    &__details-pays-title {
+        @extend %inter-500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .18px;
+        margin-bottom: 18px;
+    }
+
+    &__details-way-item,
+    &__details-pays-item {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+
+    &__details-way-label,
+    &__details-pays-label {
+        position: relative;
+    }
+
+    &__details-way-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        appearance: none;
+
+        &:checked + .placing__details-way-radio {
+
+            &::before {
+                border: 9px solid $orange;
+            }
+        }
+    }
+
+    &__details-way-radio {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-deep;
+        padding-left: 34px;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 1px solid $grey-light;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+
+    &__details-pays-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        appearance: none;
+
+        &:checked + .placing__details-pays-radio {
+
+            &::before {
+                border: 9px solid $orange;
+            }
+        }
+    }
+
+    &__details-pays-radio {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-deep;
+        padding-left: 34px;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 1px solid $grey-light;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
 
 
 
@@ -4036,6 +4231,10 @@ input[type="range"]::-moz-range-thumb {
         width: 40px;
         height: 40px;
         background-image: url(../images/arrow-up-white-small.svg);
+    }
+
+    .basket {
+        margin-bottom: 60px;
     }
 
 }
