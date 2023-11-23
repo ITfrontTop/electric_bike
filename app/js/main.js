@@ -103,7 +103,7 @@ const shopOneSmall = new Swiper('.shop-one__small-slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    
+
 
 })
 
@@ -282,25 +282,28 @@ const productsLengthCategory = document.querySelectorAll('.category__item-label'
 
 // количество начальное количество пунктов
 let itemsCategory = 5
+// проверка на то существует ли элемент
+if (showMoreCategory) {
+    showMoreCategory.addEventListener('click', function () {
+        // добавляем количество пунктов
+        itemsCategory += 5
 
-showMoreCategory.addEventListener('click', function () {
-    // добавляем количество пунктов
-    itemsCategory += 5
+        // найти все элементы
+        const arrayCategory = Array.from(document.querySelector('.category__item').children)
 
-    // найти все элементы
-    const arrayCategory = Array.from(document.querySelector('.category__item').children)
+        // элементы которые нужно видеть
+        const visItemsCategory = arrayCategory.slice(0, itemsCategory)
 
-    // элементы которые нужно видеть
-    const visItemsCategory = arrayCategory.slice(0, itemsCategory)
+        // делаем чтобы видеть елементы
+        visItemsCategory.forEach(el => el.classList.add('is-visible'))
 
-    // делаем чтобы видеть елементы
-    visItemsCategory.forEach(el => el.classList.add('is-visible'))
+        // удаляем кнопку когда елеметы заканчиваються
+        if (visItemsCategory.length === productsLengthCategory) {
+            showMoreCategory.style.display = 'none'
+        }
+    })
+}
 
-    // удаляем кнопку когда елеметы заканчиваються
-    if (visItemsCategory.length === productsLengthCategory) {
-        showMoreCategory.style.display = 'none'
-    }
-})
 
 
 
@@ -308,21 +311,23 @@ showMoreCategory.addEventListener('click', function () {
 const showMoreBrand = document.querySelector('.show-more-brand')
 const productsLengthBrand = document.querySelectorAll('.brand-aside__item-label').length
 let itemsBrand = 5
+// проверка на то существует ли элемент
+if (showMoreBrand) {
+    showMoreBrand.addEventListener('click', () => {
+        itemsBrand += 5
 
+        const arrayBrand = Array.from(document.querySelector('.brand-aside__item').children)
 
-showMoreBrand.addEventListener('click', () => {
-    itemsBrand += 5
+        const visItemsBrand = arrayBrand.slice(0, itemsBrand)
 
-    const arrayBrand = Array.from(document.querySelector('.brand-aside__item').children)
+        visItemsBrand.forEach(el => el.classList.add('is-visible'))
 
-    const visItemsBrand = arrayBrand.slice(0, itemsBrand)
+        if (visItemsBrand.length === productsLengthBrand) {
+            showMoreBrand.style.display = 'none'
+        }
+    })
+}
 
-    visItemsBrand.forEach(el => el.classList.add('is-visible'))
-
-    if (visItemsBrand.length === productsLengthBrand) {
-        showMoreBrand.style.display = 'none'
-    }
-})
 
 
 // цены которые меняються ползунками
@@ -411,7 +416,11 @@ loadItem()
 
 function listPage() {
     let count = Math.ceil(list.length / limit)
-    document.querySelector('.shop-content__number-inner').innerHTML = ''
+    // проверка на то существует ли элемент
+    if (document.querySelector('.shop-content__number-inner')) {
+        document.querySelector('.shop-content__number-inner').innerHTML = ''
+    }
+
 
     // добавления кнопки prev
     if (thisPage != 1) {
@@ -419,7 +428,11 @@ function listPage() {
         // prev.innerText = 'PREV'
         prev.classList.add('shop-content__arrow-prev')
         prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")")
-        document.querySelector('.shop-content__number-inner').appendChild(prev)
+        // проверка на то существует ли элемент
+        if (document.querySelector('.shop-content__number-inner')) {
+            document.querySelector('.shop-content__number-inner').appendChild(prev)
+        }
+
     }
 
     // добавление кнопок
@@ -432,7 +445,11 @@ function listPage() {
             newPage.classList.add('pagination-active')
         }
         newPage.setAttribute('onclick', "changePage(" + i + ")")
-        document.querySelector('.shop-content__number-inner').appendChild(newPage)
+        // проверка на то существует ли элемент
+        if (document.querySelector('.shop-content__number-inner')) {
+            document.querySelector('.shop-content__number-inner').appendChild(newPage)
+        }
+
     }
 
     if (thisPage != count) {
@@ -440,7 +457,11 @@ function listPage() {
         // next.innerText = 'NEXT'
         next.classList.add('shop-content__arrow-next')
         next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")")
-        document.querySelector('.shop-content__number-inner').appendChild(next)
+        // проверка на то существует ли элемент
+        if (document.querySelector('.shop-content__number-inner')) {
+            document.querySelector('.shop-content__number-inner').appendChild(next)
+        }
+
     }
 }
 
@@ -449,9 +470,13 @@ function changePage(i) {
     loadItem()
 }
 // при нажатие на сторинку скролит вверх страницы
-shopPageNumber.addEventListener('click', function () {
-    window.scrollTo(0, 0)
-})
+// проверка на то существует ли элемент
+if (shopPageNumber) {
+    shopPageNumber.addEventListener('click', function () {
+        window.scrollTo(0, 0)
+    })
+}
+
 
 
 
@@ -461,42 +486,50 @@ shopPageNumber.addEventListener('click', function () {
 const shopView3 = document.querySelector('.shop-content__view-img-3')
 const shopView2 = document.querySelector('.shop-content__view-img-2')
 const shopContentItem = document.querySelectorAll('.shop-content__item')
-
-
-shopView2.addEventListener('click', function () {
-    shopView3.classList.remove('active')
-    shopView2.classList.add('active')
-    shopContentItem.forEach(item => {
-        item.classList.add('shop-content__item-view2')
-        limit = 8
-        loadItem()
+// проверка на то существует ли элемент
+if (shopView2) {
+    shopView2.addEventListener('click', function () {
+        shopView3.classList.remove('active')
+        shopView2.classList.add('active')
+        shopContentItem.forEach(item => {
+            item.classList.add('shop-content__item-view2')
+            limit = 8
+            loadItem()
+        })
     })
-})
+}
 
-shopView3.addEventListener('click', function () {
-    shopView2.classList.remove('active')
-    shopView3.classList.add('active')
-    shopContentItem.forEach(item => {
-        item.classList.remove('shop-content__item-view2')
-        limit = 12
-        loadItem()
+// проверка на то существует ли элемент
+if (shopView3) {
+    shopView3.addEventListener('click', function () {
+        shopView2.classList.remove('active')
+        shopView3.classList.add('active')
+        shopContentItem.forEach(item => {
+            item.classList.remove('shop-content__item-view2')
+            limit = 12
+            loadItem()
+        })
     })
-})
+}
+
 
 // кнопка scroll to top
 const scrollBtn = document.querySelector('.scroll-top-btn')
+// проверка на то существует ли элемент
+if (scrollBtn) {
+    window.onscroll = () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.remove('scroll-top-btn__hide')
+        } else if (window.scrollY < 300) {
+            scrollBtn.classList.add('scroll-top-btn__hide')
+        }
+    }
 
-window.onscroll = () => {
-    if (window.scrollY > 300) {
-        scrollBtn.classList.remove('scroll-top-btn__hide')
-    } else if (window.scrollY < 300) {
-        scrollBtn.classList.add('scroll-top-btn__hide')
+    scrollBtn.onclick = () => {
+        window.scrollTo(0, 0)
     }
 }
 
-scrollBtn.onclick = () => {
-    window.scrollTo(0, 0)
-}
 
 
 
@@ -586,34 +619,37 @@ const resetItems = function (items) {
         item.checked = false
     })
 }
+// проверка на то существует ли элемент
+if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+        // убераем checked с "Только в наличии"
+        presenceBtn.checked = false
 
-resetBtn.addEventListener('click', function () {
-    // убераем checked с "Только в наличии"
-    presenceBtn.checked = false
+        // убераем checked с "Категории товара"
+        resetItems(categoryItems)
 
-    // убераем checked с "Категории товара"
-    resetItems(categoryItems)
+        // ставим в исходное положения ползунки "Цена"
+        rangeMin.value = '25000'
+        rangeMax.value = '750000'
 
-    // ставим в исходное положения ползунки "Цена"
-    rangeMin.value = '25000'
-    rangeMax.value = '750000'
+        inputMinPrice.value = '25000'
+        inputMaxPrice.value = '750000'
 
-    inputMinPrice.value = '25000'
-    inputMaxPrice.value = '750000'
+        progressItem.style.left = '2%'
+        progressItem.style.right = '50%'
 
-    progressItem.style.left = '2%'
-    progressItem.style.right = '50%'
+        // убераем checked с "Бренд"
+        resetItems(brandItems)
 
-    // убераем checked с "Бренд"
-    resetItems(brandItems)
+        // убераем checked с "Материал рамы"
+        resetItems(materialItem)
 
-    // убераем checked с "Материал рамы"
-    resetItems(materialItem)
+        // убераем checked с "Цвет"
+        resetItems(colorItems)
 
-    // убераем checked с "Цвет"
-    resetItems(colorItems)
+    })
+}
 
-})
 
 
 
@@ -634,14 +670,21 @@ buyOneClickBtn.forEach(item => {
     })
 })
 
-closeBtnOneClick.addEventListener('click', closebuyOneClick)
+// проверка на то существует ли элемент
+if (closeBtnOneClick) {
+    closeBtnOneClick.addEventListener('click', closebuyOneClick)
+}
 
 
 // filter btn shop
 const filterBtn = document.querySelector('.filter-btn')
 const shopeAside = document.querySelector('.shop-aside')
 
-filterBtn.addEventListener('click', function () {
-    shopeAside.classList.toggle('shop-aside--active')
-})
+// проверка на то существует ли элемент
+if (filterBtn) {
+    filterBtn.addEventListener('click', function () {
+        shopeAside.classList.toggle('shop-aside--active')
+    })
+}
+
 

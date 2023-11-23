@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/style.min.css">
 
-    <script src="js/main.min.js" defer></script>
+    <script defer src="js/main.min.js"></script>
 </head>
 
 <body>
@@ -363,453 +363,190 @@
         <div class="menu-more__overlay hidden"></div>
 
 
+
     </header>
 
 
     <main class="main">
 
-        <section class="basket__header">
+
+        <section class="contacts__header">
             <div class="container">
-
-                <!-- scroll top -->
-                <div class="scroll-top-btn scroll-top-btn__hide"></div>
-
-                <div class="breadcrumbs breadcrumbs__shop-one">
-                    <ul class="breadcrumbs__items">
-                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
-                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
-                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
-                                Оформление заказа
-                            </a>
-                        </li>
-                    </ul>
+                <div class="header__contacts-wrapper">
+                    <div class="breadcrumbs">
+                        <ul class="breadcrumbs__items">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__item-link" href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__item-link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="title contacts__title">
+                        Контакты
+                    </h2>
                 </div>
-
             </div>
         </section>
 
-
-        <section class="placing">
-            <div class="container">
-
-                <h2 class="placing__title title">
-                    Оформление заказа
-                </h2>
-
-                <div class="placing__inner">
-                    <div class="placing__details-pay">
-                        <h3 class="placing__subtitle shop-one-title">
-                            1 Детали оплаты
-                        </h3>
-                        <div class="placing__input-box">
-                            <input class="placing__input-name" type="text" placeholder="Имя*">
-                            <input class="placing__input-second-name" type="text" placeholder="Фамилия*">
-                            <input class="placing__input-city" type="text" placeholder="Город*">
-                            <input class="placing__input-st" type="text" placeholder="Улица*">
-                            <div class="placing__input-wraper">
-                                <input class="placing__input-house" type="number" placeholder="Дом*">
-                                <input class="placing__input-room" type="number" placeholder="Кв*">
-                            </div>
-                            <input class="placing__input-phone" type="number" placeholder="Телефон*">
-                            <input class="placing__input-email" type="email" placeholder="E-mail*">
-                            <textarea class="placing__input-textarea" placeholder="Комментарий к заказу"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="placing__details-delivery">
-                        <h3 class="placing__details-title shop-one-title">
-                            2 Детали доставки
-                        </h3>
-
-                        <div class="placing__radio-box">
-                            <div class="placing__details-way">
-                                <h6 class="placing__details-way-title">
-                                    Способ доставки
-                                </h6>
-                                <div class="placing__details-way-item">
-                                    <label class="placing__details-way-label">
-                                        <input class="placing__details-way-input" type="radio" name="way"
-                                            value="courier">
-                                        <span class="placing__details-way-radio">
-                                            Курьерская доставка
-                                        </span>
-                                    </label>
-                                    <label class="placing__details-way-label">
-                                        <input class="placing__details-way-input" type="radio" name="way"
-                                            value="pickup">
-                                        <span class="placing__details-way-radio">
-                                            Самовывоз
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="placing__details-pays">
-                                <h6 class="placing__details-pays-title">
-                                    Способ оплаты
-                                </h6>
-                                <div class="placing__details-pays-item">
-                                    <label class="placing__details-pays-label">
-                                        <input class="placing__details-pays-input" type="radio" name="pay">
-                                        <span class="placing__details-pays-radio">
-                                            Оплата онлайн, на сайте
-                                        </span>
-                                    </label>
-                                    <label class="placing__details-pays-label">
-                                        <input class="placing__details-pays-input" type="radio" name="pay">
-                                        <span class="placing__details-pays-radio">
-                                            Оплата курьеру картой
-                                        </span>
-                                    </label>
-                                    <label class="placing__details-pays-label">
-                                        <input class="placing__details-pays-input" type="radio" name="pay">
-                                        <span class="placing__details-pays-radio">
-                                            Оплата курьеру наличными
-                                        </span>
-                                    </label>
-                                    <label class="placing__details-pays-label">
-                                        <input class="placing__details-pays-input" type="radio" name="pay">
-                                        <span class="placing__details-pays-radio">
-                                            Оплата в магазине
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="placing__details-total">
-
-                        <div class="placing__details-total-name">
-                            <h3 class="placing__name-title shop-one-title">
-                                3 Ваш заказ
-                            </h3>
-                        </div>
-
-                        <div class="placing__details-total-delivery">
-                            <p class="placing__delivery-title">
-                                Курьерская доставка
-                            </p>
-
-                            <div class="placing__delivery-inner">
-                                <div class="placing__delivery-box">
-                                    <div class="placing__delivery-item">Адрес:</div>
-                                    <div class="placing__delivery-discription">г. Москва, ул. Некрасова, д. 23, кв. 45
-                                    </div>
-                                </div>
-                                <div class="placing__delivery-box">
-                                    <div class="placing__delivery-item">Кому:</div>
-                                    <div class="placing__delivery-discription">Алёхин Борис</div>
-                                </div>
-                                <div class="placing__delivery-box">
-                                    <div class="placing__delivery-item">Телефон:</div>
-                                    <div class="placing__delivery-discription">8 999 999 99-99</div>
-                                </div>
-                                <div class="placing__delivery-box">
-                                    <div class="placing__delivery-item">E-mail:</div>
-                                    <div class="placing__delivery-discription">pochta@mail.ru</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="placing__details-total-price">
-                            <div class="placing__price-box">
-                                <div class="placing__price-name">Итого 3 товара</div>
-                                <div class="placing__price-sum">605 370 ₽ </div>
-                            </div>
-
-                            <div class="placing__btn-accept">
-                                Подтвердить заказ
-                            </div>
-
-                            <div class="placing__personal-data-text">
-                                Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей
-                                работы с сайтом и для других целей, описанных в нашей
-                                <a class="placing__personal-data-link" href="#">политике конфиденциальности</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        <section class="contacts-map">
+            <div class="inner">
+                <img class="contacts-map__map-img" src="images/contacts-map-img.png" alt="contacts map">
             </div>
         </section>
 
-
-        <section class="similar-products">
+        <section class="contacts-info">
             <div class="container">
-                <div class="similar-products__inner">
-                    <h3 class="similar-products__title shop-one-title">
-                        Похожие товары
-                    </h3>
-
-                    <div class="swiper-container similar-products__slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/spain-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-in">
-                                                В наличии
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Orbea-ALMA.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Orbea ALMA H30 2021
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                153 400 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-                                                163 211 ₽
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                <div class="contacts-info__inner">
+                    <div class="contacts-info__address">
+                        <div class="contacts-info__info-item">
+                            <div class="contacts-info__info-title">
+                                Адрес магазина:
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/italy-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-in">
-                                                В наличии
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Trek-Fx-3.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Trek Fx 3 Disc Dnister Black HYBD 2022
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                97 070 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/france-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-out">
-                                                Распродано
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Scott-Scale-700-rs.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Scott Scale 700 RS 2016
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                435 600 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-                                                522 000 ₽
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/italy-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-in">
-                                                В наличии
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Trek-Marlin-4-Aloha.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Trek Marlin 4 Aloha ATB 27.5 2022
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                73 300 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/spain-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-in">
-                                                В наличии
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Orbea-ALMA.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Orbea ALMA H30 2021
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                153 400 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-                                                163 211 ₽
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/italy-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-in">
-                                                В наличии
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Trek-Fx-3.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Trek Fx 3 Disc Dnister Black HYBD 2022
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                97 070 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/france-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-out">
-                                                Распродано
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Scott-Scale-700-rs.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Scott Scale 700 RS 2016
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                435 600 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-                                                522 000 ₽
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="product-item shop-content__item similar-products__slider-item">
-                                    <a class="product-item_link" href="#">
-                                        <div class="product-item__top">
-                                            <div class="product-item__top-box shop-content__top-box">
-                                                <img class="product-item__top-img" src="images/italy-flag.png"
-                                                    alt="Bianchi">
-                                            </div>
-                                            <div class="product-item__top-stock sold-in">
-                                                В наличии
-                                            </div>
-                                        </div>
-                                        <div class="product-item__img">
-                                            <img src="images/Trek-Marlin-4-Aloha.png" alt="Bianchi">
-                                        </div>
-                                        <h5 class="product-item__title shop-content__title">
-                                            Trek Marlin 4 Aloha ATB 27.5 2022
-                                        </h5>
-                                        <div class="product-item__price">
-                                            <div class="product-item__price-now">
-                                                73 300 ₽
-                                            </div>
-                                            <div class="product-item__price-old">
-
-                                            </div>
-                                        </div>
-                                    </a>
+                            <div class="contacts-info__info-box">
+                                <div class="contacts-info__info-description">
+                                    Россия, Москва, ул. Доватора, дом 7/8 с1
                                 </div>
                             </div>
                         </div>
-
-                        <div class="swiper-button-prev">
-                            <div class="swiper-button-left">
-                                <svg width="14" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.125 21.1L.7 12.7a.871.871 0 01-.212-.325A1.1 1.1 0 01.425 12a1.1 1.1 0 01.063-.375A.871.871 0 01.7 11.3l8.425-8.425c.233-.233.525-.35.875-.35s.65.125.9.375.375.542.375.875a1.2 1.2 0 01-.375.875L3.55 12l7.35 7.35c.233.233.35.52.35.862 0 .342-.125.638-.375.888a1.2 1.2 0 01-.875.375 1.2 1.2 0 01-.875-.375z"
-                                        fill="#101010" />
-                                </svg>
+                        <div class="contacts-info__info-item">
+                            <div class="contacts-info__info-title">
+                                График работы:
+                            </div>
+                            <div class="contacts-info__info-box">
+                                <div class="contacts-info__info-description">
+                                    Понедельник — Воскресение с 10:00 до 20:00 часа
+                                </div>
+                                <div class="contacts-info__info-description">
+                                    БЕЗ ВЫХОДНЫХ
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-button-next">
-                            <div class="swiper-button-right">
-                                <svg width="14" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.875 21.1l8.425-8.4c.1-.1.17-.208.212-.325a1.1 1.1 0 00.063-.375 1.1 1.1 0 00-.063-.375.871.871 0 00-.212-.325L4.875 2.875A1.187 1.187 0 004 2.525c-.35 0-.65.125-.9.375a1.2 1.2 0 00-.375.875c0 .333.125.625.375.875L10.45 12 3.1 19.35c-.233.233-.35.52-.35.862 0 .342.125.638.375.888s.542.375.875.375a1.2 1.2 0 00.875-.375z"
-                                        fill="#101010" />
-                                </svg>
+                        <div class="contacts-info__info-item">
+                            <div class="contacts-info__info-title">
+                                Телефоны:
+                            </div>
+                            <div class="contacts-info__info-box">
+                                <div class="contacts-info__info-description">
+                                    +7 (495) 055-75-86
+                                </div>
+                                <div class="contacts-info__info-description">
+                                    +7 (965) 142-22-99
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts-info__info-item">
+                            <div class="contacts-info__info-title">
+                                E-mail:
+                            </div>
+                            <div class="contacts-info__info-box">
+                                <div class="contacts-info__info-description">
+                                    order@world-bike.ru — заказы
+                                </div>
+                                <div class="contacts-info__info-description">
+                                    nfo@world-bike.ru — информация
+                                </div>
+                                <div class="contacts-info__info-description">
+                                    opt@world-bike.ru — опт
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="contacts-info__legal">
+                        <div class="contacts-info__legal-title">
+                            Юридическая информация:
+                        </div>
+                        <div class="contacts-info__legal-inner">
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    Наименование: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    ИП НЕТРЕБИН ВЛАДИСЛАВ ВЯЧЕСЛАВОВИЧ
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    ИНН: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    402573939444
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    ОГРН: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    317402700004683
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    Фактический адрес: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    Москва, ул. Доватора, дом 7/8 с1
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    Юридический адрес: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    Москва, ул. Доватора, дом 7/8 с1
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    Расчетный счет: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    40802810800000085888
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    Банк: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    АО «ТИНЬКОФФ БАНК»
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    Корр.счет: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    30101810145250000974 
+                                </div>
+                            </div>
+                            <div class="contacts-info__legal-item">
+                                <div class="contacts-info__legal-name">
+                                    БИК: 
+                                </div>
+                                <div class="contacts-info__legal-decription">
+                                    044525974
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fit-back">
+            <div class="inner fit-back__inner">
+                <div class="container">
+                    <div class="fit-back__wrapper">
+                        
+                    </div>
                 </div>
             </div>
         </section>
