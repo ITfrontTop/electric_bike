@@ -688,3 +688,16 @@ if (filterBtn) {
 }
 
 
+
+// faq btn
+const faqItem = document.querySelectorAll('[data-name="faq-title"]')
+
+faqItem.forEach(function(item) {
+    item.addEventListener('click', showFagActiveContent)
+})
+
+
+function showFagActiveContent() {
+    this.classList.toggle('active')
+    this.nextElementSibling.classList.toggle('hidden')
+}
