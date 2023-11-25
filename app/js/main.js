@@ -701,3 +701,16 @@ function showFagActiveContent() {
     this.classList.toggle('active')
     this.nextElementSibling.classList.toggle('hidden')
 }
+
+
+// dop btn
+const dopItem = document.querySelectorAll('[data-name="dop"]')
+
+dopItem.forEach((item) => {
+    item.addEventListener('click', showDopActiveContent)
+})
+
+function showDopActiveContent() {
+    this.classList.toggle('active')
+    this.nextElementSibling.classList.toggle('hidden')
+}
