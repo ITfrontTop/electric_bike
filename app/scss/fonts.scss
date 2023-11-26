@@ -2,8 +2,7 @@
     font-family: 'Bebas-Neue';
     font-weight: 400;
     font-style: normal;
-    src: local('Bebas-Neue'),
-        url('../fonts/Bebas-Neue.woff2') format('woff2'),
+    src: url('../fonts/Bebas-Neue.woff2') format('woff2'),
         url('../fonts/Bebas-Neue.woff') format('woff');
     font-display: swap;
 }
@@ -13,8 +12,7 @@
     font-family: 'inter-Light';
     font-weight: 300;
     font-style: normal;
-    src: local('inter-Light'),
-        url('../fonts/Inter-Light.woff2') format('woff2'),
+    src: url('../fonts/Inter-Light.woff2') format('woff2'),
         url('../fonts/Inter-Light.woff') format('woff');
     font-display: swap;
 }
@@ -23,8 +21,7 @@
     font-family: 'inter-Regular';
     font-weight: 400;
     font-style: normal;
-    src: local('inter-Regular'),
-        url('../fonts/Inter-Regular.woff2') format('woff2'),
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
         url('../fonts/inter-Regular.woff') format('woff');
     font-display: swap;
 }
@@ -33,8 +30,7 @@
     font-family: 'inter-Medium';
     font-weight: 500;
     font-style: normal;
-    src: local('inter-Medium'),
-        url('../fonts/inter-Medium.woff2') format('woff2'),
+    src: url('../fonts/inter-Medium.woff2') format('woff2'),
         url('../fonts/inter-Medium.woff') format('woff');
     font-display: swap;
 }

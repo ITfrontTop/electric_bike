@@ -690,6 +690,10 @@
     &__dop {
         margin-bottom: 80px;
     }
+
+    &__about {
+        margin-bottom: 80px;
+    }
 }
 
 /* novelties */
@@ -4229,7 +4233,7 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__service-title {
-        @extend %inter-400;
+        @extend %bebas-400;
         font-size: 110px;
         line-height: 135px;
         letter-spacing: 2.2px;
@@ -4306,7 +4310,26 @@ input[type="range"]::-moz-range-thumb {
         height: 586px;
         width: 50%;
         background-color: $black;
+        padding: 85px 142px 85px 282px;
+    }
 
+    &__words-title {
+        color: $white;
+        margin-bottom: 32px;
+    }
+
+    &__words-box {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    &__words-text {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $white;
     }
 
     &__words-item-img {
@@ -4317,7 +4340,238 @@ input[type="range"]::-moz-range-thumb {
         background-position: center;
         background-size: cover;
     }
+
+    &__words-social-inner {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__words-social {
+        cursor: pointer;
+    }
+
+    &__info-title {
+        width: 720px;
+        margin-bottom: 48px;
+    }
+
+    &__info-text-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__info-name {
+        width: 365px;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $black;
+    }
+
+    &__info-text {
+        width: 730px;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-deep;
+    }
+
+    &__info-img {
+        height: 533px;
+        background-image: url(../images/about-info-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 56px;
+    }
+
+    &__dealar {
+        margin-bottom: 160px;
+
+    }
+
+    &__dealar-title {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 48px;
+    }
+
+    &__dealar-inner {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    &__dealar-item {
+        padding: 40px;
+        border-radius: 10px;
+    }
+
+    &__dealar-item-title {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: .24px;
+        margin-bottom: 24px;
+        color: $white;
+    }
+
+    &__dealar-link {
+        @extend %inter-300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .18px;
+        color: $white;
+    }
+
+    &__dealar-item-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+    }
+
+    &__dealar-item-bikes {
+        background-color: $grey-deep-dark;
+        width: 730px;
+    }
+
+    &__dealar-item-accessories {
+        background-color: $black;
+        width: 620px;
+    }
+
+    &__dealar-item-spares {
+        background-color: $orange;
+        width: 840px;
+    }
+
+    &__call {
+        margin-bottom: 160px;
+    }
+
+    &__call-inner {
+        background-color: $orange;
+        background-image: url(../images/about-call-bg.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+
+    &__call-item {
+        padding: 45px 0 36px;
+        width: 534px;
+    }
+
+    &__call-item-title {
+        color: $white;
+        margin-bottom: 32px;
+    }
+
+    &__call-item-subtitle {
+        @extend %inter-500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: .2px;
+        color: $white;
+    }
+
+    &__call-item-text {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $white;
+    }
+
+    &__team {
+        margin-bottom: 160px;
+    }
+
+    &__team-title {
+        margin-bottom: 80px;
+    }
+
+    &__team-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    &__team-text-box {
+        width: 581px;
+    }
+
+    &__team-text {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $black;
+        margin-bottom: 64px;
+    }
+
+    &__team-name {
+        @extend %inter-500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: .2px;
+        color: $black;
+        margin-bottom: 24px;
+    }
+
+    &__team-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__team-list-item {
+        @extend %inter-300;
+        font-size: 16px;
+        line-height: 25px;
+        padding-left: 31px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 15px;
+            background-image: url(../images/checkmark-icon.svg);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+
+    &__team-img {
+        width: 620px;
+        height: 481px;
+        background-image: url(../images/team-img.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__photo {
+        margin-bottom: 160px;
+    }
+
+    &__photo-title {
+        margin-bottom: 80px;
+    }
+
+    &__photo-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+    }
 }
+
 
 
 
