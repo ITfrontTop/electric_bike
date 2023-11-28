@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script defer src="js/main.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header__pages">
+        <div class="container">
+            <div class="header__top">
+                <div class="menu-logo">
+                    <img class="logo" src="images/logo-white.svg" alt="logo">
+                </div>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link menu-link__trade" href="">Trade In</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велосипеды</a>
+                            <div class="menu-sub">
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Горные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Городские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Шоссейные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Гравийные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Трековые велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Велосипеды для триатлона
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Двухподвесные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Электровелосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Женские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Детские велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Запчасти
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Экипировка
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Аксессуары
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велостанки</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-nav__wrapper">
+                    <div class="user-nav">
+                        <div class="user-nav__items">
+                            <div class="user-nav__search">
+                                <a class="user-nav__search-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zm2 9.5l-4.197-4.197"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <form class="user-nav__search-form" action="#">
+                                    <input class="user-nav__search-input" type="search" placeholder="Поиск">
+                                    <input class="user-nav__search-submit" type="submit" value="">
+                                </form>
+
+                            </div>
+                            <div class="user-nav__user">
+                                <a class="user-nav__user-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 15H6a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4zm-4-4a4 4 0 100-8 4 4 0 000 8z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="user-nav__heart">
+                                <a class="user-nav__heart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.331 12.047L12 20l7.669-7.953A4.804 4.804 0 0021 8.714C21 6.111 18.965 4 16.454 4a4.465 4.465 0 00-3.214 1.38L12 6.668 10.76 5.38A4.465 4.465 0 007.546 4C5.036 4 3 6.11 3 8.714c0 1.25.479 2.45 1.331 3.333z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__heart-number">0</span>
+                                </a>
+                            </div>
+                            <div class="user-nav__cart">
+                                <a class="user-nav__cart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 17H6.5l-2-14H2" stroke="#fff" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M4.786 5H21l-3 9H6.07M9 21a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__cart-number">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-extra">
+                        <div class="menu-extra__btn">
+                            <a class="menu-extra__btn-link" href="#">
+                                <svg width="32" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="#fff" stroke-width="1.5" d="M0 1.25h32m-24 9h24m-24 9h24" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-more">
+            <div class="menu-more__btn">
+                <div class="logo__black">
+                    <img src="images/logo-black.svg" alt="logo">
+                </div>
+                <a class="menu-more__btn-link" href="#">
+                    <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                    </svg>
+                </a>
+            </div>
+
+            <h4 class="sutitle menu-more__sutitle">
+                Доп. Информация
+            </h4>
+
+            <div class="menu-main">
+                <ul class="menu-main__items">
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            TRADE IN
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велосипеды
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Горные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Городские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Шоссейные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Гравийные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Трековые велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велосипеды для триатлона
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Двухподвесные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Электровелосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Женские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Детские велосипеды
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Запчасти
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Экипировка
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велокуртки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велотрусы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Термобелье
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велообувь
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велошлемы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велоперчатки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Очки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Аксессуары
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велостанки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="menu-more__list">
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        О нас
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Веломастерская
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Хранение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Гарантии
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Пользовательское соглашение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Доставка и оплата
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Блог
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="menu-more__overlay hidden"></div>
+
+    </header>
+
+
+    <main class="main">
+
+        <div class="scroll-top-btn scroll-top-btn__hide"></div>
+
+        <section class="guarantees__header">
+            <div class="container">
+                <div class="header__contacts-wrapper">
+                    <div class="breadcrumbs__guarantees">
+                        <ul class="breadcrumbs__items">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__item-link" href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__item-link" href="#">
+                                    Гарантии
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="title contacts__title">
+                        Гарантии
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="guarantees__description">
+            <div class="container">
+                <div class="guarantees__description-inner">
+                    <div class="guarantees__description-text">
+                        Одной из важных составляющих работы нашего интернет-магазина является то, что продаваемые товары
+                        сертифицированы и обеспечены фирменной гарантией фирм-производителей.
+                    </div>
+                    <div class="guarantees__description-text">
+                        Также, для удобства покупателей, наш магазин помогает (участвует) в формирование гарантийных
+                        запросов по всем нижеперечисленным брендам. При любом гарантийном случае можно обращаться
+                        напрямую к нам.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="guarantees__items">
+            <div class="container">
+                <h2 class="guarantees__items-title title">
+                    Гарантия на бренды
+                </h2>
+                <div class="guarantees__items-inner">
+                    <div class="guarantees__item">
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                BMC
+                            </div>
+                            <div class="guarantees__item-description">
+                                2 года гарантия +1 год при регистрации на сайте
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Bont
+                            </div>
+                            <div class="guarantees__item-description">
+                                6 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Campagnolo
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Cervelo
+                            </div>
+                            <div class="guarantees__item-description">
+                                48 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Cipollini
+                            </div>
+                            <div class="guarantees__item-description">
+                                60 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Colnago
+                            </div>
+                            <div class="guarantees__item-description">
+                                24 месяца
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Continental
+                            </div>
+                            <div class="guarantees__item-description">
+                                -
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                CrankBrothers
+                            </div>
+                            <div class="guarantees__item-description">
+                                -
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Early Rider
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Easton
+                            </div>
+                            <div class="guarantees__item-description">
+                                -
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Elite
+                            </div>
+                            <div class="guarantees__item-description">
+                                -
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Fox
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Garmin
+                            </div>
+                            <div class="guarantees__item-description">
+                                24 месяца
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Giant
+                            </div>
+                            <div class="guarantees__item-description">
+                                60 месяцев
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guarantees__item">
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Kask
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Koo
+                            </div>
+                            <div class="guarantees__item-description">
+                                -
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Lightweight
+                            </div>
+                            <div class="guarantees__item-description">
+                                -
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Officine Mattio
+                            </div>
+                            <div class="guarantees__item-description">
+                                36 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Pinarello
+                            </div>
+                            <div class="guarantees__item-description">
+                                24 месяца + 12 месяцев при регистрации на сайте
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Rohloff
+                            </div>
+                            <div class="guarantees__item-description">
+                                60 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Scicon
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Scott
+                            </div>
+                            <div class="guarantees__item-description">
+                                60 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Selleroyal
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Shimano
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Sigma
+                            </div>
+                            <div class="guarantees__item-description">
+                                -
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                SKS
+                            </div>
+                            <div class="guarantees__item-description">
+                                6 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Tacx
+                            </div>
+                            <div class="guarantees__item-description">
+                                12 месяцев
+                            </div>
+                        </div>
+                        <div class="guarantees__item-wrapper">
+                            <div class="guarantees__item-name">
+                                Wilier
+                            </div>
+                            <div class="guarantees__item-description">
+                                24 месяца
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="guarantees__necessary">
+            <div class="container">
+                <div class="guarantees__necessary-inner">
+                    <div class="guarantees__necessary-title">
+                        Для осуществления гарантийного обслуживания необходимы:
+                    </div>
+                    <ul class="guarantees__necessary-list">
+                        <li class="guarantees__necessary-item">
+                            правильно и без помарок и исправлений заполненный гарантийный талон, в котором должны быть
+                            указаны модель и серийный номер изделия, дата продажи и печать торгующей организации;
+                        </li>
+                        <li class="guarantees__necessary-item">
+                            документ, подтверждающий покупку (товарная накладная);
+                        </li>
+                        <li class="guarantees__necessary-item">
+                            полная комплектация товара
+                        </li>
+                    </ul>
+
+                    <p class="guarantees__necessary-text">
+                        Обращаем также ваше внимание на то, что при получении и оплате заказа покупатель в присутствии
+                        курьера обязан проверить комплектацию и внешний вид изделия на предмет отсутствия физических
+                        дефектов (царапин, трещин, сколов и т.п.) и полноту комплектации. После отъезда курьера
+                        претензии по этим вопросам не принимаются.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="guarantees__never">
+            <div class="container">
+                <div class="guarantees__never-title">
+                    Гарантийное обслуживание <span class="guarantees__never-title-decor">НЕ</span> производится, если:
+                </div>
+                <div class="guarantees__never-inner">
+
+                    <div class="guarantees__never-items">
+                        <div class="guarantees__never-item">
+                            <ul class="guarantees__never-list">
+                                <li class="guarantees__never-list-item">
+                                    утерян или не заполнен гарантийный талон
+                                </li>
+                                <li class="guarantees__never-list-item">
+                                    оборудование было поставлено на территорию РФ неофициально
+                                </li>
+                                <li class="guarantees__never-list-item">
+                                    изделие имеет следы механического повреждения или вскрытия
+                                </li>
+                                <li class="guarantees__never-list-item">
+                                    нарушены заводские пломбы
+                                </li>
+                                <li class="guarantees__never-list-item">
+                                    были нарушены условия эксплуатации, транспортировки или хранения
+                                </li>
+                                <li class="guarantees__never-list-item">
+                                    проводился ремонт лицами, не являющимися сотрудниками авторизованного сервисного
+                                    центра
+                                </li>
+                                <li class="guarantees__never-list-item">
+                                    использовались неоригинальные комплектующие
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="guarantees__never-text">
+                            Подробное описание условий предоставления гарантии вы можете найти в документации
+                            к приобретённому товару и/или на сайте соответствующего производителя.
+                        </p>
+                    </div>
+
+                    
+                    <div class="guarantees__never-items-decor"></div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <section class="brand__guarantees">
+            <div class="brand__inner">
+                <div class="brand__img-box">
+                    <img src="images/wilier-logo.svg" alt="wilier logo">
+                </div>
+                <div class="brand__img-box">
+                    <img src="images/wahoo-logo.svg" alt="wahoo logo">
+                </div>
+                <div class="brand__img-box">
+                    <img src="images/trek-logo.svg" alt="trek logo">
+                </div>
+                <div class="brand__img-box">
+                    <img src="images/topeak-logo.svg" alt="topeak logo">
+                </div>
+                <div class="brand__img-box">
+                    <img src="images/tacx-logo.svg" alt="tacx logo">
+                </div>
+                <div class="brand__img-box">
+                    <img src="images/sram-logo.svg" alt="sram logo">
+                </div>
+                <div class="brand__img-box">
+                    <img src="images/shimano-logo.svg" alt="shimano logo">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__subscription">
+            <div class="container">
+                <div class="footer__subscription-inner">
+                    <h2 class="title footer__title">
+                        Подпишитесь на наши новости
+                    </h2>
+                    <form class="footer__subscription-form" action="#footer">
+
+                        <div class="footer__subscription-email">
+                            <input class="footer__subscription-input" type="email" placeholder="E-mail">
+                            <button class="footer__subscription-btn" type="submit">
+                                Подписаться
+                            </button>
+                        </div>
+
+                        <label class="footer__subscription-label">
+                            <input class="footer__subscription-processing-input" type="checkbox">
+                            <span class="footer__subscription-checkbox"></span>
+                            Согласен(на) на обработку персональных данных
+                        </label>
+
+                    </form>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="popup__close">
+                            <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#B3B3B3" stroke-width="2"
+                                    d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                            </svg>
+                        </div>
+                        <div class="popup__img">
+                            <svg width="98" height="99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y=".5" width="98" height="98" rx="49" fill="#F57520" />
+                                <path d="M21 51.91L38.69 69.5 78 26.5" stroke="#fff" stroke-width="8.167" />
+                            </svg>
+                        </div>
+                        <h2 class="title popup__title">
+                            Благодарим за подписку!
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__content">
+
+            <div class="container">
+                <div class="footer__content-inner">
+                    <div class="footer__content-logo">
+                        <div class="footer__logo">
+                            <img class="logo" src="images/logo-white.svg" alt="logo">
+                        </div>
+                        <p class="footer__content-descr">
+                            Компания World-bikes специализируется на продаже товаров для велосипедного спорта.
+                        </p>
+                    </div>
+
+                    <div class="footer__content-menu">
+
+                        <div class="footer__content-catalog">
+                            <h6 class="footer__content-catalog-title">
+                                Каталог
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Trade-in
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велосипеды
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Экипировка
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Запчасти
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велостанки
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Аксессуары
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-client">
+                            <h6 class="footer__content-catalog-title">
+                                Для клиента
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Доставка и оплата
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Блог
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Веломастерская
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Хранение
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Гарантии
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-contacts">
+                            <h6 class="footer__content-catalog-title footer__content-contacts-title">
+                                Контакты
+                            </h6>
+                            <div class="footer__content-contacts-info">
+                                <div class="footer__content-contacts-item footer__content-phone">
+                                    <a class="footer__content-info " href="tel:74950557586">
+                                        +7(495)055-75-86
+                                    </a>
+                                    <a class="footer__content-info" href="tel:79651422299">
+                                        +7(965)142-22-99
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-address">
+                                    <a class="footer__content-info" href="#">
+                                        г. Москва, ул. Доватора, 7/8 с1
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-email">
+                                    <a class="footer__content-info" href="email:order@world-bike.ru">
+                                        order@world-bike.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copy">
+                <div class="container">
+                    <div class="footer__copy-inner">
+                        <a class="footer__copy-author" href="#">
+                            © 2023 world bike
+                        </a>
+                        <a class="footer__copy-agreement" href="#">
+                            Пользовательское соглашение
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

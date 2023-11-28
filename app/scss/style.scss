@@ -694,6 +694,10 @@
     &__about {
         margin-bottom: 80px;
     }
+
+    &__guarantees {
+        margin-bottom: 80px;
+    }
 }
 
 /* novelties */
@@ -1966,7 +1970,9 @@
         padding: 48px 0 59px 0;
     }
 
-
+    &__guarantees {
+        padding: 48px 0 59px 0;
+    }
 
     &__item-link-terms {
         color: $black;
@@ -4682,9 +4688,207 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
+/* guarantees */
+
+.guarantees {
+
+    &__header {
+        height: 278px;
+        background-image: url(../images/guarantees-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 48px;
+    }
+
+    &__description {
+        margin-bottom: 58px;
+    }
+
+    &__description-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 87px;
+    }
+
+    &__description-text {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 32px;
+        color: $grey-deep-medium;
+    }
+
+    &__items {
+        margin-bottom: 80px;
+    }
+
+    &__items-title {
+        margin-bottom: 48px;
+    }
+
+    &__items-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__item {
+        border: 1px solid $grey-bg;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__item-wrapper {
+        @include flex-center-sb;
+        gap: 40px;
+        padding: 24px;
+
+        &:nth-child(even) {
+            background-color: $grey-bg;
+        }
+    }
+
+    &__item-name {
+        @extend %inter-500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $black;
+    }
+
+    &__item-description {
+        @extend %inter-300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .18px;
+        color: $grey-deep-medium;
+    }
+
+    &__necessary {
+        margin-bottom: 80px;
+    }
+
+    &__necessary-title {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: .24px;
+        color: $black-ultra;
+        margin-bottom: 48px;
+    }
+
+    &__necessary-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 33px;
+    }
+    
+    &__necessary-item {
+        padding-left: 31px;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $black;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 15px;
+            background-image: url(../images/checkmark-icon.svg);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+    }
+
+    &__necessary-text {
+        padding: 24px;
+        background-color: $grey-bg;
+        border-radius: 10px;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 32px;
+        color: $black;
+    }
+
+    &__never {
+        margin-bottom: 160px;
+    }
+
+    &__never-title {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: .24px;
+        color: $black;
+        margin-bottom: 48px;
+    }
+
+    &__never-title-decor {
+        color: $red;
+    }
+
+    &__never-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__never-items {
+        width: 840px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__never-item {
+        padding: 40px;
+        border-radius: 10px;
+        background-color: $orange;
+    }
+
+    &__never-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__never-list-item {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $white;
+    }
+
+    &__never-text {
+        padding: 40px;
+        background-color: $grey-bg;
+        border-radius: 10px;
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $black;
+    }
+
+    &__never-items-decor {
+        background-image: url(../images/never-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 469px;
+        border-radius: 10px;
+
+    }
 
 
-
+}
 
 
 
@@ -5091,6 +5295,10 @@ input[type="range"]::-moz-range-thumb {
     .about__team-text {
         margin-bottom: 32px;
     }
+
+    .guarantees__item-description {
+        text-align: right;
+    }
 }
 
 
@@ -5250,6 +5458,9 @@ input[type="range"]::-moz-range-thumb {
         padding: 30px 20px 40px 20px;
     }
 
+    .breadcrumbs__guarantees {
+        padding: 30px 20px 40px 20px;
+    }
     .about__service {
         margin-bottom: 100px;
     }
@@ -5278,12 +5489,42 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 100px;
     }
 
+    .guarantees__never {
+        margin-bottom: 100px;
+    }
+
     .about__team-title {
         margin-bottom: 40px;
     }
 
     .about__photo-wrapper {
         flex-wrap: wrap;
+    }
+
+    .guarantees__never-item {
+        padding: 24px;
+    }
+
+    .guarantees__never-text {
+        padding: 24px;
+    }
+
+    .guarantees__never-inner {
+        gap: 16px;
+        flex-direction: column-reverse;
+    }
+
+    .guarantees__never-title {
+        margin-bottom: 32px;
+    }
+
+    .guarantees__never-items {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .guarantees__never-items-decor {
+        width: 100%;
     }
 }
 
@@ -5380,6 +5621,10 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 48px;
     }
 
+    .guarantees__never {
+        margin-bottom: 48px;
+    }
+
     .fit-back__inner {
         background-image: none;
     }
@@ -5438,6 +5683,10 @@ input[type="range"]::-moz-range-thumb {
     }
 
     .terms__info-main {
+        margin-bottom: 48px;
+    }
+
+    .guarantees__never {
         margin-bottom: 48px;
     }
 
@@ -5500,6 +5749,24 @@ input[type="range"]::-moz-range-thumb {
     .about__photo-title {
         margin-bottom: 32px;
     }
+
+    .guarantees__items-inner {
+        gap: 0px;
+        flex-direction: column;
+    }
+
+    .guarantees__item {
+        width: 100%;
+    }
+
+    .guarantees__items-title {
+        margin-bottom: 32px;
+    }
+
+    .guarantees__items {
+        margin-bottom: 48px;
+    }
+
 
 }
 
@@ -5612,6 +5879,20 @@ input[type="range"]::-moz-range-thumb {
 
     .terms__info-main {
         padding: 40px 24px;
+    }
+
+    .guarantees__description-inner {
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .guarantees__header {
+        height: 198px;
+        margin-bottom: 24px;
+    }
+
+    .guarantees__description {
+        margin-bottom: 48px;
     }
 
     
@@ -5774,6 +6055,10 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 48px;
     }
 
+    .brand__guarantees {
+        margin-bottom: 48px;
+    }
+
     .dop__item-btn {
         padding: 24px 50px 24px 16px;
     }
@@ -5829,6 +6114,18 @@ input[type="range"]::-moz-range-thumb {
 
     .about__team-text-box {
         width: 100%;
+    }
+
+    .guarantees__necessary-title {
+        margin-bottom: 32px;
+    }
+
+    .guarantees__necessary-list {
+        margin-bottom: 25px;
+    }
+
+    .guarantees__necessary {
+        margin-bottom: 48px;
     }
 }
 
