@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script defer src="js/main.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header__pages">
+        <div class="container">
+            <div class="header__top">
+                <div class="menu-logo">
+                    <img class="logo" src="images/logo-white.svg" alt="logo">
+                </div>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link menu-link__trade" href="">Trade In</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велосипеды</a>
+                            <div class="menu-sub">
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Горные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Городские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Шоссейные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Гравийные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Трековые велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Велосипеды для триатлона
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Двухподвесные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Электровелосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Женские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Детские велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Запчасти
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Экипировка
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Аксессуары
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велостанки</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-nav__wrapper">
+                    <div class="user-nav">
+                        <div class="user-nav__items">
+                            <div class="user-nav__search">
+                                <a class="user-nav__search-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zm2 9.5l-4.197-4.197"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <form class="user-nav__search-form" action="#">
+                                    <input class="user-nav__search-input" type="search" placeholder="Поиск">
+                                    <input class="user-nav__search-submit" type="submit" value="">
+                                </form>
+
+                            </div>
+                            <div class="user-nav__user">
+                                <a class="user-nav__user-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 15H6a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4zm-4-4a4 4 0 100-8 4 4 0 000 8z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="user-nav__heart">
+                                <a class="user-nav__heart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.331 12.047L12 20l7.669-7.953A4.804 4.804 0 0021 8.714C21 6.111 18.965 4 16.454 4a4.465 4.465 0 00-3.214 1.38L12 6.668 10.76 5.38A4.465 4.465 0 007.546 4C5.036 4 3 6.11 3 8.714c0 1.25.479 2.45 1.331 3.333z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__heart-number">0</span>
+                                </a>
+                            </div>
+                            <div class="user-nav__cart">
+                                <a class="user-nav__cart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 17H6.5l-2-14H2" stroke="#fff" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M4.786 5H21l-3 9H6.07M9 21a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__cart-number">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-extra">
+                        <div class="menu-extra__btn">
+                            <a class="menu-extra__btn-link" href="#">
+                                <svg width="32" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="#fff" stroke-width="1.5" d="M0 1.25h32m-24 9h24m-24 9h24" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-more">
+            <div class="menu-more__btn">
+                <div class="logo__black">
+                    <img src="images/logo-black.svg" alt="logo">
+                </div>
+                <a class="menu-more__btn-link" href="#">
+                    <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                    </svg>
+                </a>
+            </div>
+
+            <h4 class="sutitle menu-more__sutitle">
+                Доп. Информация
+            </h4>
+
+            <div class="menu-main">
+                <ul class="menu-main__items">
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            TRADE IN
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велосипеды
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Горные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Городские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Шоссейные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Гравийные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Трековые велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велосипеды для триатлона
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Двухподвесные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Электровелосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Женские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Детские велосипеды
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Запчасти
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Экипировка
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велокуртки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велотрусы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Термобелье
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велообувь
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велошлемы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велоперчатки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Очки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Аксессуары
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велостанки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="menu-more__list">
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        О нас
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Веломастерская
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Хранение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Гарантии
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Пользовательское соглашение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Доставка и оплата
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Блог
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="menu-more__overlay hidden"></div>
+
+    </header>
+
+
+    <main class="main">
+
+        <section class="basket__header">
+            <div class="container">
+
+                <!-- scroll top -->
+                <div class="scroll-top-btn scroll-top-btn__hide"></div>
+
+                <div class="breadcrumbs breadcrumbs__shop-one">
+                    <ul class="breadcrumbs__items">
+                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
+                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
+                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
+                                Блог
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item-shop-one">
+                            <a class="breadcrumbs__item-link breadcrumbs__link-shop-one" href="#">
+                                Pinarello Dogma F развивает карбоновый шоссейный велосипед следующего поколения,
+                                сохраняя возможность выбора ободного тормоза!
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-one">
+            <div class="container">
+                <h2 class="blog-one__title shop-one-title">
+                    Pinarello Dogma F развивает карбоновый шоссейный велосипед следующего поколения, сохраняя
+                    возможность выбора ободного тормоза!
+                </h2>
+
+                <div class="blog-one__video">
+                    <img class="blog-one__video-img" src="images/video-blog-one-bg.png" alt="poster">
+                </div>
+
+                <p class="blog-one__description">
+                    Новый Dogma F от Pinarello — это более лёгкий, более отзывчивый и аэродинамический вариант
+                    их последнего шоссейного гоночного мотоцикла F12. И хотя общий асимметричный аэродинамический
+                    профиль остаётся определённо знакомым с десятилетними кривыми Pinarello Dogma, самым большим
+                    сюрпризом может быть то, что здесь дело не только в дисковом тормозе. В то время как многие
+                    производители велосипедов используют только дисковые тормоза, профессионалы Pinarello продолжают
+                    выигрывать Гранд-туры на велосипедах с ободными тормозами, поэтому Dogma F продолжает
+                    развиваться как с ободными, так и с дисковыми тормозами…
+                </p>
+
+                <div class="blog-one__inner">
+
+                    <div class="blog-one__info">
+                        <h6 class="blog-one__info-title">
+                            2022 Pinarello Dogma F изогнутый аэродинамический шоссейный гоночный велосипед из карбона
+                        </h6>
+                        <div class="blog-one__info-box">
+                            <img class="blog-one__info-img-1" src="images/blog-info-1.png" alt="#">
+                            <div class="blog-one__info-text-box">
+                                <p class="blog-one__info-text">
+                                    Форма нового шоссейного аэродинамического велосипеда Pinarello Dogma F не сильно
+                                    отличается от предыдущей Dogma, за исключением более плоского верха и чуть более
+                                    опущенных перьев сиденья. Но что интересно, номерное обозначение было заменено
+                                    с самой последней Dogma F12 на эту новую Dogma F седьмого поколения, что, по словам
+                                    Пинарелло, упрощает связь мотоциклов с его давним прошлым (с 2000 года)
+                                    и его «неопровержимым» превосходством, простирающимся в будущее.
+                                </p>
+                                <p class="blog-one__info-text">
+                                    Это также намёк на универсальность нового мотоцикла. В то время как у предыдущих
+                                    поколений были версии для альпинистов или спринтеров, эта новая Pinarello Dogma F
+                                    предназначена для того, чтобы стать сбалансированным универсальным гонщиком.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-one__info">
+                        <h6 class="blog-one__info-title">
+                            Так что нового?
+                        </h6>
+                        <div class="blog-one__info-box-wrapper">
+                            <div class="blog-one__info-box blog-one__info-box-1">
+                                <div class="blog-one__info-text-box">
+                                    <p class="blog-one__info-text">
+                                        В Pinarello говорят, что новый комплект рамы Dogma F Disc в конечном итоге
+                                        экономит
+                                        265 г по сравнению с F12 Disc, большая часть которых приписывается новым
+                                        титановым
+                                        компонентам, напечатанным на 3D-принтере за пределами самой рамы. В частности,
+                                        подседельный штырь (-35 г в новой головке ti), рулевая колонка (-25 г), вилка
+                                        Onda
+                                        (-58 г), передняя сквозная ось (-20 г) и кабина Most Talon Ultra (-40 г)
+                                        потеряли
+                                        все граммы. Сама рама, кажется, достигла того же оптимального веса ~850 г,
+                                        на который Pinarello ориентировалась в течение многих лет (53 см), хотя теперь
+                                        каретка на 12% жёстче. (Фактический заявленный вес неокрашенной 53-сантиметровой
+                                        рамы диска 865 г, вес рамы обода 860 г.)
+                                    </p>
+                                    <p class="blog-one__info-text">
+                                        Полный вес велосипеда с дисковыми тормозами по-прежнему составляет
+                                        6,8 кг с Dura-Ace
+                                        Di2 или 6,9 кг с карбоновыми колёсами SRAM Red AXS и DT (оба размера 53,
+                                        без педалей). Ограничение UCI с аналогичными характеристиками для модели
+                                        с ободным
+                                        тормозом.
+                                    </p>
+                                </div>
+                                <img class="blog-one__info-img-2" src="images/blog-info-2.png" alt="#">
+                            </div>
+                            <div class="blog-one__info-box">
+                                <div class="blog-one__info-box">
+                                    <img class="blog-one__info-img-3" src="images/blog-info-3.png" alt="#">
+                                    <div class="blog-one__info-text-box">
+                                        <p class="blog-one__info-text">
+                                            Слегка опущенные перья сиденья и закрывающие их плоским переходом
+                                            к подседельной
+                                            трубе помогли улучшить аэродинамику, а также добавили комфорта в седле,
+                                            поглощающем вибрацию.
+                                        </p>
+                                        <p class="blog-one__info-text">
+                                            Обновлённые правила UCI также позволили Pinarello сделать новую подседельную
+                                            трубу и подседельный штырь Dogma F более узкими, а также немного улучшить
+                                            секцию
+                                            нижней трубы, чтобы ещё больше уменьшить сопротивление.
+                                        </p>
+                                        <p class="blog-one__info-text">
+                                            Пышная вилка Onda также совершенно новая в вариантах с ободным и дисковым
+                                            тормозом для меньшего сопротивления на ветру, основанная на конструкции ноги
+                                            вилки Bolide с аэродинамическим профилем.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="blog-one__info">
+                        <h6 class="blog-one__info-title">
+                            Насколько быстрее это на самом деле?
+                        </h6>
+                        <div class="blog-one__info-box blog-one__info-box-1">
+                            <div class="blog-one__info-text-box">
+                                <p class="blog-one__info-text">
+                                    Pinarello называет новый дисковый велосипед на 4,8% более аэродинамическим,
+                                    чем предыдущий дисковый F12.
+                                </p>
+                                <p class="blog-one__info-text">
+                                    Велосипед с ободным тормозом также немного быстрее, его аэродинамика на 3,2% лучше,
+                                    чем у ободного тормоза F12. Это относительно незначительные обновления,
+                                    но они по-прежнему требуют экономии до 2,6 Вт при гоночном темпе 50 км/ч или даже
+                                    1,3 Вт при более управляемых 40 км/ч для остальных из нас.
+                                </p>
+                            </div>
+                            <img class="blog-one__info-img-4" src="images/blog-info-4.png" alt="#">
+                        </div>
+                    </div>
+
+                    <div class="blog-one__info">
+                        <h6 class="blog-one__info-title">
+                            Технические подробности
+                        </h6>
+                        <div class="blog-one__info-box">
+                            <img class="blog-one__info-img-5" src="images/blog-info-5.png" alt="#">
+                            <div class="blog-one__info-text-box">
+                                <p class="blog-one__info-text">
+                                    Изготовленные из того же японского углеродного волокна Toraya T1100 1K Dream
+                                    с технологией Nanoalloy, велосипеды с электронным переключением передач и дисковыми
+                                    тормозами одобрены UCI и имеют улучшенную асимметричную аэродинамическую раму Dogma
+                                    F12 последнего поколения с полностью внутренней прокладкой троса, заслонками вилки
+                                    оси., гладкий, но все же внешний скрытый зажим подседельного штыря, многопозиционные
+                                    выступы флягодержателя подседельной трубы, каретка с итальянской резьбой, вставная
+                                    1,5-дюймовая прямая рулевая колонка, плоские диски и 12-миллиметровые сквозные
+                                    оси (модель с дисковым тормозом) и шина 28+ мм. клиренс на современных широких
+                                    дисках.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-one__info">
+                        <h6 class="blog-one__info-title">
+                            2022 Pinarello Dogma F – цены, опции и доступность
+                        </h6>
+                        <div class="blog-one__info-box-wrapper">
+                            <div class="blog-one__info-box blog-one__info-box-1">
+                                <div class="blog-one__info-text-box">
+                                    <p class="blog-one__info-text">
+                                        Как и в предыдущих поколениях, новая Dogma 2022 года по-прежнему будет доступна
+                                        как в моделях с дисковыми тормозами Pinarello Dogma F, так и в ободных тормозах
+                                        Dogma F, хотя реальная поставка потребителю, вероятно, состоится ещё как минимум
+                                        через пару месяцев. Комплекты рам Pinarello Dogma F 2022 года продаются
+                                        в розницу
+                                        по цене 5770 евро, независимо от того, хотите ли вы ободные или дисковые
+                                        тормоза.
+                                    </p>
+                                    <p class="blog-one__info-text">
+                                        Оба доступны с электронными трансмиссиями высшего класса от Shimano, SRAM
+                                        и Campagnolo, а также с карбоновыми колёсными парами, доступными у местного
+                                        дилера
+                                        Pinarello. Цена на полный велосипед начинается с 12 000 евро с ободными
+                                        тормозами,
+                                        но может быстро подняться до 15 000 евро. с велосипедным дисковым тормозом
+                                        с электронным переключением передач и карбоновыми колёсами премиум-класса.
+                                    </p>
+                                </div>
+                                <img class="blog-one__info-img-6" src="images/blog-info-6.png" alt="#">
+                            </div>
+                            <div class="blog-one__info-box">
+                                <img class="blog-one__info-img-7" src="images/blog-info-7.png" alt="#">
+                                <div class="blog-one__info-text-box">
+                                    <p class="blog-one__info-text">
+                                        Новая Dogma F доступна в 11 размерах приклада, 16 размерах руля/кабины
+                                        и 2 смещениях
+                                        подседельного штыря, чтобы соответствовать любому гонщику. Доступны
+                                        три стандартные
+                                        схемы окраски: Plutonium Flash с переходом от чёрного к серому, Eruption Red
+                                        с переходом от чёрного к красному и полностью чёрный на чёрном.
+                                    </p>
+                                    <p class="blog-one__info-text">
+                                        Интересно, что единственные полные велосипеды, которые мы видели с групсетами
+                                        Shimano, — это велосипеды Grenadier team edition, которые имеют только ободные
+                                        тормоза и дебютируют в гонках Тур де Франс в ближайшие выходные. Мы воспримем
+                                        это как ещё один намёк на то, что скоро должны появиться новые групсеты
+                                        Dura-Ace…
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="blog-one__social">
+
+                    <div class="blog-one__social-text">
+                        Поделиться:
+                    </div>
+
+                    <div class="shop-one__social">
+                        <div class="shop-one__social-inner" href="#">
+                            <a class="shop-one__social-ok" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                    viewBox="0 0 11 11">
+                                    <path
+                                        d="M5.5.457a2.521 2.521 0 000 5.043 2.52 2.52 0 000-5.043zm0 1.594a.929.929 0 110 1.855.929.929 0 110-1.855zm2.105 3.46a.923.923 0 00-.515.13 3.15 3.15 0 01-3.18 0 .916.916 0 00-1.363 1.007.898.898 0 00.418.563 4.79 4.79 0 001.07.48L2.754 9.016a.901.901 0 00-.23.664.89.89 0 00.304.629.918.918 0 00.61.234c.253 0 .5-.105.68-.3L5.5 8.808l1.379 1.425a.909.909 0 00.684.305.917.917 0 00.68-1.531L6.964 7.69a4.72 4.72 0 001.07-.48.898.898 0 00.418-.563.923.923 0 00-.105-.695.906.906 0 00-.563-.414.716.716 0 00-.18-.027zm0 0" />
+                                </svg>
+                            </a>
+                            <a class="shop-one__social-vk" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                    viewBox="0 0 11 11">
+                                    <path
+                                        d="M10.488 8.066c-.414-.742-1.472-1.632-1.91-2.02a.282.282 0 01-.023-.405c.836-.899 1.504-1.93 1.734-2.555a.426.426 0 00-.406-.566h-.86c-.285 0-.449.101-.527.265-.695 1.422-1.293 2.04-1.71 2.399a.362.362 0 01-.598-.274V3.016a.476.476 0 00-.477-.477l-1.574-.02a.24.24 0 00-.192.383l.262.371a.739.739 0 01.148.45v1.675c0 .293-.355.434-.566.23-.707-.69-1.324-2.105-1.547-2.78a.475.475 0 00-.453-.328H.941c-.32 0-.55.3-.464.605.773 2.715 2.363 5.3 5.191 5.582.281.027.52-.2.52-.477v-.882c0-.25.199-.47.453-.473.011-.004.02-.004.027-.004.75 0 1.59 1.09 1.883 1.602a.474.474 0 00.41.234h1.14a.434.434 0 00.387-.64zm0 0" />
+                                </svg>
+                            </a>
+                            <a class="shop-one__social-telegram" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11">
+                                    <path
+                                        d="M10.148 1.441c-.164-.14-.421-.16-.691-.05-.281.113-7.977 3.414-8.289 3.546-.059.02-.555.208-.504.622.047.37.445.527.492.543l1.957.671c.133.43.61 2.024.715 2.368.067.21.176.488.363.546a.461.461 0 00.438-.078L5.824 8.5l1.93 1.504.047.031a.98.98 0 00.375.086c.094 0 .183-.02.27-.055a.788.788 0 00.413-.421l1.446-7.5c.086-.399-.035-.602-.157-.704zM4.84 7.04l-.66 1.762-.66-2.2L8.578 2.86zm0 0" />
+                                </svg>
+                            </a>
+                            <a class="shop-one__social-whatsapp" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                    viewBox="0 0 11 11">
+                                    <path
+                                        d="M5.5 1.102A4.398 4.398 0 001.102 5.5c0 .824.23 1.594.625 2.254L1.14 9.898l2.187-.574A4.398 4.398 0 105.5 1.101zM3.992 3.449c.074 0 .149-.004.211 0 .078.004.164.008.246.192.098.214.309.754.336.804.027.055.047.121.008.192-.035.074-.055.117-.11.183-.054.063-.113.14-.163.188-.055.054-.11.117-.047.226.062.106.28.465.605.754.418.371.77.485.879.54.11.054.172.046.234-.028a4.38 4.38 0 00.344-.426c.074-.11.145-.09.246-.054.102.035.637.3.746.355.11.055.18.082.207.125.028.047.028.266-.062.52-.09.253-.535.5-.734.515-.204.02-.391.09-1.31-.27C4.52 6.829 3.82 5.692 3.767 5.618c-.055-.07-.446-.59-.446-1.125s.285-.8.383-.91a.396.396 0 01.29-.133zm0 0" />
+                                </svg>
+                            </a>
+                            <a class="shop-one__social-viber" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                    viewBox="0 0 11 11">
+                                    <path
+                                        d="M9.3 3.05a2.225 2.225 0 00-.882-1.257c-.55-.379-1.18-.512-1.727-.594a7.736 7.736 0 00-2.09-.05c-.613.078-1.07.195-1.492.386-.82.38-1.316.992-1.464 1.82-.075.403-.125.766-.153 1.11-.066.8-.004 1.512.184 2.168.183.64.508 1.097.984 1.398.121.078.277.133.43.188.074.027.148.05.21.082v1.293c0 .168.138.304.305.304a.311.311 0 00.215-.085l1.196-1.16c.05-.06.05-.06.105-.063a34.84 34.84 0 001.238-.047c.504-.027 1.082-.074 1.633-.3.5-.212.867-.544 1.086-.99a4.25 4.25 0 00.414-1.538c.09-1.004.028-1.875-.191-2.664zM7.22 6.872a1.057 1.057 0 01-.508.422.583.583 0 01-.465-.016C4.97 6.738 3.965 5.887 3.305 4.66c-.137-.25-.23-.527-.34-.793-.024-.054-.024-.117-.031-.18.007-.43.34-.671.671-.746a.354.354 0 01.336.11c.262.25.47.539.625.863.07.14.04.27-.078.375l-.074.063c-.266.199-.305.347-.164.648.242.512.64.855 1.156 1.066a.307.307 0 00.367-.082c.016-.015.032-.027.043-.046.204-.34.497-.305.77-.11.18.125.355.262.531.39.27.2.266.384.102.653zm-1.532-3.52c-.07 0-.136.008-.207.02a.207.207 0 01-.238-.176.207.207 0 01.172-.238 1.647 1.647 0 011.918 1.621c0 .094-.008.188-.02.277a.212.212 0 01-.207.172H7.07a.211.211 0 01-.172-.242 1.229 1.229 0 00-1.21-1.434zm.915 1.364a.21.21 0 01-.211.207.21.21 0 01-.211-.207.628.628 0 00-.625-.63.21.21 0 110-.418 1.05 1.05 0 011.047 1.048zm1.41.254a.213.213 0 01-.207.164c-.016 0-.032 0-.047-.004a.209.209 0 01-.156-.25 1.851 1.851 0 00-2.21-2.215.21.21 0 01-.255-.156.21.21 0 01.16-.25c.164-.04.332-.059.504-.059a2.267 2.267 0 012.21 2.77zm0 0" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__subscription">
+            <div class="container">
+                <div class="footer__subscription-inner">
+                    <h2 class="title footer__title">
+                        Подпишитесь на наши новости
+                    </h2>
+                    <form class="footer__subscription-form" action="#footer">
+
+                        <div class="footer__subscription-email">
+                            <input class="footer__subscription-input" type="email" placeholder="E-mail">
+                            <button class="footer__subscription-btn" type="submit">
+                                Подписаться
+                            </button>
+                        </div>
+
+                        <label class="footer__subscription-label">
+                            <input class="footer__subscription-processing-input" type="checkbox">
+                            <span class="footer__subscription-checkbox"></span>
+                            Согласен(на) на обработку персональных данных
+                        </label>
+
+                    </form>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="popup__close">
+                            <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#B3B3B3" stroke-width="2"
+                                    d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                            </svg>
+                        </div>
+                        <div class="popup__img">
+                            <svg width="98" height="99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y=".5" width="98" height="98" rx="49" fill="#F57520" />
+                                <path d="M21 51.91L38.69 69.5 78 26.5" stroke="#fff" stroke-width="8.167" />
+                            </svg>
+                        </div>
+                        <h2 class="title popup__title">
+                            Благодарим за подписку!
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__content">
+
+            <div class="container">
+                <div class="footer__content-inner">
+                    <div class="footer__content-logo">
+                        <div class="footer__logo">
+                            <img class="logo" src="images/logo-white.svg" alt="logo">
+                        </div>
+                        <p class="footer__content-descr">
+                            Компания World-bikes специализируется на продаже товаров для велосипедного спорта.
+                        </p>
+                    </div>
+
+                    <div class="footer__content-menu">
+
+                        <div class="footer__content-catalog">
+                            <h6 class="footer__content-catalog-title">
+                                Каталог
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Trade-in
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велосипеды
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Экипировка
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Запчасти
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велостанки
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Аксессуары
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-client">
+                            <h6 class="footer__content-catalog-title">
+                                Для клиента
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Доставка и оплата
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Блог
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Веломастерская
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Хранение
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Гарантии
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-contacts">
+                            <h6 class="footer__content-catalog-title footer__content-contacts-title">
+                                Контакты
+                            </h6>
+                            <div class="footer__content-contacts-info">
+                                <div class="footer__content-contacts-item footer__content-phone">
+                                    <a class="footer__content-info " href="tel:74950557586">
+                                        +7(495)055-75-86
+                                    </a>
+                                    <a class="footer__content-info" href="tel:79651422299">
+                                        +7(965)142-22-99
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-address">
+                                    <a class="footer__content-info" href="#">
+                                        г. Москва, ул. Доватора, 7/8 с1
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-email">
+                                    <a class="footer__content-info" href="email:order@world-bike.ru">
+                                        order@world-bike.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copy">
+                <div class="container">
+                    <div class="footer__copy-inner">
+                        <a class="footer__copy-author" href="#">
+                            © 2023 world bike
+                        </a>
+                        <a class="footer__copy-agreement" href="#">
+                            Пользовательское соглашение
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

@@ -4797,7 +4797,7 @@ input[type="range"]::-moz-range-thumb {
         gap: 24px;
         margin-bottom: 33px;
     }
-    
+
     &__necessary-item {
         padding-left: 31px;
         @extend %inter-400;
@@ -4903,7 +4903,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* storage */
 .storage {
-    
+
     &__header {
         background-image: url(../images/storage-bg.png);
         background-repeat: no-repeat;
@@ -5067,8 +5067,90 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
+/* blog-one page */
 
+.blog-one {
+    margin-bottom: 160px;
 
+    &__title {
+        width: 811px;
+        margin-bottom: 40px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid $grey-light-bright;
+    }
+
+    &__video {
+        margin-bottom: 32px;
+    }
+
+    &__description,
+    &__info-text {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 32px;
+        color: $grey-deep-dark;
+    }
+
+    &__description {
+        margin-bottom: 80px;
+    }
+
+    &__info-title {
+        @extend %inter-500;
+        font-size: 24px;
+        line-height: 38px;
+        color: $black;
+        letter-spacing: .24px;
+        margin-bottom: 40px;
+    }
+
+    &__info-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__info-text-box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__info-box-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__social {
+        display: flex;
+        gap: 32px;
+        padding-top: 44px;
+    }
+
+    &__social-text {
+        @extend %inter-400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $grey-deep;
+    }
+
+    &__info-img-1,
+    &__info-img-2,
+    &__info-img-3,
+    &__info-img-4,
+    &__info-img-5,
+    &__info-img-6,
+    &__info-img-7 {
+        object-fit: contain;
+    }
+}
 
 
 
@@ -5665,6 +5747,7 @@ input[type="range"]::-moz-range-thumb {
     .breadcrumbs__guarantees {
         padding: 30px 20px 40px 20px;
     }
+
     .about__service {
         margin-bottom: 100px;
     }
@@ -5705,10 +5788,14 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 100px;
     }
 
+    .blog-one {
+        margin-bottom: 100px;
+    }
+
     .about__team-title {
         margin-bottom: 40px;
     }
-    
+
 
     .about__photo-wrapper {
         flex-wrap: wrap;
@@ -5915,6 +6002,10 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 48px;
     }
 
+    .blog-one {
+        margin-bottom: 48px;
+    }
+
     .about__header {
         height: 198px;
     }
@@ -6017,6 +6108,14 @@ input[type="range"]::-moz-range-thumb {
         width: 100%;
     }
 
+    .blog-one__info-box {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .blog-one__title {
+        width: 100%;
+    }
 
 }
 
@@ -6152,7 +6251,7 @@ input[type="range"]::-moz-range-thumb {
     .data__info-pay {
         margin-bottom: 48px;
     }
-    
+
 
     .data__info-pay-title {
         margin-bottom: 24px;
@@ -6407,6 +6506,54 @@ input[type="range"]::-moz-range-thumb {
         padding-top: 16px;
         text-wrap: nowrap;
     }
+
+    .blog-one__title {
+        margin-bottom: 32px;
+    }
+
+    .blog-one__video {
+        margin-bottom: 16px;
+    }
+
+    .blog-one__description {
+        margin-bottom: 48px;
+    }
+
+    .blog-one__info-title {
+        margin-bottom: 16px;
+    }
+
+    .blog-one__info-box {
+        gap: 24px;
+    }
+
+    .blog-one__info-text-box {
+        gap: 16px;
+    }
+
+    .blog-one__inner {
+        gap: 48px;
+    }
+
+    .blog-one__info-box-1 {
+        flex-direction: column-reverse;
+    }
+
+    .blog-one__social {
+        padding-top: 16px;
+    }
+
+    .blog-one__inner {
+        padding-bottom: 32px;
+    }
+
+    .blog-one__video {
+        img {
+            height: 260px;
+            object-fit: none;
+        }
+    }
+
 }
 
 @media (max-width: 600px) {
