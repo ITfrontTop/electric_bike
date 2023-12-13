@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script defer src="js/main.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header__pages">
+        <div class="container">
+            <div class="header__top">
+                <div class="menu-logo">
+                    <img class="logo" src="images/logo-white.svg" alt="logo">
+                </div>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link menu-link__trade" href="">Trade In</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велосипеды</a>
+                            <div class="menu-sub">
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Горные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Городские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Шоссейные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Гравийные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Трековые велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="menu-sub__list">
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Велосипеды для триатлона
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Двухподвесные велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Электровелосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Женские велосипеды
+                                        </a>
+                                    </li>
+                                    <li class="menu-sub__item">
+                                        <a class="menu-sub__link" href="#">
+                                            Детские велосипеды
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Запчасти
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Экипировка
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">
+                                Аксессуары
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="#">Велостанки</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-nav__wrapper">
+                    <div class="user-nav">
+                        <div class="user-nav__items">
+                            <div class="user-nav__search">
+                                <a class="user-nav__search-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zm2 9.5l-4.197-4.197"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <form class="user-nav__search-form" action="#">
+                                    <input class="user-nav__search-input" type="search" placeholder="Поиск">
+                                    <input class="user-nav__search-submit" type="submit" value="">
+                                </form>
+
+                            </div>
+                            <div class="user-nav__user">
+                                <a class="user-nav__user-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 15H6a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4zm-4-4a4 4 0 100-8 4 4 0 000 8z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="user-nav__heart">
+                                <a class="user-nav__heart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.331 12.047L12 20l7.669-7.953A4.804 4.804 0 0021 8.714C21 6.111 18.965 4 16.454 4a4.465 4.465 0 00-3.214 1.38L12 6.668 10.76 5.38A4.465 4.465 0 007.546 4C5.036 4 3 6.11 3 8.714c0 1.25.479 2.45 1.331 3.333z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__heart-number">0</span>
+                                </a>
+                            </div>
+                            <div class="user-nav__cart">
+                                <a class="user-nav__cart-link" href="#">
+                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 17H6.5l-2-14H2" stroke="#fff" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M4.786 5H21l-3 9H6.07M9 21a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z"
+                                            stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="user-nav__cart-number">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-extra">
+                        <div class="menu-extra__btn">
+                            <a class="menu-extra__btn-link" href="#">
+                                <svg width="32" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="#fff" stroke-width="1.5" d="M0 1.25h32m-24 9h24m-24 9h24" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-more">
+            <div class="menu-more__btn">
+                <div class="logo__black">
+                    <img src="images/logo-black.svg" alt="logo">
+                </div>
+                <a class="menu-more__btn-link" href="#">
+                    <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#B3B3B3" stroke-width="2" d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                    </svg>
+                </a>
+            </div>
+
+            <h4 class="sutitle menu-more__sutitle">
+                Доп. Информация
+            </h4>
+
+            <div class="menu-main">
+                <ul class="menu-main__items">
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            TRADE IN
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велосипеды
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Горные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Городские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Шоссейные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Гравийные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Трековые велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велосипеды для триатлона
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Двухподвесные велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Электровелосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Женские велосипеды
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Детские велосипеды
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Запчасти
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Экипировка
+                        </a>
+                        <ul class="menu-main__subitems">
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велокуртки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велотрусы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Термобелье
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велообувь
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велошлемы
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Велоперчатки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Очки
+                                </a>
+                            </li>
+                            <li class="menu-main__subitem-item">
+                                <a class="menu-main__subitem-link" href="#">
+                                    Аксессуары
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__item-link" href="#">
+                            Велостанки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="menu-more__list">
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        О нас
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Веломастерская
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Хранение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Гарантии
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Пользовательское соглашение
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Доставка и оплата
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Блог
+                    </a>
+                </li>
+                <li class="menu-more__item">
+                    <a class="menu-more__link" href="#">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="menu-more__overlay hidden"></div>
+
+    </header>
+
+
+    <main class="main">
+
+        <div class="scroll-top-btn scroll-top-btn__hide"></div>
+
+        <section class="personal">
+            <div class="container">
+                <div class="personal__inner">
+
+                    <div class="personal__aside">
+                        <h4 class="personal__aside-title">
+                            Мой аккаунт
+                        </h4>
+                        <div class="personal__aside-items">
+                            <div class="personal__aside-item active" data-tab="tab-1">
+                                История заказов
+                            </div>
+                            <div class="personal__aside-item" data-tab="tab-2">
+                                Персональные данные
+                            </div>
+                            <div class="personal__aside-item" data-tab="tab-3">
+                                Смена пароля
+                            </div>
+                            <div class="personal__aside-item" data-tab="tab-4">
+                                Список желаний
+                            </div>
+                            <div class="personal__aside-item personal__aside-exit">
+                                Выйти
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="personal__wrapper">
+
+
+                        <div class="personal__history" data-tab-content id="tab-1">
+                            <h2 class="personal__content-title shop-one-title">
+                                История заказов
+                            </h2>
+
+                            <div class="personal__history-inner">
+                                <div class="personal__history-header">
+                                    <div class="personal__history-header-item personal__history-name-date" data-tab="tab-1">
+                                        Дата
+                                    </div>
+                                    <div class="personal__history-header-item personal__history-name-number" data-tab="tab-2">
+                                        Номер заказа
+                                    </div>
+                                    <div class="personal__history-header-item personal__history-name-price" data-tab="tab-3">
+                                        Сумма заказа
+                                    </div>
+                                    <div class="personal__history-header-item personal__history-name-status" data-tab="tab-4">
+                                        Статус
+                                    </div>
+                                </div>
+
+                                <div class="personal__history-items">
+
+                                    <div class="personal__history-item active" data-name="history-title">
+                                        <div class="personal__history-item-date">
+                                            22.01.2023
+                                        </div>
+                                        <div class="personal__history-item-number">
+                                            789563678
+                                        </div>
+                                        <div class="personal__history-item-price">
+                                            605 370 ₽
+                                        </div>
+                                        <div class="personal__history-item-status">
+                                            Новый заказ
+                                        </div>
+                                    </div>
+
+                                    <div class="personal__history-item-content-inner">
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-look-977.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    435 000 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+                                                    522 000 ₽
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-trek-fx.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Fx 3 Disc Dnister Black HYBD 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    97 070 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img"
+                                                    src="images/history-img-trek-marlin.png" alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Marlin 4 Aloha ATB 27.5 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    73 300 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="personal__history-item" data-name="history-title">
+                                        <div class="personal__history-item-date">
+                                            10.12.2022
+                                        </div>
+                                        <div class="personal__history-item-number">
+                                            789569078
+                                        </div>
+                                        <div class="personal__history-item-price">
+                                            234 567 ₽
+                                        </div>
+                                        <div class="personal__history-item-status">
+                                            Завершённый заказ
+                                        </div>
+                                    </div>
+                                    <div class="personal__history-item-content-inner hidden">
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-look-977.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    435 000 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+                                                    522 000 ₽
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-trek-fx.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Fx 3 Disc Dnister Black HYBD 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    97 070 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img"
+                                                    src="images/history-img-trek-marlin.png" alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Marlin 4 Aloha ATB 27.5 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    73 300 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="personal__history-item" data-name="history-title">
+                                        <div class="personal__history-item-date">
+                                            13.07.2022
+                                        </div>
+                                        <div class="personal__history-item-number">
+                                            749569700
+                                        </div>
+                                        <div class="personal__history-item-price">
+                                            145 087 ₽
+                                        </div>
+                                        <div class="personal__history-item-status">
+                                            Завершённый заказ
+                                        </div>
+                                    </div>
+                                    <div class="personal__history-item-content-inner hidden">
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-look-977.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    435 000 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+                                                    522 000 ₽
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-trek-fx.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Fx 3 Disc Dnister Black HYBD 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    97 070 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img"
+                                                    src="images/history-img-trek-marlin.png" alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Marlin 4 Aloha ATB 27.5 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    73 300 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="personal__history-item" data-name="history-title">
+                                        <div class="personal__history-item-date">
+                                            24.06.2022
+                                        </div>
+                                        <div class="personal__history-item-number">
+                                            645669078
+                                        </div>
+                                        <div class="personal__history-item-price">
+                                            56 907 ₽
+                                        </div>
+                                        <div class="personal__history-item-status">
+                                            Завершённый заказ
+                                        </div>
+                                    </div>
+                                    <div class="personal__history-item-content-inner hidden">
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-look-977.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    435 000 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+                                                    522 000 ₽
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-trek-fx.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Fx 3 Disc Dnister Black HYBD 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    97 070 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img"
+                                                    src="images/history-img-trek-marlin.png" alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Marlin 4 Aloha ATB 27.5 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    73 300 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="personal__history-item" data-name="history-title">
+                                        <div class="personal__history-item-date">
+                                            11.09.2021
+                                        </div>
+                                        <div class="personal__history-item-number">
+                                            789458123
+                                        </div>
+                                        <div class="personal__history-item-price">
+                                            200 666 ₽
+                                        </div>
+                                        <div class="personal__history-item-status">
+                                            Завершённый заказ
+                                        </div>
+                                    </div>
+                                    <div class="personal__history-item-content-inner hidden">
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-look-977.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    435 000 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+                                                    522 000 ₽
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img" src="images/history-img-trek-fx.png"
+                                                    alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Fx 3 Disc Dnister Black HYBD 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    97 070 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="personal__history-item-content">
+                                            <div class="personal__history-content-img">
+                                                <img class="personal__history-img"
+                                                    src="images/history-img-trek-marlin.png" alt="#">
+                                            </div>
+                                            <div class="personal__history-content-name">
+                                                Trek Marlin 4 Aloha ATB 27.5 2022
+                                            </div>
+                                            <div class="personal__history-content-price">
+                                                <div class="personal__history-price-now">
+                                                    73 300 ₽
+                                                </div>
+                                                <div class="personal__history-price-old">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="personal__content hidden" data-tab-content id="tab-2">
+
+                            <h2 class="personal__content-title shop-one-title">
+                                Персональные данные
+                            </h2>
+
+                            <form class="personal__content-form" action="#">
+
+                                <div class="personal__content-name-box">
+                                    <label class="personal__content-label">
+                                        <span class="personal__content-span">Имя</span>
+                                        <input class="personal__content-input personal__content-input-firstname"
+                                            type="text">
+                                    </label>
+                                    <label class="personal__content-label">
+                                        <span class="personal__content-span">Фамилия</span>
+                                        <input class="personal__content-input personal__content-input-secondname"
+                                            type="text">
+                                    </label>
+                                </div>
+
+                                <label class="personal__content-label">
+                                    <span class="personal__content-span">Отображаемое имя</span>
+                                    <input class="personal__content-input personal__content-input-nick" type="text">
+                                </label>
+
+                                <label class="personal__content-label">
+                                    <span class="personal__content-span">E-mail</span>
+                                    <input class="personal__content-input personal__content-input-e-mail" type="email">
+                                </label>
+
+                                <label class="personal__content-label">
+                                    <span class="personal__content-span">Телефон</span>
+                                    <input class="personal__content-input personal__content-input-phone" type="number">
+                                </label>
+
+                                <label class="personal__content-label">
+                                    <span class="personal__content-span">Город</span>
+                                    <input class="personal__content-input personal__content-input-city" type="text">
+                                </label>
+
+                                <label class="personal__content-label">
+                                    <span class="personal__content-span">Улица</span>
+                                    <input class="personal__content-input personal__content-input-street" type="text">
+                                </label>
+
+                                <div class="personal__content-address-box">
+
+                                    <label class="personal__content-label">
+                                        <span class="personal__content-span">Дом</span>
+                                        <input class="personal__content-input personal__content-input-house"
+                                            type="number">
+                                    </label>
+
+                                    <label class="personal__content-label">
+                                        <span class="personal__content-span">Этаж</span>
+                                        <input class="personal__content-input personal__content-input-floor"
+                                            type="number">
+                                    </label>
+
+                                    <label class="personal__content-label">
+                                        <span class="personal__content-span">Квартира</span>
+                                        <input class="personal__content-input personal__content-input-apartment"
+                                            type="number">
+                                    </label>
+
+                                </div>
+
+                            </form>
+
+                            <button class="personal__content-button">
+                                Изменить
+                            </button>
+
+                        </div>
+
+
+
+                        <div class="personal__change hidden" data-tab-content id="tab-3">
+
+                            <h2 class="personal__change-title shop-one-title">
+                                Смена Пароля
+                            </h2>
+                            
+                            <div class="personal__change-wrapper">
+
+                                <form class="personal__change-form" action="#">
+                                    <label class="personal__change-label">
+                                        <span class="personal__change-name">Старый пароль</span>
+                                        <input class="personal__change-input" type="text">
+                                    </label>
+                                    <label class="personal__change-label">
+                                        <span class="personal__change-name">Новый пароль</span>
+                                        <input class="personal__change-input" type="text">
+                                    </label>
+                                    <label class="personal__change-label">
+                                        <span class="personal__change-name">Повторите новый пароль</span>
+                                        <input class="personal__change-input" type="text">
+                                    </label>
+                                </form>
+
+                                <button class="personal__change-btn">
+                                    Изменить
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="personal__wish-list hidden" data-tab-content id="tab-4">
+
+                            <h2 class="personal__wish-list-title shop-one-title">
+                                Список желаний
+                            </h2>
+
+                            <div class="personal__wish-list-wrapper">
+
+                                <div class="product-item shop-content__item personal__wish-list-item">
+                                    <a class="product-item_link" href="#">
+                                        <div class="product-item__top">
+                                            <div class="product-item__top-box shop-content__top-box">
+                                                <img class="product-item__top-img" src="images/italy-flag.png"
+                                                    alt="Bianchi">
+                                            </div>
+                                            <div class="product-item__top-stock sold-out">
+                                                Распродано
+                                            </div>
+                                        </div>
+                                        <div class="product-item__img">
+                                            <img src="images/Bianchi_AQUILA_L.png" alt="Bianchi AQUILA L">
+                                        </div>
+                                        <h5 class="product-item__title shop-content__title">
+                                            Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021
+                                        </h5>
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-now">
+                                                684 840 ₽
+                                            </div>
+                                            <div class="product-item__price-old">
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="product-item shop-content__item personal__wish-list-item">
+                                    <a class="product-item_link" href="#">
+                                        <div class="product-item__top">
+                                            <div class="product-item__top-box shop-content__top-box">
+                                                <img class="product-item__top-img" src="images/usa-flag.png"
+                                                    alt="Bianchi">
+                                            </div>
+                                            <div class="product-item__top-stock sold-out">
+                                                Распродано
+                                            </div>
+                                        </div>
+                                        <div class="product-item__img">
+                                            <img src="images/Trek-Verve-2.png" alt="Trek Marlin 5">
+                                        </div>
+                                        <h5 class="product-item__title shop-content__title">
+                                            Trek Verve 2 Disc Lithium Grey HYBD 2022
+                                        </h5>
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-now">
+                                                89 300 ₽
+                                            </div>
+                                            <div class="product-item__price-old">
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="product-item shop-content__item personal__wish-list-item">
+                                    <a class="product-item_link" href="#">
+                                        <div class="product-item__top">
+                                            <div class="product-item__top-box shop-content__top-box">
+                                                <img class="product-item__top-img" src="images/italy-flag.png" alt="Bianchi">
+                                            </div>
+                                            <div class="product-item__top-stock sold-out">
+                                                Распродано
+                                            </div>
+                                        </div>
+                                        <div class="product-item__img">
+                                            <img src="images/Bianchi_ARCADEX_GRX600.png" alt="Trek Marlin 5">
+                                        </div>
+                                        <h5 class="product-item__title shop-content__title">
+                                            Bianchi ARCADEX GRX600 40 Синий 2022
+                                        </h5>
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-now">
+                                                351 890 ₽
+                                            </div>
+                                            <div class="product-item__price-old">
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="product-item shop-content__item personal__wish-list-item">
+                                    <a class="product-item_link" href="#">
+                                        <div class="product-item__top">
+                                            <div class="product-item__top-box shop-content__top-box">
+                                                <img class="product-item__top-img" src="images/usa-flag.png" alt="Bianchi">
+                                            </div>
+                                            <div class="product-item__top-stock sold-out">
+                                                Распродано
+                                            </div>
+                                        </div>
+                                        <div class="product-item__img">
+                                            <img src="images/Trek_Verve_1.png" alt="Trek Verve 1">
+                                        </div>
+                                        <h5 class="product-item__title shop-content__title">
+                                            Trek Verve 1 Disc Low Step Era White HYBD 2022
+                                        </h5>
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-now">
+                                                77 300 ₽
+                                            </div>
+                                            <div class="product-item__price-old">
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="product-item shop-content__item personal__wish-list-item">
+                                    <a class="product-item_link" href="#">
+                                        <div class="product-item__top">
+                                            <div class="product-item__top-box shop-content__top-box">
+                                                <img class="product-item__top-img" src="images/usa-flag.png" alt="Bianchi">
+                                            </div>
+                                            <div class="product-item__top-stock sold-out">
+                                                Распродано
+                                            </div>
+                                        </div>
+                                        <div class="product-item__img">
+                                            <img src="images/Trek_Dual_Sport_1.png" alt="Trek Dual Sport 1">
+                                        </div>
+                                        <h5 class="product-item__title shop-content__title">
+                                            Trek Dual Sport 1 Quicksilver Hybrid 2022
+                                        </h5>
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-now">
+                                                78 000 ₽
+                                            </div>
+                                            <div class="product-item__price-old">
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="product-item shop-content__item personal__wish-list-item">
+                                    <a class="product-item_link" href="#">
+                                        <div class="product-item__top">
+                                            <div class="product-item__top-box shop-content__top-box">
+                                                <img class="product-item__top-img" src="images/usa-flag.png" alt="Bianchi">
+                                            </div>
+                                            <div class="product-item__top-stock sold-in">
+                                                В наличии
+                                            </div>
+                                        </div>
+                                        <div class="product-item__img">
+                                            <img src="images/Trek-Marlin-7.png" alt="Trek Marlin 7">
+                                        </div>
+                                        <h5 class="product-item__title shop-content__title">
+                                            Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022
+                                        </h5>
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-now">
+                                                115 000 ₽
+                                            </div>
+                                            <div class="product-item__price-old">
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__subscription">
+            <div class="container">
+                <div class="footer__subscription-inner">
+                    <h2 class="title footer__title">
+                        Подпишитесь на наши новости
+                    </h2>
+                    <form class="footer__subscription-form" action="#footer">
+
+                        <div class="footer__subscription-email">
+                            <input class="footer__subscription-input" type="email" placeholder="E-mail">
+                            <button class="footer__subscription-btn" type="submit">
+                                Подписаться
+                            </button>
+                        </div>
+
+                        <label class="footer__subscription-label">
+                            <input class="footer__subscription-processing-input" type="checkbox">
+                            <span class="footer__subscription-checkbox"></span>
+                            Согласен(на) на обработку персональных данных
+                        </label>
+
+                    </form>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="popup__close">
+                            <svg width="26" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="#B3B3B3" stroke-width="2"
+                                    d="M.857.858l22.628 22.627M23.334.707L.707 23.334" />
+                            </svg>
+                        </div>
+                        <div class="popup__img">
+                            <svg width="98" height="99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y=".5" width="98" height="98" rx="49" fill="#F57520" />
+                                <path d="M21 51.91L38.69 69.5 78 26.5" stroke="#fff" stroke-width="8.167" />
+                            </svg>
+                        </div>
+                        <h2 class="title popup__title">
+                            Благодарим за подписку!
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__content">
+
+            <div class="container">
+                <div class="footer__content-inner">
+                    <div class="footer__content-logo">
+                        <div class="footer__logo">
+                            <img class="logo" src="images/logo-white.svg" alt="logo">
+                        </div>
+                        <p class="footer__content-descr">
+                            Компания World-bikes специализируется на продаже товаров для велосипедного спорта.
+                        </p>
+                    </div>
+
+                    <div class="footer__content-menu">
+
+                        <div class="footer__content-catalog">
+                            <h6 class="footer__content-catalog-title">
+                                Каталог
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Trade-in
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велосипеды
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Экипировка
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Запчасти
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Велостанки
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Аксессуары
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-client">
+                            <h6 class="footer__content-catalog-title">
+                                Для клиента
+                            </h6>
+                            <ul class="footer__content-menu-items">
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Доставка и оплата
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Блог
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Веломастерская
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Хранение
+                                    </a>
+                                </li>
+                                <li class="footer__content-item">
+                                    <a class="footer__content-link" href="#">
+                                        Гарантии
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__content-contacts">
+                            <h6 class="footer__content-catalog-title footer__content-contacts-title">
+                                Контакты
+                            </h6>
+                            <div class="footer__content-contacts-info">
+                                <div class="footer__content-contacts-item footer__content-phone">
+                                    <a class="footer__content-info " href="tel:74950557586">
+                                        +7(495)055-75-86
+                                    </a>
+                                    <a class="footer__content-info" href="tel:79651422299">
+                                        +7(965)142-22-99
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-address">
+                                    <a class="footer__content-info" href="#">
+                                        г. Москва, ул. Доватора, 7/8 с1
+                                    </a>
+                                </div>
+                                <div class="footer__content-contacts-item footer__content-email">
+                                    <a class="footer__content-info" href="email:order@world-bike.ru">
+                                        order@world-bike.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copy">
+                <div class="container">
+                    <div class="footer__copy-inner">
+                        <a class="footer__copy-author" href="#">
+                            © 2023 world bike
+                        </a>
+                        <a class="footer__copy-agreement" href="#">
+                            Пользовательское соглашение
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

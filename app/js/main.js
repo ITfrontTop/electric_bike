@@ -4,10 +4,10 @@
 const swiper = new Swiper('.header-slider__swiper', {
     speed: 1000,
     loop: true,
-    // autoplay: {
-    //     delay: 3000,
-    // },
-    // enabled: true,
+    autoplay: {
+        delay: 3000,
+    },
+    enabled: true,
 
     pagination: {
         el: '.swiper-pagination',
@@ -713,4 +713,40 @@ dopItem.forEach((item) => {
 function showDopActiveContent() {
     this.classList.toggle('active')
     this.nextElementSibling.classList.toggle('hidden')
+}
+
+
+// personal function
+const tabBtnPerson = document.querySelectorAll('[data-tab]')
+const tabContentPerson = document.querySelectorAll('[data-tab-content]')
+
+tabBtnPerson.forEach(function(item) {
+    item.addEventListener('click', function() {
+        
+        tabBtnPerson.forEach(function(item) {
+            item.classList.remove('active')
+        })
+
+        this.classList.add('active')
+
+        tabContentPerson.forEach(function(item) {
+            item.classList.add('hidden')
+        })
+
+        const contentPerson = document.querySelector('#' + this.dataset.tab)
+        contentPerson.classList.remove('hidden')
+    })
+})
+
+
+// personal__history
+const headerHistory = document.querySelectorAll('[data-name="history-title"]')
+
+headerHistory.forEach(function(item) {
+    item.addEventListener('click', showHistoryContent)
+})
+
+function showHistoryContent() {
+    this.nextElementSibling.classList.toggle('hidden')
+    this.classList.toggle('active')
 }
