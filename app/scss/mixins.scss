@@ -19,7 +19,9 @@
 }
 
 @mixin text {
-    @extend %inter-300;
+    font-family: 'Inter-Light', sans-serif;
+    font-weight: 300;
+    /*@extend %inter-300;*/
     font-size: 16px;
     line-height: 25px;
     color: $black;
@@ -27,7 +29,9 @@
 
 @mixin button {
     display: inline-block;
-    @extend %inter-500;
+    font-family: 'Inter-Medium', sans-serif;
+    font-weight: 500;
+    /*@extend %inter-500;*/
     font-size: 16px;
     line-height: 19px;
     color: $white;
@@ -46,7 +50,9 @@
 }
 
 @mixin product-item-title {
-    @extend %inter-300;
+    font-family: 'Inter-Light', sans-serif;
+    font-weight: 300;
+    /*@extend %inter-300;*/
     font-size: 18px;
     line-height: 28px;
     letter-spacing: .18px;
@@ -75,7 +81,9 @@
 
 @mixin button-one-click {
     display: inline-block;
-    @extend %inter-500;
+    font-family: 'Inter-Medium', sans-serif;
+    font-weight: 500;
+    /*@extend %inter-500;*/
     font-size: 16px;
     line-height: 19px;
     color: $white;

@@ -137,30 +137,33 @@ const similarSlider = new Swiper('.similar-products__slider', {
     },
 })
 
+// этот код блокировал переход по ссылкам, разобраться, 
+// пересмотреть header event listener и footer event listener
 
 // header event listener
-document.querySelector('.menu-list').addEventListener('click', function (e) {
-    e.preventDefault()
-    console.log(e.target)
-    if (e.target.classList.contains('menu-link')) {
-        const href = e.target.getAttribute('href')
-        document.querySelector(href).scrollIntoView({
-            behavior: 'smooth',
-        })
-    }
-})
+// document.querySelector('.menu-list').addEventListener('click', function (e) {
+//     e.preventDefault()
+    // console.log(e.target)
+    // if (e.target.classList.contains('menu-link')) {
+        // const href = e.target.getAttribute('href')
+        // document.querySelector(href).scrollIntoView({
+        //     behavior: 'smooth',
+        // })
+    // }
+// })
 
 
 // footer event listener
-document.querySelector('.footer__content-menu-items').addEventListener('click', function (e) {
-    e.preventDefault()
-    if (e.target.classList.contains('footer__content-link')) {
-        const href = e.target.getAttribute('href')
-        document.querySelector(href).scrollIntoView({
-            behavior: 'smooth',
-        })
-    }
-})
+// document.querySelector('.footer__content-menu-items').addEventListener('click', function (e) {
+//     e.preventDefault()
+//     if (e.target.classList.contains('footer__content-link')) {
+//         const href = e.target.getAttribute('href')
+//         document.querySelector(href).scrollIntoView({
+//             behavior: 'smooth',
+//         })
+//     }
+// })
+
 
 // btn menu-more open and close
 

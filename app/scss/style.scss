@@ -6,17 +6,6 @@
 @import 'libs';
 
 
-/*
-.user-nav__search {
-    svg {
-        path {
-            stroke: orange;
-        }
-    }
-}
-*/
-
-
 /*  header  */
 
 .header {
@@ -66,8 +55,9 @@
     }
 
     &-link {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        @extend %inter-400;
         font-size: 12px;
         line-height: 19px;
         color: $white;
@@ -119,8 +109,9 @@
         }
 
         &__link {
-            /* %inter-500 don't correct, need %inter-400, but it dont work */
-            @extend %inter-500;
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            /*@extend %inter-400;*/
             font-size: 14px;
             line-height: 22px;
             color: $white-light;
@@ -183,7 +174,9 @@
         }
 
         &__link {
-            @extend %inter-500;
+            font-family: 'Inter-Medium', sans-serif;
+            font-weight: 500;
+            /*@extend %inter-500;*/
             font-size: 18px;
             line-height: 28px;
             letter-spacing: .18px;
@@ -228,7 +221,9 @@
         padding: 16px;
         border-radius: 10px;
         background-color: $grey-bg;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         color: $black;
         line-height: 28px;
@@ -328,8 +323,9 @@
 /* submenu link*/
 .menu-main__subitem-link {
 
-    /* %inter-500 don't correct, need %inter-400, but it dont work */
-    @extend %inter-500;
+    font-family: 'Inter-Regular', sans-serif;
+    font-weight: 400;
+    /*@extend %inter-400;*/
     font-size: 16px;
     color: $grey-deep-medium;
     line-height: 25px;
@@ -406,8 +402,9 @@
         color: $white;
 
         &::placeholder {
-            /* %inter-500 don't correct, need %inter-400, but it dont work */
-            @extend %inter-400;
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            /*@extend %inter-400;*/
             font-size: 14px;
             color: $grey-deep;
         }
@@ -481,7 +478,9 @@
     }
 
     &__subtitle {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .12px;
@@ -557,7 +556,9 @@
     }
 
     &__item-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -602,7 +603,6 @@
     &__profi {
 
         margin-right: 54px;
-
         width: 427px;
         background-color: #131313;
         position: relative;
@@ -666,7 +666,9 @@
 
 
     &__item-link {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         line-height: 19px;
         color: $orange;
     }
@@ -748,14 +750,18 @@
     }
 
     &__price-now {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $grey-deep;
     }
 
     &__price-old {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 12px;
         line-height: 14px;
         color: $grey-light;
@@ -766,6 +772,7 @@
         display: flex;
         align-items: flex-end;
         gap: 8px;
+        color: $grey-deep;
     }
 
     /* button */
@@ -985,7 +992,9 @@
     }
 
     &__info-link {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $grey-light;
@@ -1040,7 +1049,9 @@
         position: relative;
         height: 40px;
         white-space: nowrap;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -1051,7 +1062,9 @@
 
     &__item-text {
         max-width: 248px;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
     }
@@ -1156,7 +1169,9 @@
     &__item-title {
         max-width: 190px;
         height: 76px;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -1167,7 +1182,9 @@
 
     &__item-text {
         max-width: 241px;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
     }
@@ -1259,7 +1276,9 @@
     }
 
     &__part-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -1276,7 +1295,9 @@
     }
 
     &__part-link {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $white;
@@ -1339,7 +1360,9 @@
     &__title {
         max-width: 350px;
         height: 58px;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         color: $black;
@@ -1349,14 +1372,18 @@
 
     &__price {
         color: $grey-deep;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         text-transform: uppercase;
 
         span {
             color: #B3B3B3;
-            @extend %inter-500;
+            font-family: 'Inter-Medium', sans-serif;
+            font-weight: 500;
+            /*@extend %inter-500;*/
             font-size: 12px;
             line-height: 14px;
             text-transform: uppercase;
@@ -1397,7 +1424,9 @@
 
     &__data-link {
         display: block;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -1406,7 +1435,9 @@
 
     &__link-tag {
         display: block;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $orange;
@@ -1417,7 +1448,9 @@
     &__text {
         height: 87px;
         color: $white;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -1427,7 +1460,9 @@
 
     &__link {
         color: $white;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
 
@@ -1503,7 +1538,9 @@
 
     &__item-text {
         margin-bottom: 8px;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
 
     }
 
@@ -1623,7 +1660,9 @@
 
     &__subscription-btn {
         display: inline-block;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $white;
@@ -1648,7 +1687,9 @@
         width: 100%;
 
         &::placeholder {
-            @extend %inter-400;
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            /*@extend %inter-400;*/
             font-size: 16px;
             line-height: 26px;
             color: $grey-light;
@@ -1657,7 +1698,9 @@
 
     /*  checkbox  */
     &__subscription-label {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 12px;
         line-height: 19px;
         color: $white;
@@ -1727,7 +1770,9 @@
         display: inline-block;
         max-width: 290px;
         width: 100%;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-light;
@@ -1747,7 +1792,9 @@
 
 
     &__content-catalog-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -1762,7 +1809,9 @@
 
     &__content-link,
     &__content-info {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -1827,7 +1876,9 @@
 
     &__copy-author,
     &__copy-agreement {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 12px;
         line-height: 19px;
         color: $grey-deep;
@@ -1866,8 +1917,9 @@
     }
 
     &__item-link {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 14px;
         line-height: 22px;
         color: $white;
@@ -1881,8 +1933,9 @@
         position: relative;
 
         &::after {
-            /* %inter-500 don't correct, need %inter-400, but it dont work */
-            @extend %inter-500;
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            /*@extend %inter-400;*/
             color: $white;
             content: '/';
             position: absolute;
@@ -1909,8 +1962,9 @@
 
     /* breadcrumbs__link-shop-one */
     &__link-shop-one {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 14px;
         line-height: 22px;
         color: $grey-deep-medium;
@@ -1924,8 +1978,9 @@
         position: relative;
 
         &::after {
-            /* %inter-500 don't correct, need %inter-400, but it dont work */
-            @extend %inter-500;
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            /*@extend %inter-400;*/
             color: $grey-deep-medium;
             content: '/';
             position: absolute;
@@ -2028,7 +2083,9 @@
     }
 
     &__title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         color: $grey-deep-light;
@@ -2121,7 +2178,9 @@
     }
 
     &__item-checkbox {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         color: $grey-deep-light;
@@ -2169,8 +2228,9 @@
         height: 46px;
         padding: 10px 16px;
         outline: none;
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
@@ -2189,8 +2249,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 .separator {
-    /* %inter-500 don't correct, need %inter-400, but it dont work */
-    @extend %inter-500;
+    font-family: 'Inter-Regular', sans-serif;
+    font-weight: 400;
+    /*@extend %inter-400;*/
     font-size: 16px;
     line-height: 25px;
     color: $black-deep;
@@ -2329,7 +2390,9 @@ input[type="range"]::-moz-range-thumb {
         padding: 16px 10px;
         border: 1px solid $grey-light-bright;
         border-radius: 10px;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $black;
@@ -2342,8 +2405,9 @@ input[type="range"]::-moz-range-thumb {
 
 /* select style*/
 .select {
-    /* стилизуем текст */
-    @extend %inter-500;
+    font-family: 'Inter-Medium', sans-serif;
+    font-weight: 500;
+    /*@extend %inter-500;*/
     font-size: 16px;
     color: $grey-deep;
 
@@ -2403,7 +2467,9 @@ input[type="range"]::-moz-range-thumb {
         /* задаем нужные стили */
         position: relative;
         width: 277px;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         color: $grey-deep;
         appearance: none;
@@ -2468,7 +2534,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__list-item {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $grey-deep;
@@ -2563,7 +2631,6 @@ input[type="range"]::-moz-range-thumb {
                 bottom: -70px;
                 left: 0;
                 width: 290px;
-                /*width: 435px;*/
                 height: 90px;
                 padding: 0 8px 8px;
                 background-color: $white;
@@ -2607,7 +2674,9 @@ input[type="range"]::-moz-range-thumb {
         }
 
         .shop-content__title {
-            @extend %inter-500;
+            font-family: 'Inter-Medium', sans-serif;
+            font-weight: 500;
+            /*@extend %inter-500;*/
             font-size: 20px;
         }
 
@@ -2697,8 +2766,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__number {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -2719,9 +2789,7 @@ input[type="range"]::-moz-range-thumb {
             background-color: $orange;
             border: 1px solid $orange;
         }
-
     }
-
 }
 
 
@@ -2749,7 +2817,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__promotion {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -2866,7 +2936,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__name {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -2879,7 +2951,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__text {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -2903,8 +2977,9 @@ input[type="range"]::-moz-range-thumb {
         padding: 16px;
 
         &::placeholder {
-            /* %inter-500 don't correct, need %inter-400, but it dont work */
-            @extend %inter-500;
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            /*@extend %inter-400;*/
             font-size: 16px;
             line-height: 25px;
             color: $grey-light;
@@ -2912,8 +2987,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__agreement {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 12px;
         line-height: 19px;
         color: $grey-deep;
@@ -3016,8 +3092,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__code-text {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 14px;
         line-height: 22px;
         color: $grey-light;
@@ -3056,7 +3133,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__price-now {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 40px;
         line-height: 64px;
         color: $black;
@@ -3064,7 +3143,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__price-sold {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 49px;
         letter-spacing: .18px;
@@ -3073,8 +3154,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__desription {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep-medium;
@@ -3087,7 +3169,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__size-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         color: $black;
@@ -3110,7 +3194,9 @@ input[type="range"]::-moz-range-thumb {
         border: 1px solid $grey-light-bright;
         border-radius: 5px;
         padding: 10px;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $grey-deep-dark;
@@ -3138,7 +3224,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__color-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         color: $black;
@@ -3234,7 +3322,9 @@ input[type="range"]::-moz-range-thumb {
     display: block;
     text-align: center;
     border: none;
-    @extend %inter-500;
+    font-family: 'Inter-Medium', sans-serif;
+    font-weight: 500;
+    /*@extend %inter-500;*/
     font-size: 16px;
     background-color: $white;
 }
@@ -3249,7 +3339,9 @@ input[type="range"]::-moz-range-thumb {
     display: block;
     text-align: center;
     border: none;
-    @extend %inter-500;
+    font-family: 'Inter-Medium', sans-serif;
+    font-weight: 500;
+    /*@extend %inter-500;*/
     font-size: 16px;
     background-color: $white;
 }
@@ -3268,8 +3360,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__text {
-        /* %inter-500 don't correct, need %inter-400, but it dont work */
-        @extend %inter-500;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 32px;
         color: $black;
@@ -3302,7 +3395,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__name {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $black;
@@ -3310,7 +3405,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__description {
         width: 596px;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -3330,7 +3427,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__text-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -3343,7 +3442,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__item {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep-light;
@@ -3353,7 +3454,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__items-discription {
         display: inline-block;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         padding: 10px 16px;
@@ -3370,7 +3473,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__support {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep-light;
@@ -3383,7 +3488,9 @@ input[type="range"]::-moz-range-thumb {
 
 
     &__clarification {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -3433,7 +3540,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__btn-back {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $orange;
@@ -3441,7 +3550,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__btn-clean {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 14px;
         line-height: 22px;
         color: $grey-light;
@@ -3478,7 +3589,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__item-price-now {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -3486,7 +3599,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__item-price-old {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-light;
@@ -3516,7 +3631,9 @@ input[type="range"]::-moz-range-thumb {
     &__sum-name,
     &__discont-name {
         width: 113px;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
@@ -3525,14 +3642,18 @@ input[type="range"]::-moz-range-thumb {
     &__number-order,
     &__sum,
     &__discont {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
     }
 
     &__total-box {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         color: $black;
@@ -3607,7 +3728,9 @@ input[type="range"]::-moz-range-thumb {
         }
 
         &::placeholder {
-            @extend %inter-400;
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            /*@extend %inter-400;*/
             font-size: 16px;
             line-height: 25px;
             color: $grey-light;
@@ -3658,7 +3781,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__details-way-title,
     &__details-pays-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -3695,7 +3820,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__details-way-radio {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
@@ -3731,7 +3858,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__details-pays-radio {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
@@ -3766,7 +3895,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__delivery-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -3787,7 +3918,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__delivery-item {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
@@ -3796,7 +3929,9 @@ input[type="range"]::-moz-range-thumb {
     &__delivery-discription {
         width: 200px;
         text-align: right;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -3811,7 +3946,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__price-name {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -3819,7 +3956,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__price-sum {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -3835,14 +3974,18 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__personal-data-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 12px;
         line-height: 19px;
         color: $grey-deep;
     }
 
     &__personal-data-link {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 12px;
         line-height: 19px;
         color: $orange;
@@ -3888,7 +4031,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -3903,7 +4048,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-description {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -3914,7 +4061,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__legal-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -3933,14 +4082,18 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__legal-name {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
     }
 
     &__legal-decription {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -3983,7 +4136,9 @@ input[type="range"]::-moz-range-thumb {
         background-color: $white;
 
         &::placeholder {
-            @extend %inter-300;
+            font-family: 'Inter-Light', sans-serif;
+            font-weight: 300;
+            /*@extend %inter-300;*/
             font-size: 16px;
             line-height: 25px;
             color: $grey-light;
@@ -4000,7 +4155,9 @@ input[type="range"]::-moz-range-thumb {
         resize: none;
 
         &::placeholder {
-            @extend %inter-300;
+            font-family: 'Inter-Light', sans-serif;
+            font-weight: 300;
+            /*@extend %inter-300;*/
             font-size: 16px;
             line-height: 25px;
             color: $grey-light;
@@ -4014,7 +4171,9 @@ input[type="range"]::-moz-range-thumb {
         background-color: $white;
         text-align: center;
         width: 100%;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $orange;
@@ -4036,7 +4195,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__item-btn {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -4078,7 +4239,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__item-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
     }
@@ -4129,7 +4292,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__description-text {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -4172,14 +4337,18 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__price-item-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $black;
     }
 
     &__price-item-value {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -4212,10 +4381,13 @@ input[type="range"]::-moz-range-thumb {
         padding: 24px 66px 24px 32px;
         background-color: $grey-bg;
         border-radius: 10px;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
+        cursor: pointer;
         position: relative;
 
         &::after {
@@ -4315,7 +4487,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__service-item-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -4324,7 +4498,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__service-item-text {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         margin-bottom: 32px;
@@ -4332,7 +4508,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__service-item-link {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $white;
@@ -4368,7 +4546,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__words-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -4406,7 +4586,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__info-name {
         width: 365px;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -4414,7 +4596,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__info-text {
         width: 730px;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
@@ -4435,7 +4619,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__dealar-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         margin-bottom: 48px;
@@ -4453,7 +4639,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__dealar-item-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -4462,7 +4650,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__dealar-link {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -4514,7 +4704,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__call-item-subtitle {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -4522,7 +4714,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__call-item-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -4547,7 +4741,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__team-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -4555,7 +4751,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__team-name {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -4570,7 +4768,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__team-list-item {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         padding-left: 31px;
@@ -4637,7 +4837,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-link {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -4662,7 +4864,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-main-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         letter-spacing: .2px;
@@ -4676,7 +4880,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-main-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 14px;
         line-height: 28px;
         color: $black;
@@ -4690,7 +4896,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-main-list-item {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 14px;
         line-height: 28px;
         color: $black;
@@ -4717,6 +4925,10 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 58px;
     }
 
+    &__title {
+        color: $white;
+    }
+
     &__description-inner {
         display: flex;
         justify-content: space-between;
@@ -4724,7 +4936,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__description-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 32px;
         color: $grey-deep-medium;
@@ -4764,14 +4978,18 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__item-name {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 19px;
         color: $black;
     }
 
     &__item-description {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -4783,7 +5001,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__necessary-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -4800,7 +5020,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__necessary-item {
         padding-left: 31px;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -4823,7 +5045,9 @@ input[type="range"]::-moz-range-thumb {
         padding: 24px;
         background-color: $grey-bg;
         border-radius: 10px;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 32px;
         color: $black;
@@ -4834,7 +5058,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__never-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -4872,7 +5098,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__never-list-item {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -4882,7 +5110,9 @@ input[type="range"]::-moz-range-thumb {
         padding: 40px;
         background-color: $grey-bg;
         border-radius: 10px;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -4928,7 +5158,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__content-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 32px;
         color: $grey-deep-medium;
@@ -4947,7 +5179,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__content-price-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -4959,7 +5193,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__content-price-text {
         padding-top: 24px;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -4976,7 +5212,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__content-description-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 32px;
         color: $white;
@@ -5021,7 +5259,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-pay-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -5091,7 +5331,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__description,
     &__info-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 32px;
         color: $grey-deep-dark;
@@ -5102,7 +5344,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__info-title {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         color: $black;
@@ -5135,7 +5379,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__social-text {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep;
@@ -5170,7 +5416,9 @@ input[type="range"]::-moz-range-thumb {
         padding: 10px 16px 16px;
         border-bottom: 1px solid $white-light;
         margin-bottom: 32px;
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 24px;
         line-height: 38px;
         letter-spacing: .24px;
@@ -5183,7 +5431,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__aside-item {
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -5217,7 +5467,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__history-header-item {
         width: 188px;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $white;
@@ -5270,10 +5522,9 @@ input[type="range"]::-moz-range-thumb {
     &__history-item-price,
     &__history-item-status {
         width: 188px;
-        /*padding: 24px 64px 24px 24px;*/
-        /*@extend %inter-400;*/
         font-family: 'Inter-Regular', sans-serif;
         font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
     }
@@ -5298,7 +5549,9 @@ input[type="range"]::-moz-range-thumb {
 
     &__history-content-name {
         width: 307px;
-        @extend %inter-300;
+        font-family: 'Inter-Light', sans-serif;
+        font-weight: 300;
+        /*@extend %inter-300;*/
         font-size: 18px;
         line-height: 28px;
         letter-spacing: .18px;
@@ -5306,7 +5559,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__history-price-now {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 20px;
         line-height: 32px;
         color: $black;
@@ -5314,7 +5569,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__history-price-old {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         text-decoration: line-through;
@@ -5350,14 +5607,18 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__content-span {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep-medium;
     }
 
     &__content-input {
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 25px;
         color: $black;
@@ -5381,7 +5642,9 @@ input[type="range"]::-moz-range-thumb {
         margin-top: 40px;
         padding: 16px;
         text-align: center;
-        @extend %inter-400;
+        font-family: 'Inter-Regular', sans-serif;
+        font-weight: 400;
+        /*@extend %inter-400;*/
         font-size: 16px;
         line-height: 19px;
         color: $white;
@@ -5416,7 +5679,9 @@ input[type="range"]::-moz-range-thumb {
     }
 
     &__change-name {
-        @extend %inter-500;
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        /*@extend %inter-500;*/
         font-size: 16px;
         line-height: 25px;
         color: $grey-deep-medium;
@@ -5460,13 +5725,11 @@ input[type="range"]::-moz-range-thumb {
         display: grid;
         grid-template-columns: repeat(2, 400px);
         gap: 40px;
-
     }
 
     &__wish-list-item {
         width: 400px;
         height: 443px;
-        /*start*/
     }
 
 }
@@ -5811,7 +6074,6 @@ input[type="range"]::-moz-range-thumb {
         border: 1px solid $grey-light-bright;
         border-radius: 10px;
         box-shadow: 0px 0px 0px 2px $grey-light, 0px 0px 10px $grey-light-bright;
-        /*-130%*/
         transform: translateY(-130%);
         background-color: $white;
         z-index: 9997;
