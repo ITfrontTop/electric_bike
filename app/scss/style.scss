@@ -6,6 +6,125 @@
 @import 'libs';
 
 
+
+/* preloader */
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .2s ease-out;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__percents {
+        font-family: 'Inter-Medium', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: $black;
+    }
+
+    &--hide {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+    }
+
+}
+
+/* preloader animation and style*/
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+}
+
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+.loader:before {
+    animation: ball1 1s infinite;
+    background-color: $black;
+    box-shadow: 30px 0 0 $orange;
+    margin-bottom: 10px;
+}
+
+.loader:after {
+    animation: ball2 1s infinite;
+    background-color: $orange;
+    box-shadow: 30px 0 0 $black;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(0.8)
+    }
+
+    50% {
+        transform: rotate(360deg) scale(1.2)
+    }
+
+    100% {
+        transform: rotate(720deg) scale(0.8)
+    }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 $orange;
+    }
+
+    50% {
+        box-shadow: 0 0 0 $orange;
+        margin-bottom: 0;
+        transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 $orange;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 $black;
+    }
+
+    50% {
+        box-shadow: 0 0 0 $black;
+        margin-top: -20px;
+        transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 $black;
+        margin-top: 0;
+    }
+}
+
+
+
 /*  header  */
 
 .header {
@@ -6415,9 +6534,9 @@ input[type="range"]::-moz-range-thumb {
         width: 170px;
     }
 
-    .personal__history-item-date, 
-    .personal__history-item-number, 
-    .personal__history-item-price, 
+    .personal__history-item-date,
+    .personal__history-item-number,
+    .personal__history-item-price,
     .personal__history-item-status {
         width: 170px;
     }
@@ -6460,9 +6579,9 @@ input[type="range"]::-moz-range-thumb {
         width: 130px;
     }
 
-    .personal__history-item-date, 
-    .personal__history-item-number, 
-    .personal__history-item-price, 
+    .personal__history-item-date,
+    .personal__history-item-number,
+    .personal__history-item-price,
     .personal__history-item-status {
         width: 130px;
     }
@@ -7288,9 +7407,9 @@ input[type="range"]::-moz-range-thumb {
         line-height: 15px;
     }
 
-    .personal__history-item-date, 
-    .personal__history-item-number, 
-    .personal__history-item-price, 
+    .personal__history-item-date,
+    .personal__history-item-number,
+    .personal__history-item-price,
     .personal__history-item-status {
         font-size: 10px;
         line-height: 15px;
@@ -7681,9 +7800,9 @@ input[type="range"]::-moz-range-thumb {
         line-height: 10px;
     }
 
-    .personal__history-item-date, 
-    .personal__history-item-number, 
-    .personal__history-item-price, 
+    .personal__history-item-date,
+    .personal__history-item-number,
+    .personal__history-item-price,
     .personal__history-item-status {
         width: 100px;
         font-size: 8px;
